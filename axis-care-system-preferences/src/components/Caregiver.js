@@ -8,7 +8,7 @@ class Caregiver extends React.Component {
       <>
         <ListGroup
           style={{
-            border: "solid 2px red",
+            boxShadow: "1px 1px 5px 1px #80808022",
             display: "flex",
             width: "40rem",
             borderRadius: "6px",
@@ -21,7 +21,6 @@ class Caregiver extends React.Component {
           <ListGroup.Item>Porta ac consectetur ac</ListGroup.Item>
           <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
         </ListGroup>
-        {/* </div> */}
       </>
     );
   }

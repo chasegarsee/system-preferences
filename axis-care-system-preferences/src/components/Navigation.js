@@ -1,10 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Card, ListGroup, Button, Collapse } from "react-bootstrap";
+import {
+  Card,
+  ListGroup,
+  Button,
+  Collapse,
+  Form,
+  FormControl
+} from "react-bootstrap";
 import { Transition } from "react-transition-group";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
-import Caregiver from "./Caregiver";
+import CaregiverSetup from "../components/systempreferences/caregiverAndApplicant/CaregiverSetup";
 import Marketing from "./Marketing";
 import Client from "./Client";
 import UserContact from "./UserContact";
@@ -59,16 +66,20 @@ class Navigation extends React.Component {
 
     return (
       <div>
-        <div className="main" style={{ display: "flex" }}>
+        <div className="main" style={{ height: "100%", display: "flex" }}>
           <Card
             style={{
               width: "18rem",
               margin: "4% 3% 0 7%",
               borderRadius: "5px",
-              boxShadow: "1px 1px 5px 1px #80808022"
+              boxShadow: "1px 1px 5px 1px #80808022",
+              height: "100%"
             }}
           >
-            <ListGroup variant="flush" style={{ alignItems: "center" }}>
+            <ListGroup
+              variant="flush"
+              style={{ height: "auto", alignItems: "center" }}
+            >
               <StyledNav
                 onClick={() => this.setState({ open: !open })}
                 aria-controls="example-collapse-text"
@@ -80,7 +91,7 @@ class Navigation extends React.Component {
                 <div id="example-collapse-text">
                   <ListGroup.Item>
                     <div>
-                      <Link to="/caregiver">Caregiver</Link>
+                      <Link to="/caregiver-setup">Caregiver Setup</Link>
                     </div>
                   </ListGroup.Item>
                 </div>
@@ -297,9 +308,17 @@ class Navigation extends React.Component {
                   </ListGroup.Item>
                 </div>
               </Collapse>
+              <Form style={{ paddingTop: "20px" }}>
+                <FormControl
+                  type="text"
+                  placeholder="Search"
+                  className="mr-sm-2"
+                />
+                <Button variant="outline-light">Search</Button>
+              </Form>
             </ListGroup>
           </Card>
-          <Route exact path="/caregiver" component={Caregiver} />
+          <Route exact path="/caregiver-setup" component={CaregiverSetup} />
           <Route exact path="/marketing" component={Marketing} />
 
           <Route exact path="/client" component={Client} />
