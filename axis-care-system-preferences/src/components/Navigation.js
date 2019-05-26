@@ -25,6 +25,7 @@ import ReportDisplayOptions from "./ReportDisplayOptions";
 import Security from "./Security";
 import Forms from "./Forms";
 import Communities from "./Communities";
+import CareNotes from "./systempreferences/caregiverAndApplicant/CareNotes";
 
 class Navigation extends React.Component {
   constructor(props, context) {
@@ -89,9 +90,18 @@ class Navigation extends React.Component {
               </StyledNav>
               <Collapse in={this.state.open}>
                 <div id="example-collapse-text">
-                  <ListGroup.Item>
+                  <ListGroup.Item
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      flexDirection: "column"
+                    }}
+                  >
                     <div>
                       <Link to="/caregiver-setup">Caregiver Setup</Link>
+                    </div>
+                    <div>
+                      <Link to="/care-notes">Care Notes</Link>
                     </div>
                   </ListGroup.Item>
                 </div>
@@ -318,7 +328,9 @@ class Navigation extends React.Component {
               </Form>
             </ListGroup>
           </Card>
+
           <Route exact path="/caregiver-setup" component={CaregiverSetup} />
+          <Route exact path="/care-notes" component={CareNotes} />
           <Route exact path="/marketing" component={Marketing} />
 
           <Route exact path="/client" component={Client} />
