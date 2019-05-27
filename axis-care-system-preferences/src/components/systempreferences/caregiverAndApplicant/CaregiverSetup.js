@@ -67,34 +67,34 @@ class CaregiverSetup extends React.Component {
           alignItems: "center",
           width: "45rem",
           borderRadius: "6px",
-          margin: "4% auto auto 0",
+          margin: "2% auto 20px 0",
           border: "solid 1px #D7D7D7",
           boxShadow: "1px 1px 5px 1px #80808022",
           height: "auto"
         }}
       >
         <div>
-          <h1 style={{ fontWeight: "300" }}>Caregiver Setup</h1>
+          <h1 style={{ fontWeight: "300", padding: "20px 0" }}>
+            Caregiver Setup
+          </h1>
         </div>
 
         <StyledDiv>
           <StyledSpan>Overtime: use weighted rate</StyledSpan>
-          <DropdownButton id="dropdown-basic-button" title="Choose option...">
-            <Dropdown.Item href="#/action-2">Enable</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Disable</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect>
+            <option>Select...</option>
+            <option>Enable</option>
+            <option>Disable</option>
+          </StyledSelect>
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Payable hours</StyledSpan>
-          <DropdownButton id="dropdown-basic-button" title="Select...">
-            <Dropdown.Item href="#/action-2">
-              Pay for hours worked
-            </Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Pay visit hours</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">
-              Pay visit hours only when exempt from overtime
-            </Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect>
+            <option>Select...</option>
+            <option>Pay for hours worked</option>
+            <option>Pay visit hours</option>
+            <option>Pay visit hours only when exempt from overtime</option>
+          </StyledSelect>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Pay break times</StyledSpan>
@@ -174,18 +174,20 @@ class CaregiverSetup extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Inter-visit travel time before/after</StyledSpan>
-          <DropdownButton id="dropdown-basic-button" title="Select...">
-            <Dropdown.Item href="#/action-2">Befor Visit</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">After Visit</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect>
+            <option>Select...</option>
+            <option>Befor Visit</option>
+            <option>After Visit</option>
+          </StyledSelect>
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Autocalculate inter-visit travel time</StyledSpan>
-          <DropdownButton id="dropdown-basic-button" title="Select...">
-            <Dropdown.Item href="#">Disabled</Dropdown.Item>
-            <Dropdown.Item href="#">Apply Before Visit</Dropdown.Item>
-            <Dropdown.Item href="#">Apply After Visit</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect>
+            <option>Select...</option>
+            <option>Disabled</option>
+            <option>Apply Before Visit</option>
+            <option>Apply After Visit</option>
+          </StyledSelect>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>
@@ -219,254 +221,237 @@ class CaregiverSetup extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Daily Certification (telephony)</StyledSpan>
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>of required sleep,</StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>
             of uninterrupted sleep,
           </StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>
             of uninterrupted meal time,
           </StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
+          <StyledSelectSmall
             style={{ width: "20px !important", marginRight: "10px" }}
-            id="dropdown-basic-button"
-            title="Select..."
           >
-            <Dropdown.Item href="#">1</Dropdown.Item>
-            <Dropdown.Item href="#">2</Dropdown.Item>
-            <Dropdown.Item href="#">3</Dropdown.Item>
-            <Dropdown.Item href="#">4</Dropdown.Item>
-            <Dropdown.Item href="#">5</Dropdown.Item>
-          </DropdownButton>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </StyledSelectSmall>
 
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineTextTwo>long break(s)</StyledSpanMultiLineTextTwo>
         </StyledDiv>
 
@@ -490,254 +475,237 @@ class CaregiverSetup extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Fixed Certification (telephony)</StyledSpan>
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>of required sleep,</StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>
             of uninterrupted sleep,
           </StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>
             of uninterrupted meal time,
           </StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
+          <StyledSelectSmall
             style={{ width: "20px !important", marginRight: "10px" }}
-            id="dropdown-basic-button"
-            title="Select..."
           >
-            <Dropdown.Item href="#">1</Dropdown.Item>
-            <Dropdown.Item href="#">2</Dropdown.Item>
-            <Dropdown.Item href="#">3</Dropdown.Item>
-            <Dropdown.Item href="#">4</Dropdown.Item>
-            <Dropdown.Item href="#">5</Dropdown.Item>
-          </DropdownButton>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </StyledSelectSmall>
 
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineTextTwo>long break(s)</StyledSpanMultiLineTextTwo>
         </StyledDiv>
 
@@ -761,269 +729,252 @@ class CaregiverSetup extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Hourly Certification (telephony)</StyledSpan>
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>of required sleep,</StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>
             of uninterrupted sleep,
           </StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineText>
             of uninterrupted meal time,
           </StyledSpanMultiLineText>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan />
-          <DropdownButton
+          <StyledSelectSmall
             style={{ width: "20px !important", marginRight: "10px" }}
-            id="dropdown-basic-button"
-            title="Select..."
           >
-            <Dropdown.Item href="#">1</Dropdown.Item>
-            <Dropdown.Item href="#">2</Dropdown.Item>
-            <Dropdown.Item href="#">3</Dropdown.Item>
-            <Dropdown.Item href="#">4</Dropdown.Item>
-            <Dropdown.Item href="#">5</Dropdown.Item>
-          </DropdownButton>
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </StyledSelectSmall>
 
-          <DropdownButton
-            style={{ width: "20px !important" }}
-            id="dropdown-basic-button"
-            title="Select..."
-          >
-            <Dropdown.Item href="#">0 (disabled)</Dropdown.Item>
-            <Dropdown.Item href="#">0.25 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.50 hour</Dropdown.Item>
-            <Dropdown.Item href="#">0.75 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1 hour</Dropdown.Item>
-            <Dropdown.Item href="#">1.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">1.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">2.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">3.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">4.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">5.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">6.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">7.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">8.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">9.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">10.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.25 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.50 hours</Dropdown.Item>
-            <Dropdown.Item href="#">11.75 hours</Dropdown.Item>
-            <Dropdown.Item href="#">12 hours</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect style={{ width: "20px !important" }}>
+            <option>0 (disabled)</option>
+            <option>0.25 hour</option>
+            <option>0.50 hour</option>
+            <option>0.75 hour</option>
+            <option>1 hour</option>
+            <option>1.25 hours</option>
+            <option>1.50 hours</option>
+            <option>1.75 hours</option>
+            <option>2 hours</option>
+            <option>2.25 hours</option>
+            <option>2.50 hours</option>
+            <option>2.75 hours</option>
+            <option>3 hours</option>
+            <option>3.25 hours</option>
+            <option>3.50 hours</option>
+            <option>3.75 hours</option>
+            <option>4 hours</option>
+            <option>4.25 hours</option>
+            <option>4.50 hours</option>
+            <option>4.75 hours</option>
+            <option>5 hours</option>
+            <option>5.25 hours</option>
+            <option>5.50 hours</option>
+            <option>5.75 hours</option>
+            <option>6 hours</option>
+            <option>6.25 hours</option>
+            <option>6.50 hours</option>
+            <option>6.75 hours</option>
+            <option>7 hours</option>
+            <option>7.25 hours</option>
+            <option>7.50 hours</option>
+            <option>7.75 hours</option>
+            <option>8 hours</option>
+            <option>8.25 hours</option>
+            <option>8.50 hours</option>
+            <option>8.75 hours</option>
+            <option>9 hours</option>
+            <option>9.25 hours</option>
+            <option>9.50 hours</option>
+            <option>9.75 hours</option>
+            <option>10 hours</option>
+            <option>10.25 hours</option>
+            <option>10.50 hours</option>
+            <option>10.75 hours</option>
+            <option>11 hours</option>
+            <option>11.25 hours</option>
+            <option>11.50 hours</option>
+            <option>11.75 hours</option>
+            <option>12 hours</option>
+          </StyledSelect>
           <StyledSpanMultiLineTextTwo>long break(s)</StyledSpanMultiLineTextTwo>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Caregiver care plan signatures</StyledSpan>
-          <DropdownButton id="dropdown-basic-button" title="Choose option...">
-            <Dropdown.Item href="#/action-2">Enable</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Disable</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect id="dropdown-basic-button" title="Choose option...">
+            <option>Enable</option>
+            <option>Disable</option>
+          </StyledSelect>
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Track seniority (hours)</StyledSpan>
-          <DropdownButton id="dropdown-basic-button" title="Select...">
-            <Dropdown.Item href="#/action-3">Enabled</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Disabled</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect id="dropdown-basic-button" title="Select...">
+            <option>Enabled</option>
+            <option>Disabled</option>
+          </StyledSelect>
         </StyledDiv>
       </div>
     );
@@ -1033,7 +984,7 @@ class CaregiverSetup extends React.Component {
 export default CaregiverSetup;
 
 const StyledSpan = styled.span`
-  padding: 0 12px 6px 6px;
+  padding: 0 12px 6px 20px;
   width: 50%;
   font-size: 1.2rem;
 `;
@@ -1061,4 +1012,40 @@ const StyledDiv = styled.div`
   width: 100%;
   align-items: center;
   margin-bottom: 1rem;
+`;
+
+const StyledSelect = styled.select`
+  background-color: #007bff;
+  height: 35px;
+  outline: none;
+  width: 125px;
+  border: solid 1px transparent;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  font-weight: 400;
+  vertical-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: white;
+`;
+
+const StyledSelectSmall = styled.select`
+  background-color: #007bff;
+  height: 35px;
+  outline: none;
+  width: 75px;
+  border: solid 1px transparent;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  font-weight: 400;
+  vertical-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: white;
 `;

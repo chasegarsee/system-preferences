@@ -8,6 +8,10 @@ class CareNotes extends React.Component {
     this.state = {};
   }
   render() {
+    function changeText(url) {
+      document.getElementById("mydiv").innerHTML = url;
+    }
+
     return (
       <div
         style={{
@@ -17,7 +21,7 @@ class CareNotes extends React.Component {
           alignItems: "center",
           width: "45rem",
           borderRadius: "6px",
-          margin: "4% auto auto 0",
+          margin: "2% auto auto 0",
           border: "solid 1px #D7D7D7",
           boxShadow: "1px 1px 5px 1px #80808022",
           height: "auto"
@@ -52,10 +56,11 @@ class CareNotes extends React.Component {
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Default selection is "No"</StyledSpan>
-          <DropdownButton id="dropdown-basic-button" title="Choose option...">
-            <Dropdown.Item href="#/action-3">Enabled</Dropdown.Item>
-            <Dropdown.Item href="#/action-3">Disabled</Dropdown.Item>
-          </DropdownButton>
+          <StyledSelect>
+            <option>Select...</option>
+            <option>Elable</option>
+            <option>Disable</option>
+          </StyledSelect>
         </StyledDiv>
       </div>
     );
@@ -93,4 +98,22 @@ const StyledDiv = styled.div`
   width: 100%;
   align-items: center;
   margin-bottom: 1rem;
+`;
+
+const StyledSelect = styled.select`
+  background-color: #007bff;
+  height: 35px;
+  outline: none;
+  width: auto;
+  border: solid 1px transparent;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  font-weight: 400;
+  vertical-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: white;
 `;

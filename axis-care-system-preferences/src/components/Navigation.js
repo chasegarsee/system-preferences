@@ -8,7 +8,6 @@ import {
   Form,
   FormControl
 } from "react-bootstrap";
-import { Transition } from "react-transition-group";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
 import CaregiverSetup from "../components/systempreferences/caregiverAndApplicant/CaregiverSetup";
@@ -26,6 +25,7 @@ import Security from "./Security";
 import Forms from "./Forms";
 import Communities from "./Communities";
 import CareNotes from "./systempreferences/caregiverAndApplicant/CareNotes";
+import CaregiverCCF from "./systempreferences/caregiverAndApplicant/CaregiverCCE";
 
 class Navigation extends React.Component {
   constructor(props, context) {
@@ -67,11 +67,19 @@ class Navigation extends React.Component {
 
     return (
       <div>
-        <div className="main" style={{ height: "100%", display: "flex" }}>
+        <div
+          className="main"
+          style={{
+            height: "100%",
+            display: "flex",
+            justifyContent: "center",
+            width: "85%"
+          }}
+        >
           <Card
             style={{
               width: "18rem",
-              margin: "4% 3% 0 7%",
+              margin: "2% 3% 5px auto",
               borderRadius: "5px",
               boxShadow: "1px 1px 5px 1px #80808022",
               height: "100%"
@@ -102,6 +110,11 @@ class Navigation extends React.Component {
                     </div>
                     <div>
                       <Link to="/care-notes">Care Notes</Link>
+                    </div>
+                    <div>
+                      <Link to="/caregiver-classes-certifications-evaluations">
+                        Classes Certifications Evaluations
+                      </Link>
                     </div>
                   </ListGroup.Item>
                 </div>
@@ -331,6 +344,12 @@ class Navigation extends React.Component {
 
           <Route exact path="/caregiver-setup" component={CaregiverSetup} />
           <Route exact path="/care-notes" component={CareNotes} />
+          <Route
+            exact
+            path="/caregiver-classes-certifications-evaluations"
+            component={CaregiverCCF}
+          />
+
           <Route exact path="/marketing" component={Marketing} />
 
           <Route exact path="/client" component={Client} />

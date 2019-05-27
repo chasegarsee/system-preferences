@@ -72,7 +72,9 @@ class App extends Component {
           style={{
             fontWeight: "300",
             display: "flex",
-            justifyContent: "center"
+            justifyContent: "center",
+            paddingTop: "20px",
+            marginBottom: "0"
           }}
         >
           AxisCare System Preferences

@@ -12,7 +12,7 @@ class Caregiver extends React.Component {
             display: "flex",
             width: "40rem",
             borderRadius: "6px",
-            margin: "4% auto auto 0"
+            margin: "2% auto auto 0"
           }}
         >
           <ListGroup.Item>Cras justo odio</ListGroup.Item>
