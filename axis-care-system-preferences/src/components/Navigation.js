@@ -1,13 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  Card,
-  ListGroup,
-  Button,
-  Collapse,
-  Form,
-  FormControl
-} from "react-bootstrap";
+import { Card, ListGroup, Collapse } from "react-bootstrap";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
 import CaregiverSetup from "../components/systempreferences/caregiverAndApplicant/CaregiverSetup";
@@ -26,10 +19,13 @@ import Forms from "./Forms";
 import Communities from "./Communities";
 import CareNotes from "./systempreferences/caregiverAndApplicant/CareNotes";
 import CaregiverCCF from "./systempreferences/caregiverAndApplicant/CaregiverCCE";
+import RecommendCaregiver from "./systempreferences/caregiverAndApplicant/RecommendCaregiver";
+import "./Navigation.css";
 
 class Navigation extends React.Component {
   constructor(props, context) {
     super(props, context);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       open: false,
       opentwo: false,
@@ -47,6 +43,21 @@ class Navigation extends React.Component {
       openfourteen: false
     };
   }
+
+  handleChange(e) {
+    console.log(e.target.value); //  search bar text
+    let object = document.getElementById("myDiv");
+    console.log(object.textContent); //  div text
+
+    let searchBarText = e.target.value;
+    let divText = object.textContent;
+    if (divText.includes(searchBarText)) {
+      console.log("the div text contains your search text");
+    } else {
+      console.log("the div text doesn't contain search text");
+    }
+  }
+
   render() {
     const {
       open,
@@ -94,7 +105,13 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={open}
               >
-                <StyledSpan>Caregiver</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />{" "}
+                  Caregiver
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.open}>
                 <div id="example-collapse-text">
@@ -102,20 +119,24 @@ class Navigation extends React.Component {
                     style={{
                       display: "flex",
                       alignItems: "center",
+                      justifyContent: "center",
                       flexDirection: "column"
                     }}
                   >
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/caregiver-setup">Caregiver Setup</Link>
-                    </div>
-                    <div>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
                       <Link to="/care-notes">Care Notes</Link>
-                    </div>
-                    <div>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
                       <Link to="/caregiver-classes-certifications-evaluations">
                         Classes Certifications Evaluations
                       </Link>
-                    </div>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/recommend-caregiver">Recommend Caregiver</Link>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -124,14 +145,21 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={opentwo}
               >
-                <StyledSpan>Client</StyledSpan>
+                <StyledSpan>
+                  {" "}
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Client
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.opentwo}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/client">Client</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -140,14 +168,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openthree}
               >
-                <StyledSpan>Marketing</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Marketing
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openthree}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/marketing">Marketing</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -156,14 +190,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openfour}
               >
-                <StyledSpan>Communities</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Communities
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openfour}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/communities">Communities</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -172,14 +212,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openfive}
               >
-                <StyledSpan>User Contact</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  User Contact
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openfive}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/usercontact">User Contact</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -188,14 +234,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={opensix}
               >
-                <StyledSpan>Messaging</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Messaging
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.opensix}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/messaging">Messaging</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -204,14 +256,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openseven}
               >
-                <StyledSpan>Telephony</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Telephony
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openseven}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/telephony">Telephony</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -220,14 +278,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openeight}
               >
-                <StyledSpan>Mobile App</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Mobile App
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openeight}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/mobileapp">Mobile App</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -236,16 +300,22 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={opennine}
               >
-                <StyledSpan>Payroll / Billing / Quickbooks</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Payroll / Billing / Quickbooks
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.opennine}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/payrollbillingquickbooks">
                         Payroll / Billing / Quickbooks
                       </Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -254,14 +324,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openten}
               >
-                <StyledSpan>Third Party Billing</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Third Party Billing
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openten}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/thirdpartybilling">Third Party Billing</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -270,14 +346,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openeleven}
               >
-                <StyledSpan>Status Types</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Status Types
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openeleven}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/statustypes">Status Types</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -286,16 +368,22 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={opentwelve}
               >
-                <StyledSpan>Report and Display Options</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Report and Display Options
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.opentwelve}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/reportanddisplayoptions">
                         Report and Display Options
                       </Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -304,14 +392,20 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openthirteen}
               >
-                <StyledSpan>Security</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Security
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openthirteen}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/security">Security</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
@@ -320,25 +414,23 @@ class Navigation extends React.Component {
                 aria-controls="example-collapse-text"
                 aria-expanded={openfourteen}
               >
-                <StyledSpan>Forms</StyledSpan>
+                <StyledSpan>
+                  <i
+                    style={{ padding: "15px" }}
+                    className="fas fa-chevron-right"
+                  />
+                  Forms
+                </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openfourteen}>
                 <div id="example-collapse-text">
                   <ListGroup.Item>
-                    <div>
+                    <InnerMenuDiv>
                       <Link to="/forms">Forms</Link>
-                    </div>
+                    </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
               </Collapse>
-              <Form style={{ paddingTop: "20px" }}>
-                <FormControl
-                  type="text"
-                  placeholder="Search"
-                  className="mr-sm-2"
-                />
-                <Button variant="outline-light">Search</Button>
-              </Form>
             </ListGroup>
           </Card>
 
@@ -348,6 +440,11 @@ class Navigation extends React.Component {
             exact
             path="/caregiver-classes-certifications-evaluations"
             component={CaregiverCCF}
+          />
+          <Route
+            exact
+            path="/recommend-caregiver"
+            component={RecommendCaregiver}
           />
 
           <Route exact path="/marketing" component={Marketing} />
@@ -393,11 +490,19 @@ const StyledNav = styled.nav`
   &:hover {
     cursor: pointer;
   }
-  &:last-child {
-    color: red;
-  }
 `;
 
 const StyledSpan = styled.span`
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   font-weight: bold;
+`;
+
+const InnerMenuDiv = styled.div`
+  display: flex;
+  width: 175px;
+  justify-content: flex-start;
+  margin: 5px;
 `;

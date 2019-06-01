@@ -3,8 +3,9 @@ import styled from "styled-components";
 import "../SystemPreferences.css";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
+import Switch from "react-switch";
 
-import { Dropdown, DropdownButton, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 class CaregiverSetup extends React.Component {
   constructor(props, context) {
@@ -15,9 +16,30 @@ class CaregiverSetup extends React.Component {
       att: 0, // Autocalculate inter-visit travel time max gap
       dct: 0, // Daily Certification Threshold
       fct: 0, // Fixed Certification Threshold
-      hct: 0 // Hourly Certification Threshold
+      hct: 0, // Hourly Certification Threshold
+      checkedOT: false, // Overtime
+      checkedTS: false, // Track Seniority
+      checkedCCPS: false // Caregiver Care Plan Signatures
     };
   }
+
+  handleToggleChangeOT = value => {
+    this.setState({
+      checkedOT: value
+    });
+  };
+
+  handleToggleChangeTS = value => {
+    this.setState({
+      checkedTS: value
+    });
+  };
+
+  handleToggleChangeCCPS = value => {
+    this.setState({
+      checkedCCPS: value
+    });
+  };
 
   handleOnChangeWot = value => {
     this.setState({
@@ -61,7 +83,6 @@ class CaregiverSetup extends React.Component {
     return (
       <div
         style={{
-          boxShadow: "1px 1px 5px 1px #80808022",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -81,11 +102,18 @@ class CaregiverSetup extends React.Component {
 
         <StyledDiv>
           <StyledSpan>Overtime: use weighted rate</StyledSpan>
-          <StyledSelect>
-            <option>Select...</option>
-            <option>Enable</option>
-            <option>Disable</option>
-          </StyledSelect>
+
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeOT}
+              checked={this.state.checkedOT}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Payable hours</StyledSpan>
@@ -964,17 +992,31 @@ class CaregiverSetup extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Caregiver care plan signatures</StyledSpan>
-          <StyledSelect id="dropdown-basic-button" title="Choose option...">
-            <option>Enable</option>
-            <option>Disable</option>
-          </StyledSelect>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeCCPS}
+              checked={this.state.checkedCCPS}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Track seniority (hours)</StyledSpan>
-          <StyledSelect id="dropdown-basic-button" title="Select...">
-            <option>Enabled</option>
-            <option>Disabled</option>
-          </StyledSelect>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeTS}
+              checked={this.state.checkedTS}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
         </StyledDiv>
       </div>
     );
@@ -1047,5 +1089,25 @@ const StyledSelectSmall = styled.select`
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: white;
+`;
+
+const UncheckedIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-top: 3px;
+  font-size: 1rem;
+  position: float;
+  color: white;
+`;
+
+const CheckedIcon = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+  font-size: 1rem;
   color: white;
 `;

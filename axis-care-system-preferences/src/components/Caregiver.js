@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { ListGroup, Tab, Row, Col, Sonnet } from "react-bootstrap";
+import { ListGroup } from "react-bootstrap";
 
 class Caregiver extends React.Component {
   render() {

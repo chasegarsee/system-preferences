@@ -1,21 +1,26 @@
 import React from "react";
-import { Form, DropdownButton, Dropdown } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import styled from "styled-components";
+import Switch from "react-switch";
 
 class CareNotes extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {};
+    this.state = {
+      checkedDS: false // Default Selection
+    };
   }
-  render() {
-    function changeText(url) {
-      document.getElementById("mydiv").innerHTML = url;
-    }
 
+  handleToggleChangeDS = value => {
+    this.setState({
+      checkedDS: value
+    });
+  };
+
+  render() {
     return (
       <div
         style={{
-          boxShadow: "1px 1px 5px 1px #80808022",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -56,11 +61,17 @@ class CareNotes extends React.Component {
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Default selection is "No"</StyledSpan>
-          <StyledSelect>
-            <option>Select...</option>
-            <option>Elable</option>
-            <option>Disable</option>
-          </StyledSelect>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeDS}
+              checked={this.state.checkedDS}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
         </StyledDiv>
       </div>
     );
@@ -72,24 +83,6 @@ export default CareNotes;
 const StyledSpan = styled.span`
   padding: 0 12px 6px 6px;
   width: 50%;
-  font-size: 1.2rem;
-`;
-
-const StyledSpanMultiLineText = styled.span`
-  padding: 0 0 6px 6px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 30%;
-  font-size: 1.2rem;
-`;
-
-const StyledSpanMultiLineTextTwo = styled.span`
-  padding: 0 0 6px 6px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 20%;
   font-size: 1.2rem;
 `;
 
@@ -115,5 +108,25 @@ const StyledSelect = styled.select`
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: white;
+`;
+
+const UncheckedIcon = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-top: 3px;
+  font-size: 1rem;
+  position: float;
+  color: white;
+`;
+
+const CheckedIcon = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 10px;
+  font-size: 1rem;
   color: white;
 `;

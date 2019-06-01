@@ -26,7 +26,6 @@ class CaregiverCCF extends Component {
     return (
       <div
         style={{
-          boxShadow: "1px 1px 5px 1px #80808022",
           display: "flex",
           flexDirection: "column",
           alignItems: "left",
@@ -187,7 +186,7 @@ class CaregiverCCF extends Component {
                     <Form.Control type="plaintext" />
                   </Col>
                   <Form.Label column sm="1.5">
-                    Defalt Experation
+                    Default Experation
                   </Form.Label>
                   <StyledSelect>
                     <option>No Expiration</option>
@@ -217,37 +216,6 @@ class CaregiverCCF extends Component {
 }
 
 export default CaregiverCCF;
-
-const StyledSpan = styled.span`
-  padding: 0 12px 6px 6px;
-  width: 50%;
-  font-size: 1.2rem;
-`;
-
-const StyledSpanMultiLineText = styled.span`
-  padding: 0 0 6px 6px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 30%;
-  font-size: 1.2rem;
-`;
-
-const StyledSpanMultiLineTextTwo = styled.span`
-  padding: 0 0 6px 6px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 20%;
-  font-size: 1.2rem;
-`;
-
-const StyledDiv = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin-bottom: 1rem;
-`;
 
 const StyledButton = styled.button`
   background-color: #007bff;

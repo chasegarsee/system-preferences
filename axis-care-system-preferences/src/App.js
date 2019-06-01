@@ -1,27 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
-import {
-  Caregiver,
-  Marketing,
-  Client,
-  Messaging,
-  PayrollBillingQuickbooks,
-  ReportDisplayOptions,
-  Security,
-  StatusTypes,
-  Telephony,
-  ThirdPartyBilling,
-  MobileApp,
-  UserContact,
-  Navigation,
-  Communities,
-  Forms
-} from "./components";
-import { Route } from "react-router-dom";
+import { Navigation } from "./components";
 
 import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
-
-import { Card, ListGroup } from "react-bootstrap";
 
 class App extends Component {
   render() {
