@@ -20,7 +20,9 @@ import Communities from "./Communities";
 import CareNotes from "./systempreferences/caregiverAndApplicant/CareNotes";
 import CaregiverCCF from "./systempreferences/caregiverAndApplicant/CaregiverCCE";
 import RecommendCaregiver from "./systempreferences/caregiverAndApplicant/RecommendCaregiver";
+import CaregiverBlockReasons from "./systempreferences/caregiverAndApplicant/CaregiverBlockReasons";
 import "./Navigation.css";
+import CaregiverPoints from "./systempreferences/caregiverAndApplicant/CaregiverPoints";
 
 class Navigation extends React.Component {
   constructor(props, context) {
@@ -136,6 +138,14 @@ class Navigation extends React.Component {
                     </InnerMenuDiv>
                     <InnerMenuDiv>
                       <Link to="/recommend-caregiver">Recommend Caregiver</Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/caregiver-block-reasons">
+                        Caregiver Block Reasons
+                      </Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/caregiver-points">Caregiver Points</Link>
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
@@ -446,6 +456,12 @@ class Navigation extends React.Component {
             path="/recommend-caregiver"
             component={RecommendCaregiver}
           />
+          <Route
+            exact
+            path="/caregiver-block-reasons"
+            component={CaregiverBlockReasons}
+          />
+          <Route exact path="/caregiver-points" component={CaregiverPoints} />
 
           <Route exact path="/marketing" component={Marketing} />
 

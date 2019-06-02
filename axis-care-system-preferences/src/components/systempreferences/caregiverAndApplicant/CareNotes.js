@@ -93,24 +93,6 @@ const StyledDiv = styled.div`
   margin-bottom: 1rem;
 `;
 
-const StyledSelect = styled.select`
-  background-color: #007bff;
-  height: 35px;
-  outline: none;
-  width: auto;
-  border: solid 1px transparent;
-  padding: 0.375rem 0.75rem;
-  text-align: center;
-  font-weight: 400;
-  vertical-align: center;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: white;
-`;
-
 const UncheckedIcon = styled.div`
   display: flex;
   justify-content: center;
