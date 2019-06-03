@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
-export default class LeadDeactivationReasons extends Component {
+export default class ClassSettings extends Component {
   state = {
     DRReasons: [],
     BFCReasons: []
@@ -32,14 +32,14 @@ export default class LeadDeactivationReasons extends Component {
         }}
       >
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <StyledH1>Lead De-activation Reasons</StyledH1>
+          <StyledH1>Organization Classes</StyledH1>
         </div>
-        <Form.Label style={{ marginLeft: "5%" }} column sm="1.5">
-          Reasons for de-activation.
-        </Form.Label>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Col sm="6">
+            <Form.Label column sm="1.5">
+              Name
+            </Form.Label>
+            <Col sm="4">
               <Form.Control type="plaintext" />
             </Col>
           </Form.Group>
@@ -49,7 +49,10 @@ export default class LeadDeactivationReasons extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Col sm="6">
+                  <Form.Label column sm="1.5">
+                    Name
+                  </Form.Label>
+                  <Col sm="4">
                     <Form.Control type="plaintext" />
                   </Col>
                 </Form.Group>
@@ -59,6 +62,40 @@ export default class LeadDeactivationReasons extends Component {
         })}
         <StyledButtonDiv>
           <StyledButton onClick={e => this.addDRReasons(e)}>
+            Add New
+          </StyledButton>
+        </StyledButtonDiv>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <StyledH1>Contact Classes</StyledH1>
+        </div>
+        <Form>
+          <Form.Group as={Row} controlId="formPlaintextEmail">
+            <Form.Label column sm="1.5">
+              Name
+            </Form.Label>
+            <Col sm="4">
+              <Form.Control type="plaintext" />
+            </Col>
+          </Form.Group>
+        </Form>
+        {this.state.BFCReasons.map(index => {
+          return (
+            <div key={index}>
+              <Form>
+                <Form.Group as={Row} controlId="formPlaintextEmail">
+                  <Form.Label column sm="1.5">
+                    Name
+                  </Form.Label>
+                  <Col sm="4">
+                    <Form.Control type="plaintext" />
+                  </Col>
+                </Form.Group>
+              </Form>
+            </div>
+          );
+        })}
+        <StyledButtonDiv style={{ background: "none" }}>
+          <StyledButton onClick={e => this.addBFCReasons(e)}>
             Add New
           </StyledButton>
         </StyledButtonDiv>
@@ -75,7 +112,7 @@ const StyledButton = styled.button`
   width: auto;
   border: solid 1px transparent;
   padding: 0.375rem 0.75rem;
-  margin: 2% 5%;
+  margin: 2% 3%;
   text-align: center;
   font-weight: 400;
   vertical-align: center;
@@ -94,4 +131,8 @@ const StyledH1 = styled.h2`
 
 const StyledButtonDiv = styled.div`
   width: 100%;
+  background: linear-gradient(to left, transparent, grey, transparent);
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
 `;

@@ -23,6 +23,15 @@ import RecommendCaregiver from "./systempreferences/caregiverAndApplicant/Recomm
 import CaregiverBlockReasons from "./systempreferences/caregiverAndApplicant/CaregiverBlockReasons";
 import "./Navigation.css";
 import CaregiverPoints from "./systempreferences/caregiverAndApplicant/CaregiverPoints";
+import ProfileOptions from "./systempreferences/client/ProfileOptions";
+import ClientClasses from "./systempreferences/client/ClientClasses";
+import RegionCodesClientAndCaregiver from "./systempreferences/client/RegionCodesClientAndCaregiver";
+import TriageCategories from "./systempreferences/client/TriageCategories";
+import OtherReferralSources from "./systempreferences/client/OtherReferralSources";
+import PhysicianInformation from "./systempreferences/client/PhysicianInformation";
+import BusinessSettings from "./systempreferences/marketingAndLeads/BusinessSettings";
+import ClassSettings from "./systempreferences/marketingAndLeads/ClassSettings";
+import LeadDeactivationReasons from "./systempreferences/marketingAndLeads/LeadDeactivationReasons";
 
 class Navigation extends React.Component {
   constructor(props, context) {
@@ -168,7 +177,26 @@ class Navigation extends React.Component {
                 <div id="example-collapse-text">
                   <ListGroup.Item>
                     <InnerMenuDiv>
-                      <Link to="/client">Client</Link>
+                      <Link to="/profile-options">Profile Options</Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/client-classes">Client Classes</Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/region-codes-client-and-caregiver">
+                        Region Codes Client and Caregiver
+                      </Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/triage-categories">Triage Categories</Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/referral-sources">Other Referral Sources</Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/physician-information">
+                        Physician Information
+                      </Link>
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
@@ -190,7 +218,15 @@ class Navigation extends React.Component {
                 <div id="example-collapse-text">
                   <ListGroup.Item>
                     <InnerMenuDiv>
-                      <Link to="/marketing">Marketing</Link>
+                      <Link to="/business-settings">Business Settings</Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/class-settings">Class Settings</Link>
+                    </InnerMenuDiv>
+                    <InnerMenuDiv>
+                      <Link to="/lead-deactivation-reasons">
+                        Lead Deactivation Reasons
+                      </Link>
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
@@ -462,8 +498,31 @@ class Navigation extends React.Component {
             component={CaregiverBlockReasons}
           />
           <Route exact path="/caregiver-points" component={CaregiverPoints} />
-
-          <Route exact path="/marketing" component={Marketing} />
+          <Route exact path="/profile-options" component={ProfileOptions} />
+          <Route exact path="/client-classes" component={ClientClasses} />
+          <Route
+            exact
+            path="/region-codes-client-and-caregiver"
+            component={RegionCodesClientAndCaregiver}
+          />
+          <Route exact path="/triage-categories" component={TriageCategories} />
+          <Route
+            exact
+            path="/referral-sources"
+            component={OtherReferralSources}
+          />
+          <Route
+            exact
+            path="/physician-information"
+            component={PhysicianInformation}
+          />
+          <Route exact path="/business-settings" component={BusinessSettings} />
+          <Route exact path="/class-settings" component={ClassSettings} />
+          <Route
+            exact
+            path="/lead-deactivation-reasons"
+            component={LeadDeactivationReasons}
+          />
 
           <Route exact path="/client" component={Client} />
           <Route exact path="/communities" component={Communities} />
