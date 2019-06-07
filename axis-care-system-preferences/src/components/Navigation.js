@@ -6,7 +6,6 @@ import { Route } from "react-router-dom";
 import CaregiverSetup from "../components/systempreferences/caregiverAndApplicant/CaregiverSetup";
 import Marketing from "./Marketing";
 import Client from "./Client";
-import UserContact from "./UserContact";
 import Messaging from "./Messaging";
 import Telephony from "./Telephony";
 import MobileApp from "./MobileApp";
@@ -32,6 +31,8 @@ import PhysicianInformation from "./systempreferences/client/PhysicianInformatio
 import BusinessSettings from "./systempreferences/marketingAndLeads/BusinessSettings";
 import ClassSettings from "./systempreferences/marketingAndLeads/ClassSettings";
 import LeadDeactivationReasons from "./systempreferences/marketingAndLeads/LeadDeactivationReasons";
+import GeneralSettings from "./systempreferences/Communities/GeneralSettings";
+import UserContact from "./systempreferences/userContact/UserContact";
 
 class Navigation extends React.Component {
   constructor(props, context) {
@@ -248,7 +249,7 @@ class Navigation extends React.Component {
                 <div id="example-collapse-text">
                   <ListGroup.Item>
                     <InnerMenuDiv>
-                      <Link to="/communities">Communities</Link>
+                      <Link to="/general-settings">General Settings</Link>
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
@@ -270,7 +271,7 @@ class Navigation extends React.Component {
                 <div id="example-collapse-text">
                   <ListGroup.Item>
                     <InnerMenuDiv>
-                      <Link to="/usercontact">User Contact</Link>
+                      <Link to="/user-contact">User Contact</Link>
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
@@ -525,8 +526,8 @@ class Navigation extends React.Component {
           />
 
           <Route exact path="/client" component={Client} />
-          <Route exact path="/communities" component={Communities} />
-          <Route exact path="/usercontact" component={UserContact} />
+          <Route exact path="/general-settings" component={GeneralSettings} />
+          <Route exact path="/user-contact" component={UserContact} />
           <Route exact path="/messaging" component={Messaging} />
           <Route exact path="/telephony" component={Telephony} />
           <Route exact path="/mobileapp" component={MobileApp} />
@@ -546,6 +547,7 @@ class Navigation extends React.Component {
             path="/reportanddisplayoptions"
             component={ReportDisplayOptions}
           />
+
           <Route exact path="/security" component={Security} />
           <Route exact path="/forms" component={Forms} />
         </div>
