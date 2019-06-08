@@ -4,7 +4,6 @@ import { Card, ListGroup, Collapse } from "react-bootstrap";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
 import CaregiverSetup from "../components/systempreferences/caregiverAndApplicant/CaregiverSetup";
-import Marketing from "./Marketing";
 import Client from "./Client";
 import Messaging from "./Messaging";
 import Telephony from "./Telephony";
@@ -15,7 +14,6 @@ import StatusTypes from "./StatusTypes";
 import ReportDisplayOptions from "./ReportDisplayOptions";
 import Security from "./Security";
 import Forms from "./Forms";
-import Communities from "./Communities";
 import CareNotes from "./systempreferences/caregiverAndApplicant/CareNotes";
 import CaregiverCCF from "./systempreferences/caregiverAndApplicant/CaregiverCCE";
 import RecommendCaregiver from "./systempreferences/caregiverAndApplicant/RecommendCaregiver";
@@ -33,6 +31,7 @@ import ClassSettings from "./systempreferences/marketingAndLeads/ClassSettings";
 import LeadDeactivationReasons from "./systempreferences/marketingAndLeads/LeadDeactivationReasons";
 import GeneralSettings from "./systempreferences/Communities/GeneralSettings";
 import UserContact from "./systempreferences/userContact/UserContact";
+import MessagingGeneralSettings from "./systempreferences/messaging/MessagingGeneralSettings";
 
 class Navigation extends React.Component {
   constructor(props, context) {
@@ -293,7 +292,9 @@ class Navigation extends React.Component {
                 <div id="example-collapse-text">
                   <ListGroup.Item>
                     <InnerMenuDiv>
-                      <Link to="/messaging">Messaging</Link>
+                      <Link to="/general-messaging-settings">
+                        General Messaging Settings
+                      </Link>
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
@@ -528,7 +529,11 @@ class Navigation extends React.Component {
           <Route exact path="/client" component={Client} />
           <Route exact path="/general-settings" component={GeneralSettings} />
           <Route exact path="/user-contact" component={UserContact} />
-          <Route exact path="/messaging" component={Messaging} />
+          <Route
+            exact
+            path="/general-messaging-settings"
+            component={MessagingGeneralSettings}
+          />
           <Route exact path="/telephony" component={Telephony} />
           <Route exact path="/mobileapp" component={MobileApp} />
           <Route
