@@ -2,8 +2,20 @@ import React, { Component } from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import "./CaregiverAndApplicant.css";
+import {
+  MainCard,
+  StyledH1,
+  StyledButtonDiv,
+  StyledButtonDivWithUnderline,
+  StyledDivHeader
+} from "../../styles/Divs";
+import {
+  StyledButton,
+  StyledSelect,
+  StyledSelectTwo
+} from "../../styles/Button";
 
-class CaregiverCCF extends Component {
+export default class CaregiverCCF extends Component {
   state = {
     classes: [],
     certifications: [],
@@ -24,31 +36,19 @@ class CaregiverCCF extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "left",
-          width: "45rem",
-          borderRadius: "6px",
-          margin: "2% auto auto 0",
-          border: "solid 1px #D7D7D7",
-          boxShadow: "1px 1px 5px 1px #80808022",
-          height: "auto"
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "center" }}>
+      <MainCard>
+        <StyledDivHeader>
           <StyledH1>Classes</StyledH1>
-        </div>
+        </StyledDivHeader>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5">
+            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
               Code
             </Form.Label>
             <Col sm="4">
               <Form.Control type="plaintext" placeholder="code" />
             </Col>
-            <Form.Label column sm="1.5">
+            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
               Lable
             </Form.Label>
             <Col sm="4">
@@ -62,13 +62,13 @@ class CaregiverCCF extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5">
+                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
                     Code
                   </Form.Label>
                   <Col sm="4">
                     <Form.Control type="plaintext" />
                   </Col>
-                  <Form.Label column sm="1.5">
+                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
                     Lable
                   </Form.Label>
                   <Col sm="4">
@@ -79,24 +79,24 @@ class CaregiverCCF extends Component {
             </div>
           );
         })}
-        <StyledButtonDiv>
+        <StyledButtonDivWithUnderline style={{ margin: "0 2%" }}>
           <StyledButton onClick={e => this.addClass(e)}>Add Class</StyledButton>
-        </StyledButtonDiv>
+        </StyledButtonDivWithUnderline>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <StyledH1 style={{ fontWeight: "300" }}>Certifications</StyledH1>
         </div>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5">
+            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
               Name
             </Form.Label>
             <Col sm="4">
               <Form.Control type="plaintext" placeholder="code" />
             </Col>
-            <Form.Label column sm="1.5">
+            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
               Default Experation
             </Form.Label>
-            <StyledSelect>
+            <StyledSelectTwo>
               <option>No Expiration</option>
               <option>1 Month</option>
               <option>3 Months</option>
@@ -107,7 +107,7 @@ class CaregiverCCF extends Component {
               <option>3 Years</option>
               <option>4 Years</option>
               <option>5 Years</option>
-            </StyledSelect>
+            </StyledSelectTwo>
           </Form.Group>
         </Form>
         {this.state.certifications.map(index => {
@@ -115,16 +115,16 @@ class CaregiverCCF extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5">
+                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
                     Name
                   </Form.Label>
                   <Col sm="4">
                     <Form.Control type="plaintext" />
                   </Col>
-                  <Form.Label column sm="1.5">
+                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
                     Default Experation
                   </Form.Label>
-                  <StyledSelect>
+                  <StyledSelectTwo>
                     <option>No Expiration</option>
                     <option>1 Month</option>
                     <option>3 Months</option>
@@ -135,32 +135,32 @@ class CaregiverCCF extends Component {
                     <option>3 Years</option>
                     <option>4 Years</option>
                     <option>5 Years</option>
-                  </StyledSelect>
+                  </StyledSelectTwo>
                 </Form.Group>
               </Form>
             </div>
           );
         })}
-        <StyledButtonDiv style={{ width: "100%" }}>
+        <StyledButtonDivWithUnderline style={{ margin: "0 2%" }}>
           <StyledButton onClick={e => this.addCertification(e)}>
             Add Certification
           </StyledButton>
-        </StyledButtonDiv>
+        </StyledButtonDivWithUnderline>
         <div style={{ display: "flex", justifyContent: "center" }}>
           <StyledH1 style={{ fontWeight: "300" }}>Evaluations</StyledH1>
         </div>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5">
+            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
               Name
             </Form.Label>
             <Col sm="4">
               <Form.Control type="plaintext" placeholder="code" />
             </Col>
-            <Form.Label column sm="1.5">
+            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
               Default Experation
             </Form.Label>
-            <StyledSelect>
+            <StyledSelectTwo>
               <option>No Expiration</option>
               <option>1 Month</option>
               <option>3 Months</option>
@@ -171,7 +171,7 @@ class CaregiverCCF extends Component {
               <option>3 Years</option>
               <option>4 Years</option>
               <option>5 Years</option>
-            </StyledSelect>
+            </StyledSelectTwo>
           </Form.Group>
         </Form>
         {this.state.evaluations.map(index => {
@@ -179,16 +179,16 @@ class CaregiverCCF extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5">
+                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
                     Name
                   </Form.Label>
                   <Col sm="4">
                     <Form.Control type="plaintext" />
                   </Col>
-                  <Form.Label column sm="1.5">
+                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
                     Default Experation
                   </Form.Label>
-                  <StyledSelect>
+                  <StyledSelectTwo>
                     <option>No Expiration</option>
                     <option>1 Month</option>
                     <option>3 Months</option>
@@ -199,72 +199,18 @@ class CaregiverCCF extends Component {
                     <option>3 Years</option>
                     <option>4 Years</option>
                     <option>5 Years</option>
-                  </StyledSelect>
+                  </StyledSelectTwo>
                 </Form.Group>
               </Form>
             </div>
           );
         })}
-        <StyledButtonDiv>
+        <StyledButtonDiv style={{ margin: "0 2%" }}>
           <StyledButton onClick={e => this.addEvaluations(e)}>
             Add Evaluation
           </StyledButton>
         </StyledButtonDiv>
-      </div>
+      </MainCard>
     );
   }
 }
-
-export default CaregiverCCF;
-
-const StyledButton = styled.button`
-  background-color: #007bff;
-  height: 35px;
-  align-content: left;
-  outline: none;
-  width: auto;
-  border: solid 1px transparent;
-  padding: 0.375rem 0.75rem;
-  margin: 2% 3%;
-  text-align: center;
-  font-weight: 400;
-  vertical-align: center;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: white;
-`;
-
-const StyledH1 = styled.h2`
-  font-weight: 300;
-  padding: 10px;
-`;
-
-const StyledSelect = styled.select`
-  background-color: #007bff;
-  height: 35px;
-  outline: none;
-  width: auto;
-  border: solid 1px transparent;
-  margin: 0 3%;
-  padding: 0.375rem 0.75rem;
-  text-align: center;
-  font-weight: 400;
-  vertical-align: center;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: white;
-`;
-
-const StyledButtonDiv = styled.div`
-  width: 100%;
-  background: linear-gradient(to left, transparent, grey, transparent);
-  background-size: 100% 1px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-`;

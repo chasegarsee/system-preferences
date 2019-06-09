@@ -2,6 +2,25 @@ import React, { Component } from "react";
 import { Form, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import Switch from "react-switch";
+import {
+  MainCard,
+  StyledDivHeader,
+  StyledH1,
+  StyledButtonDiv,
+  StyledButtonDivWithUnderline,
+  StyledSpan,
+  StyledDiv,
+  StyledSpanMultiLineText,
+  StyledSpanMultiLineTextTwo
+} from "../../styles/Divs";
+import {
+  ButtonSmall,
+  StyledButton,
+  UncheckedIcon,
+  CheckedIcon,
+  StyledSelect,
+  StyledSelectSmall
+} from "../../styles/Button";
 
 export default class UserContact extends Component {
   state = {
@@ -26,23 +45,11 @@ export default class UserContact extends Component {
 
   render() {
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "left",
-          width: "45rem",
-          borderRadius: "6px",
-          margin: "2% auto auto 0",
-          border: "solid 1px #D7D7D7",
-          boxShadow: "1px 1px 5px 1px #80808022",
-          height: "auto"
-        }}
-      >
-        <div style={{ display: "flex", justifyContent: "center" }}>
+      <MainCard>
+        <StyledDivHeader>
           <StyledH1>Caregiver Points</StyledH1>
-        </div>
-        <StyledDiv>
+        </StyledDivHeader>
+        <StyledDiv style={{ margin: "0 2%" }}>
           <StyledSpan>Allow Caregiver Points</StyledSpan>
 
           <label>
@@ -59,7 +66,7 @@ export default class UserContact extends Component {
         </StyledDiv>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5">
+            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
               Name
             </Form.Label>
             <Col sm="4">
@@ -79,7 +86,7 @@ export default class UserContact extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5">
+                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
                     Name
                   </Form.Label>
                   <Col sm="4">
@@ -96,75 +103,10 @@ export default class UserContact extends Component {
             </div>
           );
         })}
-        <StyledButtonDiv>
+        <StyledButtonDiv style={{ margin: "0 2%" }}>
           <StyledButton onClick={e => this.addClass(e)}>Add New</StyledButton>
         </StyledButtonDiv>
-      </div>
+      </MainCard>
     );
   }
 }
-
-const StyledButton = styled.button`
-  background-color: #007bff;
-  height: 35px;
-  align-content: left;
-  outline: none;
-  width: auto;
-  border: solid 1px transparent;
-  padding: 0.375rem 0.75rem;
-  margin: 2% 3%;
-  text-align: center;
-  font-weight: 400;
-  vertical-align: center;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: white;
-`;
-
-const StyledH1 = styled.h2`
-  font-weight: 300;
-  padding: 10px;
-`;
-
-const StyledButtonDiv = styled.div`
-  width: 100%;
-  margin: 0 2%;
-`;
-
-const StyledSpan = styled.span`
-  padding: 0 12px 6px 6px;
-  width: 50%;
-  font-size: 1.2rem;
-`;
-
-const StyledDiv = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin-bottom: 1rem;
-  margin: 5px 20px;
-  padding: 5px 15px;
-`;
-
-const UncheckedIcon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-  margin-top: 3px;
-  font-size: 1rem;
-  position: float;
-  color: white;
-`;
-
-const CheckedIcon = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-left: 10px;
-  font-size: 1rem;
-  color: white;
-`;

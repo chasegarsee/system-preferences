@@ -1,10 +1,28 @@
 import React from "react";
 import styled from "styled-components";
-import "./RecommendCaregiver.css";
 import Slider from "react-rangeslider";
 import Switch from "react-switch";
+import {
+  MainCard,
+  StyledDivHeader,
+  StyledH1,
+  StyledButtonDiv,
+  StyledButtonDivWithUnderline,
+  StyledSpan,
+  StyledDiv,
+  StyledSpanMultiLineText,
+  StyledSpanMultiLineTextTwo
+} from "../../styles/Divs";
+import {
+  ButtonSmall,
+  StyledButton,
+  UncheckedIcon,
+  CheckedIcon,
+  StyledSelect,
+  StyledSelectSmall
+} from "../../styles/Button";
 
-class RecommendCaregiver extends React.Component {
+export default class RecommendCaregiver extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
@@ -58,24 +76,10 @@ class RecommendCaregiver extends React.Component {
   render() {
     let { wot } = this.state;
     return (
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          width: "45rem",
-          borderRadius: "6px",
-          margin: "2% auto 20px 0",
-          border: "solid 1px #D7D7D7",
-          boxShadow: "1px 1px 5px 1px #80808022",
-          height: "auto"
-        }}
-      >
-        <div>
-          <h1 style={{ fontWeight: "300", padding: "20px 0" }}>
-            Recommend Caregiver
-          </h1>
-        </div>
+      <MainCard>
+        <StyledDivHeader>
+          <StyledH1>Recommend Caregiver</StyledH1>
+        </StyledDivHeader>
 
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Final Sorting Order</StyledSpan>
@@ -135,60 +139,7 @@ class RecommendCaregiver extends React.Component {
             />
           </div>
         </StyledDiv>
-      </div>
+      </MainCard>
     );
   }
 }
-
-export default RecommendCaregiver;
-
-const StyledSpan = styled.span`
-  padding: 0 12px 6px 20px;
-  width: 50%;
-  font-size: 1.2rem;
-`;
-
-const StyledDiv = styled.div`
-  display: flex;
-  width: 100%;
-  align-items: center;
-  margin-bottom: 1rem;
-`;
-
-const StyledSelect = styled.select`
-  background-color: #007bff;
-  height: 35px;
-  outline: none;
-  width: 125px;
-  border: solid 1px transparent;
-  padding: 0.375rem 0.75rem;
-  text-align: center;
-  font-weight: 400;
-  vertical-align: center;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: white;
-`;
-
-const UncheckedIcon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-  margin-top: 3px;
-  font-size: 1rem;
-  position: float;
-  color: white;
-`;
-
-const CheckedIcon = styled.div`
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding-left: 10px;
-  font-size: 1rem;
-  color: white;
-`;
