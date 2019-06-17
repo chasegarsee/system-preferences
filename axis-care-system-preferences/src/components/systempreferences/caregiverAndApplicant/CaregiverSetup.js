@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import "../SystemPreferences.css";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
@@ -8,16 +7,12 @@ import {
   MainCard,
   StyledDivHeader,
   StyledH1,
-  StyledButtonDiv,
-  StyledButtonDivWithUnderline,
   StyledSpan,
   StyledDiv,
   StyledSpanMultiLineText,
   StyledSpanMultiLineTextTwo
 } from "../../styles/Divs";
 import {
-  ButtonSmall,
-  StyledButton,
   UncheckedIcon,
   CheckedIcon,
   StyledSelect,

@@ -1,25 +1,13 @@
 import React, { Component } from "react";
 import { Form, Row, Col } from "react-bootstrap";
-import styled from "styled-components";
+
 import {
   MainCard,
   StyledDivHeader,
   StyledH1,
-  StyledButtonDiv,
-  StyledButtonDivWithUnderline,
-  StyledSpan,
-  StyledDiv,
-  StyledSpanMultiLineText,
-  StyledSpanMultiLineTextTwo
+  StyledButtonDiv
 } from "../../styles/Divs";
-import {
-  ButtonSmall,
-  StyledButton,
-  UncheckedIcon,
-  CheckedIcon,
-  StyledSelect,
-  StyledSelectSmall
-} from "../../styles/Button";
+import { StyledButton } from "../../styles/Button";
 
 export default class RegionCodesClientAndCaregiver extends Component {
   state = {

@@ -6,7 +6,6 @@ import {
   StyledButtonDiv,
   StyledButtonDivWithUnderline,
   MainCard,
-  StyledDiv,
   StyledDivHeader
 } from "../../styles/Divs";
 import { StyledButton } from "../../styles/Button";

@@ -1,26 +1,16 @@
 import React, { Component } from "react";
 import { Form, Row, Col } from "react-bootstrap";
-import styled from "styled-components";
+
 import Switch from "react-switch";
 import {
   MainCard,
   StyledDivHeader,
   StyledH1,
   StyledButtonDiv,
-  StyledButtonDivWithUnderline,
   StyledSpan,
-  StyledDiv,
-  StyledSpanMultiLineText,
-  StyledSpanMultiLineTextTwo
+  StyledDiv
 } from "../../styles/Divs";
-import {
-  ButtonSmall,
-  StyledButton,
-  UncheckedIcon,
-  CheckedIcon,
-  StyledSelect,
-  StyledSelectSmall
-} from "../../styles/Button";
+import { StyledButton, UncheckedIcon, CheckedIcon } from "../../styles/Button";
 
 export default class UserContact extends Component {
   state = {

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Form, Row, Col } from "react-bootstrap";
-import styled from "styled-components";
 import "./CaregiverAndApplicant.css";
 import {
   MainCard,
@@ -9,11 +8,7 @@ import {
   StyledButtonDivWithUnderline,
   StyledDivHeader
 } from "../../styles/Divs";
-import {
-  StyledButton,
-  StyledSelect,
-  StyledSelectTwo
-} from "../../styles/Button";
+import { StyledButton, StyledSelectTwo } from "../../styles/Button";
 
 export default class CaregiverCCF extends Component {
   state = {

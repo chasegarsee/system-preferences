@@ -1,26 +1,13 @@
 import React from "react";
-import { Form } from "react-bootstrap";
-import styled from "styled-components";
 import Switch from "react-switch";
 import {
   MainCard,
   StyledDivHeader,
   StyledH1,
-  StyledButtonDiv,
-  StyledButtonDivWithUnderline,
   StyledSpan,
-  StyledDiv,
-  StyledSpanMultiLineText,
-  StyledSpanMultiLineTextTwo
+  StyledDiv
 } from "../../styles/Divs";
-import {
-  ButtonSmall,
-  StyledButton,
-  UncheckedIcon,
-  CheckedIcon,
-  StyledSelect,
-  StyledSelectSmall
-} from "../../styles/Button";
+import { UncheckedIcon, CheckedIcon } from "../../styles/Button";
 
 export default class PhysicianInformation extends React.Component {
   constructor(props, context) {
