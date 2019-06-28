@@ -4,11 +4,8 @@ export const MainCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
-  width: 45rem;
-  border-radius: 6px;
-  margin: 2% auto auto 0;
-  border: solid 1px #d7d7d7;
-  box-shadow: 1px 1px 5px 1px #80808022;
+  width: 100%;
+  /* margin: 2% auto auto 0; */
   height: auto;
 `;
 
@@ -44,6 +41,7 @@ export const StyledDiv = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
+  border-bottom: 1px solid #eeeff2;
   margin-bottom: 1rem;
   margin: 5px 20px;
   padding: 5px 15px;

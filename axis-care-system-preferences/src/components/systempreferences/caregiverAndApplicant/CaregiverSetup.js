@@ -115,6 +115,26 @@ export default class CaregiverSetup extends React.Component {
             />
           </label>
         </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>Weekly overtime threshold</StyledSpan>
+          <Slider
+            min={0}
+            max={168}
+            value={wot}
+            orientation="horizontal"
+            onChange={this.handleOnChangeWot}
+          />
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>Daily overtime threshold</StyledSpan>
+          <Slider
+            min={0}
+            max={168}
+            value={dot}
+            orientation="horizontal"
+            onChange={this.handleOnChangeDot}
+          />
+        </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Payable hours</StyledSpan>
           <StyledSelect>
@@ -140,26 +160,7 @@ export default class CaregiverSetup extends React.Component {
           <StyledSpan>Pay inter-visit travel time</StyledSpan>
           <input type="checkbox" />
         </StyledDiv>
-        <StyledDiv>
-          <StyledSpan>Weekly overtime threshold</StyledSpan>
-          <Slider
-            min={0}
-            max={168}
-            value={wot}
-            orientation="horizontal"
-            onChange={this.handleOnChangeWot}
-          />
-        </StyledDiv>
-        <StyledDiv>
-          <StyledSpan>Daily overtime threshold</StyledSpan>
-          <Slider
-            min={0}
-            max={168}
-            value={dot}
-            orientation="horizontal"
-            onChange={this.handleOnChangeDot}
-          />
-        </StyledDiv>
+
         <StyledDiv>
           <StyledSpan>Request break times</StyledSpan>
           <input type="checkbox" />
