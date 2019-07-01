@@ -13,7 +13,8 @@ class App extends Component {
             backgroundColor: "#165FC7",
             position: "-webkit-sticky",
             position: "sticky",
-            top: "0px"
+            top: "0px",
+            zIndex: 1
           }}
         >
           <Navbar.Brand

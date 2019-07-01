@@ -5,44 +5,34 @@ export const MainCard = styled.div`
   flex-direction: column;
   align-items: left;
   width: 100%;
-  /* margin: 2% auto auto 0; */
   height: auto;
 `;
 
 export const StyledDivHeader = styled.div`
   display: flex;
   justify-content: flex-start;
-  margin: 5px 20px;
-  padding: 5px 15px;
 `;
 
 export const StyledH1 = styled.h2`
   width: 100%;
   font-weight: 300;
-  padding: 10px;
+  padding: 6px;
 `;
 
-export const StyledButtonDiv = styled.div`
-  width: 100%;
-`;
+export const StyledButtonDiv = styled.div``;
 
 export const StyledDivWithUnderline = styled.div`
   display: flex;
-  width: 100%;
+
   align-items: center;
   margin-bottom: 1rem;
-  margin: 5px 20px;
-  padding: 5px 15px;
   border-bottom: 1px solid #eeeff2;
 `;
 
 export const StyledButtonDivWithUnderline = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
   margin-bottom: 1rem;
-  margin: 5px 20px;
-  padding: 5px 15px;
   border-bottom: 1px solid #eeeff2;
 `;
 
@@ -71,11 +61,8 @@ export const StyledSpan2 = styled.span`
 
 export const StyledDiv = styled.div`
   display: flex;
-  width: 100%;
   align-items: center;
   margin-bottom: 1rem;
-  margin: 5px 20px;
-  padding: 5px 15px;
 `;
 
 export const StyledSpanMultiLineText = styled.span`

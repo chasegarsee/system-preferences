@@ -36,7 +36,7 @@ import MessagingGeneralSettings from "./systempreferences/messaging/MessagingGen
 class Navigation extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.handleChange = this.handleChange.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
     this.state = {
       open: false,
       opentwo: false,
@@ -55,23 +55,24 @@ class Navigation extends React.Component {
     };
   }
 
-  handleChange(e) {
-    console.log(e.target.value); //  search bar text
-    let object = document.getElementById("myDiv");
-    console.log(object.textContent); //  div text
+  // handleChange(e) {
+  //   console.log(e.target.value); //  search bar text
+  //   let object = document.getElementById("myDiv");
+  //   console.log(object.textContent); //  div text
 
-    let searchBarText = e.target.value;
-    let divText = object.textContent;
-    if (divText.includes(searchBarText)) {
-      console.log("the div text contains your search text");
-    } else {
-      console.log("the div text doesn't contain search text");
-    }
-  }
+  //   let searchBarText = e.target.value;
+  //   let divText = object.textContent;
+  //   if (divText.includes(searchBarText)) {
+  //     console.log("the div text contains your search text");
+  //   } else {
+  //     console.log("the div text doesn't contain search text");
+  //   }
+  // }
 
   render() {
     const {
       open,
+
       opentwo,
       openthree,
       openfour,
@@ -94,9 +95,7 @@ class Navigation extends React.Component {
           style={{
             height: "100%",
             display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            margin: "2%"
+            justifyContent: "center"
           }}
         >
           <Card
