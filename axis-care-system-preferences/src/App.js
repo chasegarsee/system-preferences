@@ -8,10 +8,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navbar style={{ backgroundColor: "#165FC7" }}>
+        <Navbar
+          style={{
+            backgroundColor: "#165FC7",
+            position: "-webkit-sticky",
+            position: "sticky",
+            top: "0px"
+          }}
+        >
           <Navbar.Brand
             href="#home"
-            style={{ color: "white", fontSize: "1.6rem" }}
+            style={{
+              color: "white",
+              fontSize: "1.6rem"
+            }}
           >
             AxisCare
           </Navbar.Brand>

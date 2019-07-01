@@ -95,7 +95,8 @@ class Navigation extends React.Component {
             height: "100%",
             display: "flex",
             justifyContent: "center",
-            width: "85%"
+            width: "100%",
+            margin: "2%"
           }}
         >
           <Card
@@ -104,7 +105,10 @@ class Navigation extends React.Component {
               margin: "2% 3% 5px auto",
               borderRadius: "5px",
               boxShadow: "1px 1px 5px 1px #80808022",
-              height: "100%"
+              height: "100%",
+              position: "-webkit-sticky",
+              position: "sticky",
+              top: "75px"
             }}
           >
             <ListGroup

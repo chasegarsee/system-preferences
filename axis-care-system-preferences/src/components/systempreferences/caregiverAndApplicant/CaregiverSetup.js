@@ -8,9 +8,12 @@ import {
   StyledDivHeader,
   StyledH1,
   StyledSpan,
+  StyledSpan2,
   StyledDiv,
   StyledSpanMultiLineText,
-  StyledSpanMultiLineTextTwo
+  StyledSpanMultiLineTextTwo,
+  StyledDivWithUnderline,
+  StyledPara
 } from "../../styles/Divs";
 import {
   UncheckedIcon,
@@ -99,9 +102,18 @@ export default class CaregiverSetup extends React.Component {
         <StyledDivHeader>
           <StyledH1>Caregiver Setup</StyledH1>
         </StyledDivHeader>
-
+        <StyledDivHeader>
+          <StyledSpan2>Features</StyledSpan2>
+          <StyledSpan2>Stauts</StyledSpan2>
+        </StyledDivHeader>
         <StyledDiv>
-          <StyledSpan>Overtime: use weighted rate</StyledSpan>
+          <StyledSpan>
+            Overtime: use weighted rate <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos!
+            </StyledPara>
+          </StyledSpan>
 
           <label>
             <Switch
@@ -125,7 +137,7 @@ export default class CaregiverSetup extends React.Component {
             onChange={this.handleOnChangeWot}
           />
         </StyledDiv>
-        <StyledDiv>
+        <StyledDivWithUnderline>
           <StyledSpan>Daily overtime threshold</StyledSpan>
           <Slider
             min={0}
@@ -134,7 +146,7 @@ export default class CaregiverSetup extends React.Component {
             orientation="horizontal"
             onChange={this.handleOnChangeDot}
           />
-        </StyledDiv>
+        </StyledDivWithUnderline>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Payable hours</StyledSpan>
           <StyledSelect>
@@ -145,10 +157,6 @@ export default class CaregiverSetup extends React.Component {
           </StyledSelect>
         </StyledDiv>
         <StyledDiv>
-          <StyledSpan>Pay break times</StyledSpan>
-          <input type="checkbox" />
-        </StyledDiv>
-        <StyledDiv>
           <StyledSpan>Pay meal times</StyledSpan>
           <input type="checkbox" />
         </StyledDiv>
@@ -157,14 +165,13 @@ export default class CaregiverSetup extends React.Component {
           <input type="checkbox" />
         </StyledDiv>
         <StyledDiv>
+          <StyledSpan>Pay break times</StyledSpan>
+          <input type="checkbox" />
+        </StyledDiv>
+        <StyledDivWithUnderline>
           <StyledSpan>Pay inter-visit travel time</StyledSpan>
           <input type="checkbox" />
-        </StyledDiv>
-
-        <StyledDiv>
-          <StyledSpan>Request break times</StyledSpan>
-          <input type="checkbox" />
-        </StyledDiv>
+        </StyledDivWithUnderline>
         <StyledDiv>
           <StyledSpan>Request meal times</StyledSpan>
           <input type="checkbox" />
@@ -174,13 +181,7 @@ export default class CaregiverSetup extends React.Component {
           <input type="checkbox" />
         </StyledDiv>
         <StyledDiv>
-          <StyledSpan>Request inter-visit travel time</StyledSpan>
-          <input type="checkbox" />
-        </StyledDiv>
-        <StyledDiv>
-          <StyledSpan>
-            Request break times <br /> (telephony)
-          </StyledSpan>
+          <StyledSpan>Request break times</StyledSpan>
           <input type="checkbox" />
         </StyledDiv>
         <StyledDiv>
@@ -195,20 +196,32 @@ export default class CaregiverSetup extends React.Component {
           </StyledSpan>
           <input type="checkbox" />
         </StyledDiv>
+        <StyledDivWithUnderline>
+          <StyledSpan>
+            Request break times <br /> (telephony)
+          </StyledSpan>
+          <input type="checkbox" />
+        </StyledDivWithUnderline>
+
+        <StyledDiv>
+          <StyledSpan>Request inter-visit travel time</StyledSpan>
+          <input type="checkbox" />
+        </StyledDiv>
+
         <StyledDiv>
           <StyledSpan>
             Request inter-visit travel time <br /> (telephony)
           </StyledSpan>
           <input type="checkbox" />
         </StyledDiv>
-        <StyledDiv>
+        <StyledDivWithUnderline>
           <StyledSpan>Inter-visit travel time before/after</StyledSpan>
           <StyledSelect>
             <option>Select...</option>
             <option>Befor Visit</option>
             <option>After Visit</option>
           </StyledSelect>
-        </StyledDiv>
+        </StyledDivWithUnderline>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>Autocalculate inter-visit travel time</StyledSpan>
           <StyledSelect>
@@ -218,7 +231,7 @@ export default class CaregiverSetup extends React.Component {
             <option>Apply After Visit</option>
           </StyledSelect>
         </StyledDiv>
-        <StyledDiv>
+        <StyledDivWithUnderline>
           <StyledSpan>
             Autocalculate inter-visit travel time max gap (minutes)
           </StyledSpan>
@@ -229,7 +242,7 @@ export default class CaregiverSetup extends React.Component {
             orientation="horizontal"
             onChange={this.handleOnChangeAtt}
           />
-        </StyledDiv>
+        </StyledDivWithUnderline>
         <StyledDiv>
           <StyledSpan>Daily Certification Threshold (hours)</StyledSpan>
           <Slider
@@ -417,7 +430,7 @@ export default class CaregiverSetup extends React.Component {
             of uninterrupted meal time,
           </StyledSpanMultiLineText>
         </StyledDiv>
-        <StyledDiv>
+        <StyledDivWithUnderline>
           <StyledSpan />
           <StyledSelectSmall
             style={{ width: "20px !important", marginRight: "10px" }}
@@ -482,7 +495,7 @@ export default class CaregiverSetup extends React.Component {
             <option>12 hours</option>
           </StyledSelect>
           <StyledSpanMultiLineTextTwo>long break(s)</StyledSpanMultiLineTextTwo>
-        </StyledDiv>
+        </StyledDivWithUnderline>
 
         <StyledDiv>
           <StyledSpan>Fixed Certification Threshold (hours)</StyledSpan>
@@ -671,7 +684,7 @@ export default class CaregiverSetup extends React.Component {
             of uninterrupted meal time,
           </StyledSpanMultiLineText>
         </StyledDiv>
-        <StyledDiv>
+        <StyledDivWithUnderline>
           <StyledSpan />
           <StyledSelectSmall
             style={{ width: "20px !important", marginRight: "10px" }}
@@ -736,7 +749,7 @@ export default class CaregiverSetup extends React.Component {
             <option>12 hours</option>
           </StyledSelect>
           <StyledSpanMultiLineTextTwo>long break(s)</StyledSpanMultiLineTextTwo>
-        </StyledDiv>
+        </StyledDivWithUnderline>
 
         <StyledDiv>
           <StyledSpan>Hourly Certification Threshold (hours)</StyledSpan>
@@ -925,7 +938,7 @@ export default class CaregiverSetup extends React.Component {
             of uninterrupted meal time,
           </StyledSpanMultiLineText>
         </StyledDiv>
-        <StyledDiv>
+        <StyledDivWithUnderline>
           <StyledSpan />
           <StyledSelectSmall
             style={{ width: "20px !important", marginRight: "10px" }}
@@ -990,7 +1003,7 @@ export default class CaregiverSetup extends React.Component {
             <option>12 hours</option>
           </StyledSelect>
           <StyledSpanMultiLineTextTwo>long break(s)</StyledSpanMultiLineTextTwo>
-        </StyledDiv>
+        </StyledDivWithUnderline>
         <StyledDiv>
           <StyledSpan>Caregiver care plan signatures</StyledSpan>
           <label>
