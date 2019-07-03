@@ -60,7 +60,7 @@ class App extends Component {
             <Button variant="outline-light">Search</Button>
           </Form>
         </Navbar>
-        <h1
+        {/* <h1
           style={{
             fontWeight: "300",
             display: "flex",
@@ -70,7 +70,7 @@ class App extends Component {
           }}
         >
           AxisCare System Preferences
-        </h1>
+        </h1> */}
 
         <Navigation />
       </div>

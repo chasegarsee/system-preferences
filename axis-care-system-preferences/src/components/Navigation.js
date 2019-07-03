@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { Card, ListGroup, Collapse } from "react-bootstrap";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
@@ -51,7 +51,8 @@ class Navigation extends React.Component {
       openeleven: false,
       opentwelve: false,
       openthirteen: false,
-      openfourteen: false
+      openfourteen: false,
+      active: ""
     };
   }
 
@@ -69,10 +70,13 @@ class Navigation extends React.Component {
   //   }
   // }
 
+  someFunct(name) {
+    this.setState({ active: name });
+  }
+
   render() {
     const {
       open,
-
       opentwo,
       openthree,
       openfour,
@@ -120,44 +124,45 @@ class Navigation extends React.Component {
                 aria-expanded={open}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />{" "}
-                  Caregiver
+                  <StyledI className="fas fa-chevron-right" /> Caregiver
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.open}>
                 <div id="example-collapse-text">
-                  <ListGroup.Item
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      flexDirection: "column"
-                    }}
-                  >
+                  <ListGroup.Item action href="#link1">
                     <InnerMenuDiv>
-                      <Link to="/caregiver-setup">Caregiver Setup</Link>
+                      <NavLink to="/caregiver-setup">Caregiver Setup</NavLink>
                     </InnerMenuDiv>
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link2">
                     <InnerMenuDiv>
-                      <Link to="/care-notes">Care Notes</Link>
+                      <NavLink to="/care-notes">Care Notes</NavLink>
                     </InnerMenuDiv>
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link3">
                     <InnerMenuDiv>
-                      <Link to="/caregiver-classes-certifications-evaluations">
+                      <NavLink to="/caregiver-classes-certifications-evaluations">
                         Classes Certifications Evaluations
-                      </Link>
+                      </NavLink>
                     </InnerMenuDiv>
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link4">
                     <InnerMenuDiv>
-                      <Link to="/recommend-caregiver">Recommend Caregiver</Link>
+                      <NavLink to="/recommend-caregiver">
+                        Recommend Caregiver
+                      </NavLink>
                     </InnerMenuDiv>
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link5">
                     <InnerMenuDiv>
-                      <Link to="/caregiver-block-reasons">
+                      <NavLink to="/caregiver-block-reasons">
                         Caregiver Block Reasons
-                      </Link>
+                      </NavLink>
                     </InnerMenuDiv>
+                  </ListGroup.Item>
+                  <ListGroup.Item action href="#link6">
                     <InnerMenuDiv>
-                      <Link to="/caregiver-points">Caregiver Points</Link>
+                      <NavLink to="/caregiver-points">Caregiver Points</NavLink>
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
@@ -169,10 +174,7 @@ class Navigation extends React.Component {
               >
                 <StyledSpan>
                   {" "}
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Client
                 </StyledSpan>
               </StyledNav>
@@ -210,10 +212,7 @@ class Navigation extends React.Component {
                 aria-expanded={openthree}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Marketing
                 </StyledSpan>
               </StyledNav>
@@ -240,10 +239,7 @@ class Navigation extends React.Component {
                 aria-expanded={openfour}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Communities
                 </StyledSpan>
               </StyledNav>
@@ -262,10 +258,7 @@ class Navigation extends React.Component {
                 aria-expanded={openfive}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   User Contact
                 </StyledSpan>
               </StyledNav>
@@ -284,10 +277,7 @@ class Navigation extends React.Component {
                 aria-expanded={opensix}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Messaging
                 </StyledSpan>
               </StyledNav>
@@ -308,10 +298,7 @@ class Navigation extends React.Component {
                 aria-expanded={openseven}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Telephony
                 </StyledSpan>
               </StyledNav>
@@ -330,10 +317,7 @@ class Navigation extends React.Component {
                 aria-expanded={openeight}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Mobile App
                 </StyledSpan>
               </StyledNav>
@@ -352,10 +336,7 @@ class Navigation extends React.Component {
                 aria-expanded={opennine}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Payroll / Billing / Quickbooks
                 </StyledSpan>
               </StyledNav>
@@ -376,10 +357,7 @@ class Navigation extends React.Component {
                 aria-expanded={openten}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Third Party Billing
                 </StyledSpan>
               </StyledNav>
@@ -398,10 +376,7 @@ class Navigation extends React.Component {
                 aria-expanded={openeleven}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Status Types
                 </StyledSpan>
               </StyledNav>
@@ -420,10 +395,7 @@ class Navigation extends React.Component {
                 aria-expanded={opentwelve}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Report and Display Options
                 </StyledSpan>
               </StyledNav>
@@ -444,10 +416,7 @@ class Navigation extends React.Component {
                 aria-expanded={openthirteen}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Security
                 </StyledSpan>
               </StyledNav>
@@ -466,10 +435,7 @@ class Navigation extends React.Component {
                 aria-expanded={openfourteen}
               >
                 <StyledSpan>
-                  <i
-                    style={{ padding: "15px" }}
-                    className="fas fa-chevron-right"
-                  />
+                  <StyledI className="fas fa-chevron-right" />
                   Forms
                 </StyledSpan>
               </StyledNav>
@@ -571,9 +537,10 @@ const StyledNav = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #80808033;
+
   &:hover {
     cursor: pointer;
+    /* border-bottom: 1px solid #80808033; */
   }
 `;
 
@@ -590,4 +557,9 @@ const InnerMenuDiv = styled.div`
   width: 175px;
   justify-content: flex-start;
   margin: 5px;
+  border: none;
+`;
+
+const StyledI = styled.i`
+  padding: 15px;
 `;

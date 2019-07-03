@@ -6,6 +6,7 @@ export const MainCard = styled.div`
   align-items: left;
   width: 100%;
   height: auto;
+  margin: 2% 0;
 `;
 
 export const StyledDivHeader = styled.div`
