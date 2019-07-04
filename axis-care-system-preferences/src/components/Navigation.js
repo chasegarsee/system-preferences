@@ -556,7 +556,6 @@ const InnerMenuDiv = styled.div`
   display: flex;
   width: 175px;
   justify-content: flex-start;
-  margin: 5px;
   border: none;
 `;
 
