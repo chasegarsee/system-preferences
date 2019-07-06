@@ -36,7 +36,10 @@ import MessagingGeneralSettings from "./systempreferences/messaging/MessagingGen
 class Navigation extends React.Component {
   constructor(props, context) {
     super(props, context);
-    // this.handleChange = this.handleChange.bind(this);
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+
     this.state = {
       open: false,
       opentwo: false,
@@ -56,22 +59,30 @@ class Navigation extends React.Component {
     };
   }
 
-  // handleChange(e) {
-  //   console.log(e.target.value); //  search bar text
-  //   let object = document.getElementById("myDiv");
-  //   console.log(object.textContent); //  div text
-
-  //   let searchBarText = e.target.value;
-  //   let divText = object.textContent;
-  //   if (divText.includes(searchBarText)) {
-  //     console.log("the div text contains your search text");
-  //   } else {
-  //     console.log("the div text doesn't contain search text");
-  //   }
-  // }
-
   someFunct(name) {
     this.setState({ active: name });
+  }
+
+  handleClick() {
+    if (!this.state.open) {
+      // attach/remove event handler
+      document.addEventListener("click", this.handleOutsideClick, false);
+    } else {
+      document.removeEventListener("click", this.handleOutsideClick, false);
+    }
+
+    this.setState(prevState => ({
+      open: !prevState.open
+    }));
+  }
+
+  handleOutsideClick(e) {
+    // ignore clicks on the component itself
+    if (this.node.contains(e.target)) {
+      return;
+    }
+
+    this.handleClick();
   }
 
   render() {
@@ -119,16 +130,23 @@ class Navigation extends React.Component {
               style={{ height: "auto", alignItems: "center" }}
             >
               <StyledNav
-                onClick={() => this.setState({ open: !open })}
-                aria-controls="example-collapse-text"
-                aria-expanded={open}
+                ref={node => {
+                  this.node = node;
+                }}
+                onClick={this.handleClick}
+                // aria-controls="example-collapse-text"
               >
                 <StyledSpan>
                   <StyledI className="fas fa-chevron-right" /> Caregiver
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.open}>
-                <div id="example-collapse-text">
+                <div
+                  ref={node => {
+                    this.node = node;
+                  }}
+                  id="example-collapse-text"
+                >
                   <ListGroup.Item action href="#link1">
                     <InnerMenuDiv>
                       <NavLink to="/caregiver-setup">Caregiver Setup</NavLink>
