@@ -105,26 +105,8 @@ class Navigation extends React.Component {
 
     return (
       <div>
-        <div
-          className="main"
-          style={{
-            height: "100%",
-            display: "flex",
-            justifyContent: "center"
-          }}
-        >
-          <Card
-            style={{
-              width: "18rem",
-              margin: "2% 3% 5px auto",
-              borderRadius: "5px",
-              boxShadow: "1px 1px 5px 1px #80808022",
-              height: "100%",
-              position: "-webkit-sticky",
-              position: "sticky",
-              top: "75px"
-            }}
-          >
+        <div className="main">
+          <Card className="main-card">
             <ListGroup
               variant="flush"
               style={{ height: "auto", alignItems: "center" }}

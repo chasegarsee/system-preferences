@@ -1,3 +1,20 @@
+.main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-card {
+  width: 18rem;
+  margin: 2% 3% 5px auto;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 1px #80808022;
+  height: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 75px;
+}
+
 .fas {
   transition: 0.5s;
 }
@@ -91,6 +108,14 @@ a.active {
 @media (max-width: 1160px) {
   .navigation-bar-div {
     display: none;
+  }
+
+  .main {
+    flex-direction: column;
+  }
+
+  .main-card {
+    width: 100%;
   }
 }
 
