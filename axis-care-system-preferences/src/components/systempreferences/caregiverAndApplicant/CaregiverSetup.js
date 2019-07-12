@@ -102,9 +102,9 @@ export default class CaregiverSetup extends React.Component {
         <StyledDivHeader>
           <StyledH1>Caregiver Setup</StyledH1>
         </StyledDivHeader>
-        <StyledDivHeader>
+        <StyledDivHeader style={{ borderBottom: "2px solid #eeeff2" }}>
           <StyledSpan2>Features</StyledSpan2>
-          <StyledSpan2>Stauts</StyledSpan2>
+          <StyledSpan2>Status</StyledSpan2>
         </StyledDivHeader>
         <StyledDiv>
           <StyledSpan>
@@ -128,7 +128,13 @@ export default class CaregiverSetup extends React.Component {
           </label>
         </StyledDiv>
         <StyledDiv>
-          <StyledSpan>Weekly overtime threshold</StyledSpan>
+          <StyledSpan>
+            Weekly overtime threshold <br />
+            <StyledPara>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Doloremque
+            </StyledPara>
+          </StyledSpan>
           <Slider
             min={0}
             max={168}
