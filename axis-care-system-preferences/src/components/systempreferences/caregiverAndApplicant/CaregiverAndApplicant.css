@@ -1,11 +1,7 @@
 .form-group {
-  margin: 2% 3% !important;
+  margin: 2% 0 !important;
 }
 
-.form-group row {
-  margin: 0 3% !important;
-}
-
-.Form {
-  margin: 0 2% !important;
+.col-sm-4 {
+  padding: 0;
 }

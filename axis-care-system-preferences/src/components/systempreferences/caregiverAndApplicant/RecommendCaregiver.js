@@ -7,7 +7,9 @@ import {
   StyledDivHeader,
   StyledH1,
   StyledSpan,
-  StyledDiv
+  StyledDiv,
+  StyledSpan2,
+  StyledPara
 } from "../../styles/Divs";
 import { UncheckedIcon, CheckedIcon, StyledSelect } from "../../styles/Button";
 
@@ -69,9 +71,19 @@ export default class RecommendCaregiver extends React.Component {
         <StyledDivHeader>
           <StyledH1>Recommend Caregiver</StyledH1>
         </StyledDivHeader>
+        <StyledDivHeader style={{ borderBottom: "2px solid #eeeff2" }}>
+          <StyledSpan2>Features</StyledSpan2>
+          <StyledSpan2>Status</StyledSpan2>
+        </StyledDivHeader>
 
         <StyledDiv style={{ alignItems: "center" }}>
-          <StyledSpan>Final Sorting Order</StyledSpan>
+          <StyledSpan>
+            Final Sorting Order <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos!
+            </StyledPara>
+          </StyledSpan>
           <StyledSelect>
             <option>Distance Only</option>
             <option>Seniority, then Distance</option>
@@ -79,7 +91,11 @@ export default class RecommendCaregiver extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>
-            Show sorting rank, regardless of placement due to conflicts.
+            Show sorting rank, regardless of placement due to conflicts. <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid,
+              dolor?
+            </StyledPara>
           </StyledSpan>
           <label>
             <Switch
@@ -97,6 +113,11 @@ export default class RecommendCaregiver extends React.Component {
           <StyledSpan>
             Limit recommendations to caregivers in the same region as the
             client.
+            <br />
+            <StyledPara>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
+              culpa?
+            </StyledPara>
           </StyledSpan>
           <label>
             <Switch
@@ -114,7 +135,11 @@ export default class RecommendCaregiver extends React.Component {
         <StyledDiv>
           <StyledSpan>
             Maximum Caregivers to display (affects download speed) Conflicted
-            Caregivers will be most likely to be dropped.
+            Caregivers will be most likely to be dropped. <br />
+            <StyledPara>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem,
+              repellendus!
+            </StyledPara>
           </StyledSpan>
           <div class="range-slider">
             <Slider

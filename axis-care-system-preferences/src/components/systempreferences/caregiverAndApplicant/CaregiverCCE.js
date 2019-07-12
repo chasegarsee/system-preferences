@@ -6,7 +6,8 @@ import {
   StyledH1,
   StyledButtonDiv,
   StyledButtonDivWithUnderline,
-  StyledDivHeader
+  StyledDivHeader,
+  StyledSpan2
 } from "../../styles/Divs";
 import { StyledButton, StyledSelectTwo } from "../../styles/Button";
 
@@ -37,13 +38,13 @@ export default class CaregiverCCF extends Component {
         </StyledDivHeader>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+            <Form.Label column sm="1.5">
               Code
             </Form.Label>
             <Col sm="4">
               <Form.Control type="plaintext" placeholder="code" />
             </Col>
-            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+            <Form.Label column sm="1.5">
               Lable
             </Form.Label>
             <Col sm="4">
@@ -57,13 +58,13 @@ export default class CaregiverCCF extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+                  <Form.Label column sm="1.5">
                     Code
                   </Form.Label>
                   <Col sm="4">
                     <Form.Control type="plaintext" />
                   </Col>
-                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+                  <Form.Label column sm="1.5">
                     Lable
                   </Form.Label>
                   <Col sm="4">
@@ -74,7 +75,7 @@ export default class CaregiverCCF extends Component {
             </div>
           );
         })}
-        <StyledButtonDivWithUnderline style={{ margin: "0 2%" }}>
+        <StyledButtonDivWithUnderline>
           <StyledButton onClick={e => this.addClass(e)}>Add Class</StyledButton>
         </StyledButtonDivWithUnderline>
         <div style={{ display: "flex", justifyContent: "center" }}>
@@ -82,13 +83,13 @@ export default class CaregiverCCF extends Component {
         </div>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+            <Form.Label column sm="1.5">
               Name
             </Form.Label>
             <Col sm="4">
               <Form.Control type="plaintext" placeholder="code" />
             </Col>
-            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+            <Form.Label column sm="1.5">
               Default Experation
             </Form.Label>
             <StyledSelectTwo>
@@ -110,13 +111,13 @@ export default class CaregiverCCF extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+                  <Form.Label column sm="1.5">
                     Name
                   </Form.Label>
                   <Col sm="4">
                     <Form.Control type="plaintext" />
                   </Col>
-                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+                  <Form.Label column sm="1.5">
                     Default Experation
                   </Form.Label>
                   <StyledSelectTwo>
@@ -136,7 +137,7 @@ export default class CaregiverCCF extends Component {
             </div>
           );
         })}
-        <StyledButtonDivWithUnderline style={{ margin: "0 2%" }}>
+        <StyledButtonDivWithUnderline>
           <StyledButton onClick={e => this.addCertification(e)}>
             Add Certification
           </StyledButton>
@@ -146,13 +147,13 @@ export default class CaregiverCCF extends Component {
         </div>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+            <Form.Label column sm="1.5">
               Name
             </Form.Label>
             <Col sm="4">
               <Form.Control type="plaintext" placeholder="code" />
             </Col>
-            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+            <Form.Label column sm="1.5">
               Default Experation
             </Form.Label>
             <StyledSelectTwo>
@@ -174,13 +175,13 @@ export default class CaregiverCCF extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+                  <Form.Label column sm="1.5">
                     Name
                   </Form.Label>
                   <Col sm="4">
                     <Form.Control type="plaintext" />
                   </Col>
-                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+                  <Form.Label column sm="1.5">
                     Default Experation
                   </Form.Label>
                   <StyledSelectTwo>
@@ -200,7 +201,7 @@ export default class CaregiverCCF extends Component {
             </div>
           );
         })}
-        <StyledButtonDiv style={{ margin: "0 2%" }}>
+        <StyledButtonDiv>
           <StyledButton onClick={e => this.addEvaluations(e)}>
             Add Evaluation
           </StyledButton>

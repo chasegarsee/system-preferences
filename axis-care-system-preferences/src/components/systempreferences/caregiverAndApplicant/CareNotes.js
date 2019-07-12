@@ -7,7 +7,9 @@ import {
   StyledDivHeader,
   StyledH1,
   StyledSpan,
-  StyledDiv
+  StyledSpan2,
+  StyledDiv,
+  StyledPara
 } from "../../styles/Divs";
 import { UncheckedIcon, CheckedIcon } from "../../styles/Button";
 
@@ -31,8 +33,18 @@ export default class CareNotes extends React.Component {
         <StyledDivHeader>
           <StyledH1 style={{ fontWeight: "300" }}>Care Notes</StyledH1>
         </StyledDivHeader>
+        <StyledDivHeader style={{ borderBottom: "2px solid #eeeff2" }}>
+          <StyledSpan2>Features</StyledSpan2>
+          <StyledSpan2>Status</StyledSpan2>
+        </StyledDivHeader>
         <StyledDiv>
-          <StyledSpan>Additional Daily certification text</StyledSpan>
+          <StyledSpan>
+            Additional Daily certification text <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos!
+            </StyledPara>
+          </StyledSpan>
           <Form>
             <Form.Group controlId="exampleForm.ControlTextarea1">
               <Form.Control as="textarea" rows="3" />
@@ -56,7 +68,13 @@ export default class CareNotes extends React.Component {
           </Form>
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
-          <StyledSpan>Default selection is "No"</StyledSpan>
+          <StyledSpan>
+            Default selection is "No" <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos!
+            </StyledPara>
+          </StyledSpan>
           <label>
             <Switch
               onChange={this.handleToggleChangeDS}

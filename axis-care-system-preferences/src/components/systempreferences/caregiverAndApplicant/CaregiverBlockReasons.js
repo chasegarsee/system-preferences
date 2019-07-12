@@ -30,7 +30,7 @@ export default class CaregiverBlockReasons extends Component {
         <StyledDivHeader>
           <StyledH1>Caregiver Block Reasons</StyledH1>
         </StyledDivHeader>
-        <Form style={{ margin: "0 2%" }}>
+        <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
             <Form.Label column sm="1.5">
               Reason
@@ -43,7 +43,7 @@ export default class CaregiverBlockReasons extends Component {
         {this.state.DRReasons.map(index => {
           return (
             <div key={index}>
-              <Form style={{ margin: "0 2%" }}>
+              <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
                   <Form.Label column sm="1.5">
                     Reason
@@ -56,7 +56,7 @@ export default class CaregiverBlockReasons extends Component {
             </div>
           );
         })}
-        <StyledButtonDivWithUnderline style={{ margin: "0 2%" }}>
+        <StyledButtonDivWithUnderline>
           <StyledButton onClick={e => this.addDRReasons(e)}>
             Add Reason
           </StyledButton>
@@ -66,7 +66,7 @@ export default class CaregiverBlockReasons extends Component {
         </div>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
-            <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+            <Form.Label column sm="1.5">
               Reason
             </Form.Label>
             <Col sm="4">
@@ -79,7 +79,7 @@ export default class CaregiverBlockReasons extends Component {
             <div key={index}>
               <Form>
                 <Form.Group as={Row} controlId="formPlaintextEmail">
-                  <Form.Label column sm="1.5" style={{ margin: "0 2%" }}>
+                  <Form.Label column sm="1.5">
                     Reason
                   </Form.Label>
                   <Col sm="4">
@@ -90,11 +90,11 @@ export default class CaregiverBlockReasons extends Component {
             </div>
           );
         })}
-        <StyledButtonDiv style={{ margin: "0 2%" }}>
+        <StyledButtonDivWithUnderline>
           <StyledButton onClick={e => this.addBFCReasons(e)}>
             Add Reason
           </StyledButton>
-        </StyledButtonDiv>
+        </StyledButtonDivWithUnderline>
       </MainCard>
     );
   }

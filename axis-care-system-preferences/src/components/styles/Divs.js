@@ -24,7 +24,6 @@ export const StyledButtonDiv = styled.div``;
 
 export const StyledDivWithUnderline = styled.div`
   display: flex;
-
   align-items: center;
   margin-bottom: 1rem;
   border-bottom: 1px solid #eeeff2;

@@ -15,7 +15,7 @@ export const StyledButton = styled.button`
   width: auto;
   border: solid 1px transparent;
   padding: 0.375rem 0.75rem;
-  margin: 2% 3%;
+  margin: 2% 0;
   text-align: center;
   font-weight: 400;
   vertical-align: center;

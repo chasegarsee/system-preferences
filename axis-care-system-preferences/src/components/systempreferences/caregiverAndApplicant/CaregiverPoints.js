@@ -8,7 +8,10 @@ import {
   StyledH1,
   StyledButtonDiv,
   StyledSpan,
-  StyledDiv
+  StyledSpan2,
+  StyledPara,
+  StyledDiv,
+  StyledButtonDivWithUnderline
 } from "../../styles/Divs";
 import { StyledButton, UncheckedIcon, CheckedIcon } from "../../styles/Button";
 
@@ -34,8 +37,14 @@ export default class CaregiverPoints extends Component {
         <StyledDivHeader>
           <StyledH1>Caregiver Points</StyledH1>
         </StyledDivHeader>
-        <StyledDiv>
-          <StyledSpan>Allow Caregiver Points</StyledSpan>
+        <StyledDivHeader style={{ borderBottom: "2px solid #eeeff2" }}>
+          <StyledSpan2>Features</StyledSpan2>
+          <StyledSpan2>Status</StyledSpan2>
+        </StyledDivHeader>
+        <StyledDiv style={{ paddingTop: "15px" }}>
+          <StyledSpan style={{ marginBottom: "0", paddingLeft: "0" }}>
+            Allow Caregiver Points
+          </StyledSpan>
 
           <label>
             <Switch
@@ -49,8 +58,10 @@ export default class CaregiverPoints extends Component {
             />
           </label>
         </StyledDiv>
-        <StyledDiv>
-          <StyledSpan>Point Categories</StyledSpan>
+        <StyledDiv style={{ marginBottom: "0", padding: "0" }}>
+          <StyledSpan style={{ marginBottom: "0", padding: "0" }}>
+            Point Categories
+          </StyledSpan>
         </StyledDiv>
         <Form>
           <Form.Group as={Row} controlId="formPlaintextEmail">
@@ -73,11 +84,11 @@ export default class CaregiverPoints extends Component {
             </div>
           );
         })}
-        <StyledButtonDiv style={{ margin: "0 2%" }}>
+        <StyledButtonDivWithUnderline>
           <StyledButton onClick={e => this.addPointCategories(e)}>
             Add New
           </StyledButton>
-        </StyledButtonDiv>
+        </StyledButtonDivWithUnderline>
       </MainCard>
     );
   }
