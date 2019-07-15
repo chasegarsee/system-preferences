@@ -3,35 +3,39 @@ import { NavLink, Link } from "react-router-dom";
 import { Card, ListGroup, Collapse } from "react-bootstrap";
 import styled from "styled-components";
 import { Route } from "react-router-dom";
-import CaregiverSetup from "../components/systempreferences/caregiverAndApplicant/CaregiverSetup";
-import Client from "./Client";
-import Messaging from "./Messaging";
-import Telephony from "./Telephony";
-import MobileApp from "./MobileApp";
-import PayrollBillingQuickbooks from "./PayrollBillingQuickbooks";
-import ThirdPartyBilling from "./ThirdPartyBilling";
-import StatusTypes from "./StatusTypes";
-import ReportDisplayOptions from "./ReportDisplayOptions";
-import Security from "./Security";
-import Forms from "./Forms";
-import CareNotes from "./systempreferences/caregiverAndApplicant/CareNotes";
-import CaregiverCCF from "./systempreferences/caregiverAndApplicant/CaregiverCCE";
-import RecommendCaregiver from "./systempreferences/caregiverAndApplicant/RecommendCaregiver";
-import CaregiverBlockReasons from "./systempreferences/caregiverAndApplicant/CaregiverBlockReasons";
-import "./Navigation.css";
-import CaregiverPoints from "./systempreferences/caregiverAndApplicant/CaregiverPoints";
-import ProfileOptions from "./systempreferences/client/ProfileOptions";
-import ClientClasses from "./systempreferences/client/ClientClasses";
-import RegionCodesClientAndCaregiver from "./systempreferences/client/RegionCodesClientAndCaregiver";
-import TriageCategories from "./systempreferences/client/TriageCategories";
-import OtherReferralSources from "./systempreferences/client/OtherReferralSources";
-import PhysicianInformation from "./systempreferences/client/PhysicianInformation";
-import BusinessSettings from "./systempreferences/marketingAndLeads/BusinessSettings";
-import ClassSettings from "./systempreferences/marketingAndLeads/ClassSettings";
-import LeadDeactivationReasons from "./systempreferences/marketingAndLeads/LeadDeactivationReasons";
-import GeneralSettings from "./systempreferences/Communities/GeneralSettings";
-import UserContact from "./systempreferences/userContact/UserContact";
-import MessagingGeneralSettings from "./systempreferences/messaging/MessagingGeneralSettings";
+import CaregiverSetup from "../caregiverAndApplicant/CaregiverSetup";
+import Client from "../../Client";
+import Messaging from "../../Messaging";
+import Telephony from "../../Telephony";
+import MobileApp from "../../MobileApp";
+import PayrollBillingQuickbooks from "../../PayrollBillingQuickbooks";
+import ThirdPartyBilling from "../../ThirdPartyBilling";
+import StatusTypes from "../../StatusTypes";
+import ReportDisplayOptions from "../../ReportDisplayOptions";
+import Security from "../../Security";
+import Forms from "../../Forms";
+import CareNotes from "../caregiverAndApplicant/CareNotes";
+import CaregiverCCF from "../caregiverAndApplicant/CaregiverCCE";
+import RecommendCaregiver from "../caregiverAndApplicant/RecommendCaregiver";
+import CaregiverBlockReasons from "../caregiverAndApplicant/CaregiverBlockReasons";
+import "../../Navigation.css";
+import CaregiverPoints from "../caregiverAndApplicant/CaregiverPoints";
+import ProfileOptions from "../client/ProfileOptions";
+import ClientClasses from "../client/ClientClasses";
+import RegionCodesClientAndCaregiver from "../client/RegionCodesClientAndCaregiver";
+import TriageCategories from "../client/TriageCategories";
+import OtherReferralSources from "../client/OtherReferralSources";
+import PhysicianInformation from "../client/PhysicianInformation";
+import BusinessSettings from "../marketingAndLeads/BusinessSettings";
+import ClassSettings from "../marketingAndLeads/ClassSettings";
+import LeadDeactivationReasons from "../marketingAndLeads/LeadDeactivationReasons";
+import GeneralSettings from "../Communities/GeneralSettings";
+import UserContact from "../userContact/UserContact";
+import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
+import MobileAppSettings from "../mobileApp/MoblieAppSettings";
+import MobileAppNav from "../sideBarNavigation/MobileAppNav";
+import CaregiverNav from "../sideBarNavigation/CaregiverNav";
+import ClientNav from "../sideBarNavigation/ClientNav";
 
 class Navigation extends React.Component {
   constructor(props, context) {
@@ -59,12 +63,8 @@ class Navigation extends React.Component {
     };
   }
 
-  someFunct(name) {
-    this.setState({ active: name });
-  }
-
   handleClick() {
-    if (!this.state.open) {
+    if ((!this.state.open, !this.state.openeight)) {
       // attach/remove event handler
       document.addEventListener("click", this.handleOutsideClick, false);
     } else {
@@ -72,7 +72,8 @@ class Navigation extends React.Component {
     }
 
     this.setState(prevState => ({
-      open: !prevState.open
+      open: !prevState.open,
+      openeight: !prevState.openeight
     }));
   }
 
@@ -111,101 +112,10 @@ class Navigation extends React.Component {
               variant="flush"
               style={{ height: "auto", alignItems: "center" }}
             >
-              <StyledNav
-                ref={node => {
-                  this.node = node;
-                }}
-                onClick={this.handleClick}
-                // aria-controls="example-collapse-text"
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" /> Caregiver
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.open}>
-                <div
-                  ref={node => {
-                    this.node = node;
-                  }}
-                  id="example-collapse-text"
-                >
-                  <ListGroup.Item action href="#link1">
-                    <InnerMenuDiv>
-                      <NavLink to="/caregiver-setup">Caregiver Setup</NavLink>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                  <ListGroup.Item action href="#link2">
-                    <InnerMenuDiv>
-                      <NavLink to="/care-notes">Care Notes</NavLink>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                  <ListGroup.Item action href="#link3">
-                    <InnerMenuDiv>
-                      <NavLink to="/caregiver-classes-certifications-evaluations">
-                        Classes Certifications Evaluations
-                      </NavLink>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                  <ListGroup.Item action href="#link4">
-                    <InnerMenuDiv>
-                      <NavLink to="/recommend-caregiver">
-                        Recommend Caregiver
-                      </NavLink>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                  <ListGroup.Item action href="#link5">
-                    <InnerMenuDiv>
-                      <NavLink to="/caregiver-block-reasons">
-                        Caregiver Block Reasons
-                      </NavLink>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                  <ListGroup.Item action href="#link6">
-                    <InnerMenuDiv>
-                      <NavLink to="/caregiver-points">Caregiver Points</NavLink>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
-              <StyledNav
-                onClick={() => this.setState({ opentwo: !opentwo })}
-                aria-controls="example-collapse-text"
-                aria-expanded={opentwo}
-              >
-                <StyledSpan>
-                  {" "}
-                  <StyledI className="fas fa-chevron-right" />
-                  Client
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.opentwo}>
-                <div id="example-collapse-text">
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/profile-options">Profile Options</Link>
-                    </InnerMenuDiv>
-                    <InnerMenuDiv>
-                      <Link to="/client-classes">Client Classes</Link>
-                    </InnerMenuDiv>
-                    <InnerMenuDiv>
-                      <Link to="/region-codes-client-and-caregiver">
-                        Region Codes Client and Caregiver
-                      </Link>
-                    </InnerMenuDiv>
-                    <InnerMenuDiv>
-                      <Link to="/triage-categories">Triage Categories</Link>
-                    </InnerMenuDiv>
-                    <InnerMenuDiv>
-                      <Link to="/referral-sources">Other Referral Sources</Link>
-                    </InnerMenuDiv>
-                    <InnerMenuDiv>
-                      <Link to="/physician-information">
-                        Physician Information
-                      </Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
+              <CaregiverNav />
+              <MobileAppNav />
+              <ClientNav />
+
               <StyledNav
                 onClick={() => this.setState({ openthree: !openthree })}
                 aria-controls="example-collapse-text"
@@ -311,25 +221,7 @@ class Navigation extends React.Component {
                   </ListGroup.Item>
                 </div>
               </Collapse>
-              <StyledNav
-                onClick={() => this.setState({ openeight: !openeight })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openeight}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Mobile App
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openeight}>
-                <div id="example-collapse-text">
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/mobileapp">Mobile App</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
+
               <StyledNav
                 onClick={() => this.setState({ opennine: !opennine })}
                 aria-controls="example-collapse-text"
@@ -504,7 +396,11 @@ class Navigation extends React.Component {
             component={MessagingGeneralSettings}
           />
           <Route exact path="/telephony" component={Telephony} />
-          <Route exact path="/mobileapp" component={MobileApp} />
+          <Route
+            exact
+            path="/mobile-app-settings"
+            component={MobileAppSettings}
+          />
           <Route
             exact
             path="/payrollbillingquickbooks"

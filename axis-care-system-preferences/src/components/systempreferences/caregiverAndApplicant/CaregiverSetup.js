@@ -144,7 +144,14 @@ export default class CaregiverSetup extends React.Component {
           />
         </StyledDiv>
         <StyledDivWithUnderline>
-          <StyledSpan>Daily overtime threshold</StyledSpan>
+          <StyledSpan>
+            Daily overtime threshold <br />
+            <StyledPara>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi,
+              rerum. Nostrum molestias vitae natus architecto voluptates
+              assumenda, rem dolorum.
+            </StyledPara>
+          </StyledSpan>
           <Slider
             min={0}
             max={168}
@@ -154,7 +161,13 @@ export default class CaregiverSetup extends React.Component {
           />
         </StyledDivWithUnderline>
         <StyledDiv style={{ alignItems: "center" }}>
-          <StyledSpan>Payable hours</StyledSpan>
+          <StyledSpan>
+            Payable hours <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos!
+            </StyledPara>
+          </StyledSpan>
           <StyledSelect>
             <option>Select...</option>
             <option>Pay for hours worked</option>
@@ -210,7 +223,13 @@ export default class CaregiverSetup extends React.Component {
         </StyledDivWithUnderline>
 
         <StyledDiv>
-          <StyledSpan>Request inter-visit travel time</StyledSpan>
+          <StyledSpan>
+            Request inter-visit travel time <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos!
+            </StyledPara>
+          </StyledSpan>
           <input type="checkbox" />
         </StyledDiv>
 
@@ -1042,90 +1061,3 @@ export default class CaregiverSetup extends React.Component {
     );
   }
 }
-
-// const StyledSpan = styled.span`
-//   padding: 0 12px 6px 20px;
-//   width: 50%;
-//   font-size: 1.2rem;
-// `;
-
-// const StyledSpanMultiLineText = styled.span`
-//   padding: 0 0 6px 6px;
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   width: 30%;
-//   font-size: 1.2rem;
-// `;
-
-// const StyledSpanMultiLineTextTwo = styled.span`
-//   padding: 0 0 6px 6px;
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   width: 20%;
-//   font-size: 1.2rem;
-// `;
-
-// const StyledDiv = styled.div`
-//   display: flex;
-//   width: 100%;
-//   align-items: center;
-//   margin-bottom: 1rem;
-// `;
-
-// const StyledSelect = styled.select`
-//   background-color: #007bff;
-//   height: 35px;
-//   outline: none;
-//   width: 125px;
-//   border: solid 1px transparent;
-//   padding: 0.375rem 0.75rem;
-//   text-align: center;
-//   font-weight: 400;
-//   vertical-align: center;
-//   font-size: 1rem;
-//   line-height: 1.5;
-//   border-radius: 0.25rem;
-//   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-//     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-//   color: white;
-// `;
-
-// const StyledSelectSmall = styled.select`
-//   background-color: #007bff;
-//   height: 35px;
-//   outline: none;
-//   width: 75px;
-//   border: solid 1px transparent;
-//   padding: 0.375rem 0.75rem;
-//   text-align: center;
-//   font-weight: 400;
-//   vertical-align: center;
-//   font-size: 1rem;
-//   line-height: 1.5;
-//   border-radius: 0.25rem;
-//   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-//     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-//   color: white;
-// `;
-
-// const UncheckedIcon = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-right: 30px;
-//   margin-top: 3px;
-//   font-size: 1rem;
-//   position: float;
-//   color: white;
-// `;
-
-// const CheckedIcon = styled.div`
-//   display: flex;
-//   align-items: center;
-//   height: 100%;
-//   padding-left: 10px;
-//   font-size: 1rem;
-//   color: white;
-// `;
