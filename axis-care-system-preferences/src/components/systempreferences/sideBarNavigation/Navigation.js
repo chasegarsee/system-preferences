@@ -30,6 +30,7 @@ import TriageCategories from "../client/TriageCategories";
 import OtherReferralSources from "../client/OtherReferralSources";
 import PhysicianInformation from "../client/PhysicianInformation";
 
+import MarketingNav from "../sideBarNavigation/MarketingNav";
 import BusinessSettings from "../marketingAndLeads/BusinessSettings";
 import ClassSettings from "../marketingAndLeads/ClassSettings";
 import LeadDeactivationReasons from "../marketingAndLeads/LeadDeactivationReasons";
@@ -105,34 +106,8 @@ class Navigation extends React.Component {
               <CaregiverNav />
               <MobileAppNav />
               <ClientNav />
+              <MarketingNav />
 
-              <StyledNav
-                onClick={() => this.setState({ openthree: !openthree })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openthree}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Marketing
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openthree}>
-                <div id="example-collapse-text">
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/business-settings">Business Settings</Link>
-                    </InnerMenuDiv>
-                    <InnerMenuDiv>
-                      <Link to="/class-settings">Class Settings</Link>
-                    </InnerMenuDiv>
-                    <InnerMenuDiv>
-                      <Link to="/lead-deactivation-reasons">
-                        Lead Deactivation Reasons
-                      </Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
               <StyledNav
                 onClick={() => this.setState({ openfour: !openfour })}
                 aria-controls="example-collapse-text"
@@ -144,7 +119,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openfour}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/general-settings">General Settings</Link>
@@ -163,7 +138,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openfive}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/user-contact">User Contact</Link>
@@ -182,7 +157,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.opensix}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/general-messaging-settings">
@@ -203,7 +178,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openseven}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/telephony">Telephony</Link>
@@ -223,7 +198,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.opennine}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/payrollbillingquickbooks">
@@ -244,7 +219,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openten}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/thirdpartybilling">Third Party Billing</Link>
@@ -263,7 +238,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openeleven}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/statustypes">Status Types</Link>
@@ -282,7 +257,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.opentwelve}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/reportanddisplayoptions">
@@ -303,7 +278,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openthirteen}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/security">Security</Link>
@@ -322,7 +297,7 @@ class Navigation extends React.Component {
                 </StyledSpan>
               </StyledNav>
               <Collapse in={this.state.openfourteen}>
-                <div id="example-collapse-text">
+                <div>
                   <ListGroup.Item>
                     <InnerMenuDiv>
                       <Link to="/forms">Forms</Link>
