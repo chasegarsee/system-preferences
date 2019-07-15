@@ -35,13 +35,16 @@ import BusinessSettings from "../marketingAndLeads/BusinessSettings";
 import ClassSettings from "../marketingAndLeads/ClassSettings";
 import LeadDeactivationReasons from "../marketingAndLeads/LeadDeactivationReasons";
 
+import CommunitiesNav from "../sideBarNavigation/CommunitiesNav";
 import GeneralSettings from "../Communities/GeneralSettings";
 
+import UserContactNav from "../sideBarNavigation/UserContactNav";
 import UserContact from "../userContact/UserContact";
 
 import Telephony from "../../Telephony";
 
 import Messaging from "../../Messaging";
+import MessagingNav from "../sideBarNavigation/MessagingNav";
 import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
 
 // STYLES
@@ -60,12 +63,6 @@ class Navigation extends React.Component {
     super(props, context);
 
     this.state = {
-      open: false,
-      opentwo: false,
-      openthree: false,
-      openfour: false,
-      openfive: false,
-      opensix: false,
       openseven: false,
       openeight: false,
       opennine: false,
@@ -79,12 +76,6 @@ class Navigation extends React.Component {
 
   render() {
     const {
-      open,
-      opentwo,
-      openthree,
-      openfour,
-      openfive,
-      opensix,
       openseven,
       openeight,
       opennine,
@@ -107,66 +98,10 @@ class Navigation extends React.Component {
               <MobileAppNav />
               <ClientNav />
               <MarketingNav />
+              <CommunitiesNav />
+              <UserContactNav />
+              <MessagingNav />
 
-              <StyledNav
-                onClick={() => this.setState({ openfour: !openfour })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openfour}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Communities
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openfour}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/general-settings">General Settings</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
-              <StyledNav
-                onClick={() => this.setState({ openfive: !openfive })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openfive}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  User Contact
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openfive}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/user-contact">User Contact</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
-              <StyledNav
-                onClick={() => this.setState({ opensix: !opensix })}
-                aria-controls="example-collapse-text"
-                aria-expanded={opensix}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Messaging
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.opensix}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/general-messaging-settings">
-                        General Messaging Settings
-                      </Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
               <StyledNav
                 onClick={() => this.setState({ openseven: !openseven })}
                 aria-controls="example-collapse-text"
