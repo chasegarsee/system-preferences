@@ -19,6 +19,12 @@ import CaregiverCCF from "../caregiverAndApplicant/CaregiverCCE";
 import RecommendCaregiver from "../caregiverAndApplicant/RecommendCaregiver";
 import CaregiverBlockReasons from "../caregiverAndApplicant/CaregiverBlockReasons";
 import "../../Navigation.css";
+import {
+  StyledI,
+  StyledNav,
+  StyledSpan,
+  InnerMenuDiv
+} from "../../styles/SideBarStyles";
 import CaregiverPoints from "../caregiverAndApplicant/CaregiverPoints";
 import ProfileOptions from "../client/ProfileOptions";
 import ClientClasses from "../client/ClientClasses";
@@ -41,9 +47,6 @@ class Navigation extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleClick = this.handleClick.bind(this);
-    this.handleOutsideClick = this.handleOutsideClick.bind(this);
-
     this.state = {
       open: false,
       opentwo: false,
@@ -58,32 +61,8 @@ class Navigation extends React.Component {
       openeleven: false,
       opentwelve: false,
       openthirteen: false,
-      openfourteen: false,
-      active: ""
+      openfourteen: false
     };
-  }
-
-  handleClick() {
-    if ((!this.state.open, !this.state.openeight)) {
-      // attach/remove event handler
-      document.addEventListener("click", this.handleOutsideClick, false);
-    } else {
-      document.removeEventListener("click", this.handleOutsideClick, false);
-    }
-
-    this.setState(prevState => ({
-      open: !prevState.open,
-      openeight: !prevState.openeight
-    }));
-  }
-
-  handleOutsideClick(e) {
-    // ignore clicks on the component itself
-    if (this.node.contains(e.target)) {
-      return;
-    }
-
-    this.handleClick();
   }
 
   render() {
@@ -427,34 +406,3 @@ class Navigation extends React.Component {
 }
 
 export default Navigation;
-
-const StyledNav = styled.nav`
-  height: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    cursor: pointer;
-    /* border-bottom: 1px solid #80808033; */
-  }
-`;
-
-const StyledSpan = styled.span`
-  width: 200px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-weight: bold;
-`;
-
-const InnerMenuDiv = styled.div`
-  display: flex;
-  width: 175px;
-  justify-content: flex-start;
-  border: none;
-`;
-
-const StyledI = styled.i`
-  padding: 15px;
-`;
