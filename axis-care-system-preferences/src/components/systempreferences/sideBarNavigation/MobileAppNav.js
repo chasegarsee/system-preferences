@@ -69,9 +69,8 @@ class MobileAppNav extends React.Component {
             ref={node => {
               this.node = node;
             }}
-            id="example-collapse-text"
           >
-            <ListGroup.Item action href="#link7">
+            <ListGroup.Item action href="#link10">
               <InnerMenuDiv>
                 <NavLink to="/mobile-app-settings">Mobile App Settings</NavLink>
               </InnerMenuDiv>

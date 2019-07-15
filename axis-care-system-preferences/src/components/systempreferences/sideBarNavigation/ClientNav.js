@@ -64,7 +64,6 @@ class ClientNav extends React.Component {
             ref={node => {
               this.node = node;
             }}
-            id="example-collapse-text"
           >
             <ListGroup.Item action href="#link30">
               <InnerMenuDiv>

@@ -1,23 +1,49 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Card, ListGroup, Collapse } from "react-bootstrap";
-import styled from "styled-components";
 import { Route } from "react-router-dom";
-import CaregiverSetup from "../caregiverAndApplicant/CaregiverSetup";
-import Client from "../../Client";
-import Messaging from "../../Messaging";
-import Telephony from "../../Telephony";
-import MobileApp from "../../MobileApp";
+
 import PayrollBillingQuickbooks from "../../PayrollBillingQuickbooks";
 import ThirdPartyBilling from "../../ThirdPartyBilling";
 import StatusTypes from "../../StatusTypes";
 import ReportDisplayOptions from "../../ReportDisplayOptions";
 import Security from "../../Security";
 import Forms from "../../Forms";
+
+import CaregiverNav from "../sideBarNavigation/CaregiverNav";
+import CaregiverSetup from "../caregiverAndApplicant/CaregiverSetup";
 import CareNotes from "../caregiverAndApplicant/CareNotes";
 import CaregiverCCF from "../caregiverAndApplicant/CaregiverCCE";
 import RecommendCaregiver from "../caregiverAndApplicant/RecommendCaregiver";
 import CaregiverBlockReasons from "../caregiverAndApplicant/CaregiverBlockReasons";
+import CaregiverPoints from "../caregiverAndApplicant/CaregiverPoints";
+
+import MobileAppNav from "../sideBarNavigation/MobileAppNav";
+import MobileApp from "../../MobileApp";
+import MobileAppSettings from "../mobileApp/MoblieAppSettings";
+
+import ClientNav from "../sideBarNavigation/ClientNav";
+import Client from "../../Client";
+import ProfileOptions from "../client/ProfileOptions";
+import ClientClasses from "../client/ClientClasses";
+import RegionCodesClientAndCaregiver from "../client/RegionCodesClientAndCaregiver";
+import TriageCategories from "../client/TriageCategories";
+import OtherReferralSources from "../client/OtherReferralSources";
+import PhysicianInformation from "../client/PhysicianInformation";
+
+import BusinessSettings from "../marketingAndLeads/BusinessSettings";
+import ClassSettings from "../marketingAndLeads/ClassSettings";
+import LeadDeactivationReasons from "../marketingAndLeads/LeadDeactivationReasons";
+
+import GeneralSettings from "../Communities/GeneralSettings";
+
+import UserContact from "../userContact/UserContact";
+
+import Telephony from "../../Telephony";
+
+import Messaging from "../../Messaging";
+import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
+
+// STYLES
 import "../../Navigation.css";
 import {
   StyledI,
@@ -25,23 +51,8 @@ import {
   StyledSpan,
   InnerMenuDiv
 } from "../../styles/SideBarStyles";
-import CaregiverPoints from "../caregiverAndApplicant/CaregiverPoints";
-import ProfileOptions from "../client/ProfileOptions";
-import ClientClasses from "../client/ClientClasses";
-import RegionCodesClientAndCaregiver from "../client/RegionCodesClientAndCaregiver";
-import TriageCategories from "../client/TriageCategories";
-import OtherReferralSources from "../client/OtherReferralSources";
-import PhysicianInformation from "../client/PhysicianInformation";
-import BusinessSettings from "../marketingAndLeads/BusinessSettings";
-import ClassSettings from "../marketingAndLeads/ClassSettings";
-import LeadDeactivationReasons from "../marketingAndLeads/LeadDeactivationReasons";
-import GeneralSettings from "../Communities/GeneralSettings";
-import UserContact from "../userContact/UserContact";
-import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
-import MobileAppSettings from "../mobileApp/MoblieAppSettings";
-import MobileAppNav from "../sideBarNavigation/MobileAppNav";
-import CaregiverNav from "../sideBarNavigation/CaregiverNav";
-import ClientNav from "../sideBarNavigation/ClientNav";
+import { Card, ListGroup, Collapse } from "react-bootstrap";
+// STYLES
 
 class Navigation extends React.Component {
   constructor(props, context) {

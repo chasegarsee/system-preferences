@@ -63,7 +63,6 @@ class CaregiverNav extends React.Component {
             ref={node => {
               this.node = node;
             }}
-            id="example-collapse-text"
           >
             <ListGroup.Item action href="#link1">
               <InnerMenuDiv>
