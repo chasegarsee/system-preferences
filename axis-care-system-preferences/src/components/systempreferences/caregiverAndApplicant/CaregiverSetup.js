@@ -102,7 +102,7 @@ export default class CaregiverSetup extends React.Component {
         <StyledDivHeader>
           <StyledH1>Caregiver Setup</StyledH1>
         </StyledDivHeader>
-        <StyledDivHeader style={{ borderBottom: "2px solid #eeeff2" }}>
+        <StyledDivHeader style={{ borderBottom: "4px solid #eeeff2" }}>
           <StyledSpan2>Features</StyledSpan2>
           <StyledSpan2>Status</StyledSpan2>
         </StyledDivHeader>

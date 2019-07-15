@@ -20,13 +20,19 @@ export const StyledH1 = styled.h2`
   padding: 6px;
 `;
 
+export const StyledH3 = styled.h3`
+  width: 100%;
+  font-weight: 300;
+  padding: 6px;
+`;
+
 export const StyledButtonDiv = styled.div``;
 
 export const StyledDivWithUnderline = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
-  border-bottom: 1px solid #eeeff2;
+  border-bottom: 3px solid #eeeff2;
 `;
 
 export const StyledButtonDivWithUnderline = styled.div`

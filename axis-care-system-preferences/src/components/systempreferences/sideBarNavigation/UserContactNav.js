@@ -1,6 +1,6 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import { Card, ListGroup, Collapse } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import { ListGroup, Collapse } from "react-bootstrap";
 import {
   StyledI,
   StyledNav,
