@@ -75,6 +75,18 @@ class MobileAppNav extends React.Component {
                 <NavLink to="/mobile-app-settings">Mobile App Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
+            <ListGroup.Item action href="#link11">
+              <InnerMenuDiv>
+                <NavLink to="/calls-and-alerts">Calls and Alerts</NavLink>
+              </InnerMenuDiv>
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link12">
+              <InnerMenuDiv>
+                <NavLink to="/open-visit-permissions">
+                  Open Visit Permissions
+                </NavLink>
+              </InnerMenuDiv>
+            </ListGroup.Item>
           </div>
         </Collapse>
       </div>

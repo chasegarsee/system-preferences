@@ -19,6 +19,7 @@ import CaregiverPoints from "../caregiverAndApplicant/CaregiverPoints";
 
 import MobileAppNav from "../sideBarNavigation/MobileAppNav";
 import MobileApp from "../../MobileApp";
+import CallsAndAlerts from "../mobileApp/CallsAndAlerts";
 import MobileAppSettings from "../mobileApp/MoblieAppSettings";
 
 import ClientNav from "../sideBarNavigation/ClientNav";
@@ -301,6 +302,8 @@ class Navigation extends React.Component {
             path="/mobile-app-settings"
             component={MobileAppSettings}
           />
+          <Route exact path="/calls-and-alerts" component={CallsAndAlerts} />
+
           <Route
             exact
             path="/payrollbillingquickbooks"
