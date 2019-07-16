@@ -40,6 +40,14 @@ export default class MobileAppSettings extends React.Component {
       checkedNC: false, // Not Completed
       checkedCS: false, // Client Signature
       checkedACCV: false, // Auto Clock Chained Visits
+      checkedCLN: false, // Client Signature
+      checkedCSSN: false, // Client Signature Summary: Notes
+      checkedCSSA: false, // Client Signature Summary: ADLs
+      checkedCCSC: false, // Client Signature Summary: Certification
+      checkedCGS: false, // Caregiver Signature
+      checkedFM: false, // Forms
+      checkedOM: false, // Offline Mode
+      checkedSDC: false, // Self Directed Care
       dgr: 0, // Default Geofence Radius
       cav: 0 // Changes After Visit
     };
@@ -108,6 +116,54 @@ export default class MobileAppSettings extends React.Component {
   handleToggleChangeACCV = value => {
     this.setState({
       checkedACCV: value
+    });
+  };
+
+  handleToggleChangeCLS = value => {
+    this.setState({
+      checkedCLS: value
+    });
+  };
+
+  handleToggleChangeCSSN = value => {
+    this.setState({
+      checkedCSSN: value
+    });
+  };
+
+  handleToggleChangeCSSA = value => {
+    this.setState({
+      checkedCSSA: value
+    });
+  };
+
+  handleToggleChangeCSSC = value => {
+    this.setState({
+      checkedCSSC: value
+    });
+  };
+
+  handleToggleChangeCGS = value => {
+    this.setState({
+      checkedCGS: value
+    });
+  };
+
+  handleToggleChangeFM = value => {
+    this.setState({
+      checkedFM: value
+    });
+  };
+
+  handleToggleChangeOM = value => {
+    this.setState({
+      checkedOM: value
+    });
+  };
+
+  handleToggleChangeSDC = value => {
+    this.setState({
+      checkedSDC: value
     });
   };
 
@@ -383,6 +439,186 @@ export default class MobileAppSettings extends React.Component {
             <Switch
               onChange={this.handleToggleChangeACCV}
               checked={this.state.checkedACCV}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDivWithUnderline>
+        <StyledDiv>
+          <StyledH3>
+            Client Signature Permissions <br />
+          </StyledH3>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>
+            Client Signature <br />
+          </StyledSpan>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeCLS}
+              checked={this.state.checkedCLS}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>
+            Client signature summary: Notes <br />
+          </StyledSpan>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeCSSN}
+              checked={this.state.checkedCSSN}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>
+            Client signature summary: ADLs <br />
+          </StyledSpan>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeCSSA}
+              checked={this.state.checkedCSSA}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>
+            Client signature summary: Certification <br />
+          </StyledSpan>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeCSSC}
+              checked={this.state.checkedCSSC}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDiv>
+        <StyledDivWithUnderline>
+          <StyledSpan>
+            Client signature summary: Certification Text <br />
+          </StyledSpan>
+          <Form>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Control as="textarea" rows="2" />
+            </Form.Group>
+          </Form>
+        </StyledDivWithUnderline>
+        <StyledDiv>
+          <StyledH3>
+            Caregiver Singature Permissions <br />
+          </StyledH3>
+        </StyledDiv>
+        <StyledDivWithUnderline>
+          <StyledSpan>
+            Caregiver Signature <br />
+          </StyledSpan>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeCGS}
+              checked={this.state.checkedCGS}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDivWithUnderline>
+        <StyledDiv>
+          <StyledH3>
+            Forms Display Permissions <br />
+          </StyledH3>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>
+            Forms <br />
+          </StyledSpan>
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeFM}
+              checked={this.state.checkedFM}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDiv>
+        <StyledDiv>
+          <StyledSpan>
+            Care plan signature certification text <br />
+          </StyledSpan>
+          <Form>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Control as="textarea" rows="2" />
+            </Form.Group>
+          </Form>
+        </StyledDiv>
+        <StyledDivWithUnderline>
+          <StyledSpan>
+            Care plan signature certification checkbox <br />
+          </StyledSpan>
+          <Form>
+            <Form.Group controlId="exampleForm.ControlTextarea1">
+              <Form.Control as="textarea" rows="2" />
+            </Form.Group>
+          </Form>
+        </StyledDivWithUnderline>
+        <StyledDiv>
+          <StyledSpan>
+            Offline Mode
+            <br />
+          </StyledSpan>
+
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeOM}
+              checked={this.state.checkedOM}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
+        </StyledDiv>
+        <StyledDivWithUnderline>
+          <StyledSpan>
+            Allow Self Directed Care <br />
+            <StyledPara>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Dignissimos!
+            </StyledPara>
+          </StyledSpan>
+
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeSDC}
+              checked={this.state.checkedSDC}
               height={30}
               width={100}
               onColor="#007bff"
