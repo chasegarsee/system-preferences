@@ -68,8 +68,10 @@ export default class MessagingGeneralSettings extends React.Component {
         </StyledDiv>
         <StyledDiv style={{ alignItems: "center" }}>
           <StyledSpan>
-            Display Client names in which format? (This may affect HIPAA
-            compliance)
+            Display Client names in which format? <br />
+            <span style={{ fontStyle: "italic" }}>
+              This may affect HIPAA compliance{" "}
+            </span>
           </StyledSpan>
           <StyledSelect>
             <option>Select...</option>

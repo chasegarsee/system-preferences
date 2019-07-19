@@ -11,17 +11,9 @@ import {
   StyledSpan,
   StyledSpan2,
   StyledDiv,
-  StyledSpanMultiLineText,
-  StyledSpanMultiLineTextTwo,
   StyledDivWithUnderline,
   StyledPara
 } from "../../styles/Divs";
-import {
-  UncheckedIcon,
-  CheckedIcon,
-  StyledSelect,
-  StyledSelectSmall
-} from "../../styles/Button";
 
 import { Form } from "react-bootstrap";
 

@@ -57,6 +57,7 @@ import {
   InnerMenuDiv
 } from "../../styles/SideBarStyles";
 import { Card, ListGroup, Collapse } from "react-bootstrap";
+import OpenVisitPermissions from "../mobileApp/OpenVisitPermissions";
 // STYLES
 
 class Navigation extends React.Component {
@@ -303,6 +304,11 @@ class Navigation extends React.Component {
             component={MobileAppSettings}
           />
           <Route exact path="/calls-and-alerts" component={CallsAndAlerts} />
+          <Route
+            exact
+            path="/open-visit-permissions"
+            component={OpenVisitPermissions}
+          />
 
           <Route
             exact
