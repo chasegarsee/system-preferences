@@ -56,7 +56,7 @@ export default class MessagingGeneralSettings extends React.Component {
           </label>
         </StyledDiv>
         <StyledDiv>
-          <StyledSpan>
+          <StyledSpan style={{ fontStyle: "italic" }}>
             Messages will be sent to phones via email whenever possible
           </StyledSpan>
         </StyledDiv>

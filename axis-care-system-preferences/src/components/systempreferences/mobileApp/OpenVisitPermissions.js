@@ -14,7 +14,8 @@ import {
   StyledSpanMultiLineText,
   StyledSpanMultiLineTextTwo,
   StyledDivWithUnderline,
-  StyledPara
+  StyledPara,
+  StyledInput
 } from "../../styles/Divs";
 import {
   UncheckedIcon,
@@ -29,41 +30,12 @@ export default class OpenVisitPermissions extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      checkedA: false, // allow Clock In/Out
-      checkedE: false, // Expences
-      checkedM: false, // Milage
+      checkedM: false, //
       checkedT: false, // Travel Time
-      checkedB: false, // Breaks
-      checkedSP: false, // See Client Phone Numbers
       checkedRN: false, // Record Notes
-      checkedMBS: false, // Must Be Submitted
-      checkedNC: false, // Not Completed
-      checkedCS: false, // Client Signature
-      checkedACCV: false, // Auto Clock Chained Visits
-      checkedCLN: false, // Client Signature
-      checkedCSSN: false, // Client Signature Summary: Notes
-      checkedCSSA: false, // Client Signature Summary: ADLs
-      checkedCCSC: false, // Client Signature Summary: Certification
-      checkedCGS: false, // Caregiver Signature
-      checkedFM: false, // Forms
-      checkedOM: false, // Offline Mode
-      checkedSDC: false, // Self Directed Care
-      dgr: 0, // Default Geofence Radius
-      cav: 0 // Changes After Visit
+      dgr: 0 // Default Geofence Radius
     };
   }
-
-  handleToggleChangeA = value => {
-    this.setState({
-      checkedA: value
-    });
-  };
-
-  handleToggleChangeE = value => {
-    this.setState({
-      checkedE: value
-    });
-  };
 
   handleToggleChangeM = value => {
     this.setState({
@@ -77,105 +49,15 @@ export default class OpenVisitPermissions extends React.Component {
     });
   };
 
-  handleToggleChangeB = value => {
-    this.setState({
-      checkedB: value
-    });
-  };
-
-  handleToggleChangeSP = value => {
-    this.setState({
-      checkedSP: value
-    });
-  };
-
   handleToggleChangeRN = value => {
     this.setState({
       checkedRN: value
     });
   };
 
-  handleToggleChangeMBS = value => {
-    this.setState({
-      checkedMBS: value
-    });
-  };
-
-  handleToggleChangeNC = value => {
-    this.setState({
-      checkedNC: value
-    });
-  };
-
-  handleToggleChangeCS = value => {
-    this.setState({
-      checkedCS: value
-    });
-  };
-
-  handleToggleChangeACCV = value => {
-    this.setState({
-      checkedACCV: value
-    });
-  };
-
-  handleToggleChangeCLS = value => {
-    this.setState({
-      checkedCLS: value
-    });
-  };
-
-  handleToggleChangeCSSN = value => {
-    this.setState({
-      checkedCSSN: value
-    });
-  };
-
-  handleToggleChangeCSSA = value => {
-    this.setState({
-      checkedCSSA: value
-    });
-  };
-
-  handleToggleChangeCSSC = value => {
-    this.setState({
-      checkedCSSC: value
-    });
-  };
-
-  handleToggleChangeCGS = value => {
-    this.setState({
-      checkedCGS: value
-    });
-  };
-
-  handleToggleChangeFM = value => {
-    this.setState({
-      checkedFM: value
-    });
-  };
-
-  handleToggleChangeOM = value => {
-    this.setState({
-      checkedOM: value
-    });
-  };
-
-  handleToggleChangeSDC = value => {
-    this.setState({
-      checkedSDC: value
-    });
-  };
-
   handleOnChangeDgr = value => {
     this.setState({
       dgr: value
-    });
-  };
-
-  handleOnChangeCav = value => {
-    this.setState({
-      cav: value
     });
   };
 
@@ -211,7 +93,9 @@ export default class OpenVisitPermissions extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>
-            Enable caregivers to record notes for each ADL <br />
+            Allowed to directly accept visit <br />
+            (if Disabled, they can only generate Alerts to request assignment):{" "}
+            <br />
             <StyledPara>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum,
               asperiores?
@@ -237,6 +121,7 @@ export default class OpenVisitPermissions extends React.Component {
               Doloremque
             </StyledPara>
           </StyledSpan>
+          <StyledInput type="text" value={dgr} />
           <Slider
             min={0}
             max={45}

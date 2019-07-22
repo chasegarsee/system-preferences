@@ -9,7 +9,8 @@ import {
   StyledSpan,
   StyledDiv,
   StyledSpan2,
-  StyledPara
+  StyledPara,
+  StyledInput
 } from "../../styles/Divs";
 import { UncheckedIcon, CheckedIcon, StyledSelect } from "../../styles/Button";
 
@@ -38,29 +39,6 @@ export default class RecommendCaregiver extends React.Component {
   handleToggleChangeLR = value => {
     this.setState({
       checkedLR: value
-    });
-  };
-
-  rangeSlider = function() {
-    var slider = document.querySelectorAll("range-slider"),
-      range = document.querySelectorAll("range-slider__range"),
-      value = document.querySelectorAll("range-slider__value");
-
-    slider.each(function() {
-      value.each(function() {
-        var value = document
-          .querySelector(this)
-          .prev()
-          .attr("value");
-        document.querySelector(this).html(value);
-      });
-
-      range.on("input", function() {
-        document
-          .querySelector(this)
-          .next(value)
-          .html(this.value);
-      });
     });
   };
 
@@ -141,17 +119,17 @@ export default class RecommendCaregiver extends React.Component {
               repellendus!
             </StyledPara>
           </StyledSpan>
-          <div class="range-slider">
-            <Slider
-              class="range-slider__range"
-              type="range"
-              min={0}
-              max={168}
-              value={wot}
-              orientation="horizontal"
-              onChange={this.handleOnChangeWot}
-            />
-          </div>
+
+          <StyledInput type="text" value={wot} />
+          <Slider
+            class="range-slider__range"
+            type="range"
+            min={0}
+            max={168}
+            value={wot}
+            orientation="horizontal"
+            onChange={this.handleOnChangeWot}
+          />
         </StyledDiv>
       </MainCard>
     );

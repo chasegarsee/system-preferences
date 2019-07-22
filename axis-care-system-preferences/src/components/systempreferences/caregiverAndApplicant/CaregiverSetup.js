@@ -13,7 +13,8 @@ import {
   StyledSpanMultiLineText,
   StyledSpanMultiLineTextTwo,
   StyledDivWithUnderline,
-  StyledPara
+  StyledPara,
+  StyledInput
 } from "../../styles/Divs";
 import {
   UncheckedIcon,
@@ -135,6 +136,7 @@ export default class CaregiverSetup extends React.Component {
               Doloremque
             </StyledPara>
           </StyledSpan>
+          <StyledInput type="text" value={wot} />
           <Slider
             min={0}
             max={168}
@@ -152,6 +154,7 @@ export default class CaregiverSetup extends React.Component {
               assumenda, rem dolorum.
             </StyledPara>
           </StyledSpan>
+          <StyledInput type="text" value={dot} />
           <Slider
             min={0}
             max={168}
@@ -260,6 +263,7 @@ export default class CaregiverSetup extends React.Component {
           <StyledSpan>
             Autocalculate inter-visit travel time max gap (minutes)
           </StyledSpan>
+          <StyledInput type="text" value={att} />
           <Slider
             min={0}
             max={1440}
@@ -270,6 +274,7 @@ export default class CaregiverSetup extends React.Component {
         </StyledDivWithUnderline>
         <StyledDiv>
           <StyledSpan>Daily Certification Threshold (hours)</StyledSpan>
+          <StyledInput type="text" value={fct} />
           <Slider
             min={0}
             max={30}
@@ -524,6 +529,7 @@ export default class CaregiverSetup extends React.Component {
 
         <StyledDiv>
           <StyledSpan>Fixed Certification Threshold (hours)</StyledSpan>
+          <StyledInput type="text" value={dct} />
           <Slider
             min={0}
             max={30}
@@ -778,6 +784,7 @@ export default class CaregiverSetup extends React.Component {
 
         <StyledDiv>
           <StyledSpan>Hourly Certification Threshold (hours)</StyledSpan>
+          <StyledInput type="text" value={hct} />
           <Slider
             min={0}
             max={30}

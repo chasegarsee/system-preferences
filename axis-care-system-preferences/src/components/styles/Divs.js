@@ -28,6 +28,16 @@ export const StyledH3 = styled.h3`
 
 export const StyledButtonDiv = styled.div``;
 
+export const StyledInput = styled.input`
+  border: none;
+  width: 3%;
+  background-color: rgb(0, 123, 255);
+  color: white;
+  text-align: center;
+  margin-right: 1%;
+  border-radius: 15px;
+`;
+
 export const StyledDivWithUnderline = styled.div`
   display: flex;
   align-items: center;

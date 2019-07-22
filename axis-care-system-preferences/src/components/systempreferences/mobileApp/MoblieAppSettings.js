@@ -14,7 +14,8 @@ import {
   StyledSpanMultiLineText,
   StyledSpanMultiLineTextTwo,
   StyledDivWithUnderline,
-  StyledPara
+  StyledPara,
+  StyledInput
 } from "../../styles/Divs";
 import {
   UncheckedIcon,
@@ -219,6 +220,7 @@ export default class MobileAppSettings extends React.Component {
               Doloremque
             </StyledPara>
           </StyledSpan>
+          <StyledInput type="text" value={dgr} />
           <Slider
             min={0}
             max={1000}
@@ -320,6 +322,7 @@ export default class MobileAppSettings extends React.Component {
               Doloremque
             </StyledPara>
           </StyledSpan>
+          <StyledInput type="text" value={cav} />
           <Slider
             min={0}
             max={60}
