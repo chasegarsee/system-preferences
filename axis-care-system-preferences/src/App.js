@@ -12,7 +12,6 @@ class App extends Component {
     return (
       <div>
         <NavigationBar />
-
         <Navigation />
       </div>
     );

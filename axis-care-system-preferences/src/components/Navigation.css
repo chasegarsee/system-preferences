@@ -105,7 +105,7 @@ a.active {
   color: white;
   font-size: 1.6rem;
 }
-@media (max-width: 1160px) {
+/* @media (max-width: 1160px) {
   .navigation-bar-div {
     display: none;
   }
@@ -117,7 +117,7 @@ a.active {
   .main-card {
     width: 100%;
   }
-}
+} */
 
 @media (min-width: 1160px) {
   .mobile-nav-bar-div {
