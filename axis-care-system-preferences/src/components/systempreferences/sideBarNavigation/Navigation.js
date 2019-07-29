@@ -47,6 +47,8 @@ import Telephony from "../../Telephony";
 import Messaging from "../../Messaging";
 import MessagingNav from "../sideBarNavigation/MessagingNav";
 import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
+import OpenVisitPermissions from "../mobileApp/OpenVisitPermissions";
+import TelephonyNav from "./TelephonyNav";
 
 // STYLES
 import "../../Navigation.css";
@@ -57,7 +59,8 @@ import {
   InnerMenuDiv
 } from "../../styles/SideBarStyles";
 import { Card, ListGroup, Collapse } from "react-bootstrap";
-import OpenVisitPermissions from "../mobileApp/OpenVisitPermissions";
+import CallsAndAlertsTelephony from "../telephony/callsAndAlertsTelephony";
+
 // STYLES
 
 class Navigation extends React.Component {
@@ -103,8 +106,9 @@ class Navigation extends React.Component {
               <CommunitiesNav />
               <UserContactNav />
               <MessagingNav />
+              <TelephonyNav />
 
-              <StyledNav
+              {/* <StyledNav
                 onClick={() => this.setState({ openseven: !openseven })}
                 aria-controls="example-collapse-text"
                 aria-expanded={openseven}
@@ -122,7 +126,7 @@ class Navigation extends React.Component {
                     </InnerMenuDiv>
                   </ListGroup.Item>
                 </div>
-              </Collapse>
+              </Collapse> */}
 
               <StyledNav
                 onClick={() => this.setState({ opennine: !opennine })}
@@ -244,7 +248,6 @@ class Navigation extends React.Component {
               </Collapse>
             </ListGroup>
           </Card>
-
           <Route exact path="/caregiver-setup" component={CaregiverSetup} />
           <Route exact path="/care-notes" component={CareNotes} />
           <Route
@@ -288,7 +291,6 @@ class Navigation extends React.Component {
             path="/lead-deactivation-reasons"
             component={LeadDeactivationReasons}
           />
-
           <Route exact path="/client" component={Client} />
           <Route exact path="/general-settings" component={GeneralSettings} />
           <Route exact path="/user-contact" component={UserContact} />
@@ -298,6 +300,12 @@ class Navigation extends React.Component {
             component={MessagingGeneralSettings}
           />
           <Route exact path="/telephony" component={Telephony} />
+
+          <Route
+            exact
+            path="/calls-and-alerts-telephony"
+            component={CallsAndAlertsTelephony}
+          />
           <Route
             exact
             path="/mobile-app-settings"
@@ -309,7 +317,6 @@ class Navigation extends React.Component {
             path="/open-visit-permissions"
             component={OpenVisitPermissions}
           />
-
           <Route
             exact
             path="/payrollbillingquickbooks"
@@ -326,7 +333,6 @@ class Navigation extends React.Component {
             path="/reportanddisplayoptions"
             component={ReportDisplayOptions}
           />
-
           <Route exact path="/security" component={Security} />
           <Route exact path="/forms" component={Forms} />
         </div>
