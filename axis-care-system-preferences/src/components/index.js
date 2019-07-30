@@ -1,5 +1,5 @@
 import Caregiver from "./Caregiver";
-import Client from "./Client";
+import Client from "./NIU/Client";
 import Marketing from "./Marketing";
 import Communities from "./Communities";
 import UserContact from "./UserContact";
@@ -11,7 +11,7 @@ import ThirdPartyBilling from "./ThirdPartyBilling";
 import StatusTypes from "./StatusTypes";
 import ReportDisplayOptions from "./ReportDisplayOptions";
 import Security from "./Security";
-import Forms from "./Forms";
+import Forms from "./NIU/Forms";
 import Navigation from "./Navigation";
 
 export {

@@ -20,7 +20,7 @@ import OpenVisitPermissions from "../mobileApp/OpenVisitPermissions";
 /*-------------------- MOBILE APP ------------------------------------- */
 /*-------------------- CLIENT ----------------------------------------- */
 import ClientNav from "../sideBarNavigation/ClientNav";
-import Client from "../../Client";
+import Client from "../../NIU/Client";
 import ProfileOptions from "../client/ProfileOptions";
 import ClientClasses from "../client/ClientClasses";
 import RegionCodesClientAndCaregiver from "../client/RegionCodesClientAndCaregiver";
@@ -44,7 +44,7 @@ import UserContact from "../userContact/UserContact";
 /*-------------------- USER CONTACT ----------------------------------- */
 /*-------------------- TELEPHONY -------------------------------------- */
 import TelephonyNav from "./TelephonyNav";
-import Telephony from "../../Telephony";
+import Telephony from "../../NIU/Telephony";
 import CallsAndAlertsTelephony from "../telephony/callsAndAlertsTelephony";
 /*-------------------- TELEPHONY -------------------------------------- */
 /*-------------------- USER CONTACT ----------------------------------- */
@@ -57,23 +57,23 @@ import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
 import StatusTypesNav from "./StatusTypesNav";
 /*-------------------- PAYROLL BILLING & QB---------------------------- */
 import PBQNav from "./PBQNav";
-import PayrollBillingQuickbooks from "../../PayrollBillingQuickbooks";
+import PayrollBillingQuickbooks from "../../NIU/PayrollBillingQuickbooks";
 /*-------------------- PAYROLL BILLING & QB---------------------------- */
 /*-------------------- THIRD PARTY BILLING ---------------------------- */
-import ThirdPartyBilling from "../../ThirdPartyBilling";
+import ThirdPartyBilling from "../../NIU/ThirdPartyBilling";
 import TPBNav from "./TPBNav";
 /*-------------------- THIRD PARTY BILLING ---------------------------- */
 /*-------------------- REPORT AND DISPLAY OPTIONS --------------------- */
 import RDONav from "./RDONav";
-import ReportDisplayOptions from "../../ReportDisplayOptions";
+import ReportDisplayOptions from "../../NIU/ReportDisplayOptions";
 /*-------------------- REPORT AND DISPLAY OPTIONS --------------------- */
 /*-------------------- SECURITY --------------------------------------- */
-import Security from "../../Security";
+import Security from "../../NIU/Security";
 import SecurityNav from "./SecurityNav";
 /*-------------------- SECURITY --------------------------------------- */
 /*-------------------- FORMS ------------------------------------------ */
 import FormsNav from "./FormsNav";
-import Forms from "../../Forms";
+import Forms from "../../NIU/Forms";
 /*-------------------- FORMS ------------------------------------------ */
 
 // STYLES
