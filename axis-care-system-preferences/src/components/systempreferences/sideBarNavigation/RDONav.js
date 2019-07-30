@@ -8,7 +8,7 @@ import {
   InnerMenuDiv
 } from "../../styles/SideBarStyles";
 
-class PBQ extends React.Component {
+class RDONav extends React.Component {
   constructor(props, context) {
     super(props, context);
 
@@ -55,8 +55,8 @@ class PBQ extends React.Component {
           onClick={this.handleClick}
         >
           <StyledSpan>
-            <StyledI className="fas fa-chevron-right" /> Payroll / Billing /
-            Quickbooks
+            <StyledI className="fas fa-chevron-right" /> Report and Display
+            Options
           </StyledSpan>
         </StyledNav>
         <Collapse in={this.state.open}>
@@ -65,31 +65,46 @@ class PBQ extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link90">
+            <ListGroup.Item action href="#link120">
               <InnerMenuDiv>
-                <NavLink to="/pbq-general-settings">General Settings</NavLink>
-              </InnerMenuDiv>
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link91">
-              <InnerMenuDiv>
-                <NavLink to="/timesheet-setup">Timesheet Setup</NavLink>
-              </InnerMenuDiv>
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link92">
-              <InnerMenuDiv>
-                <NavLink to="/invoicing-settings">Invoicing Settings</NavLink>
-              </InnerMenuDiv>
-            </ListGroup.Item>
-            <ListGroup.Item action href="#link93">
-              <InnerMenuDiv>
-                <NavLink to="/misc-quickbook-settings">
-                  Misc Quickbook Settings
+                <NavLink to="/third-party-billing-general-settings">
+                  Report Viewing, Printing, and Saving
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link94">
+            <ListGroup.Item action href="#link121">
               <InnerMenuDiv>
-                <NavLink to="/payment-settings">Payment Settings</NavLink>
+                <NavLink to="/organization-information">
+                  Schedule Verification Options
+                </NavLink>
+              </InnerMenuDiv>
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link122">
+              <InnerMenuDiv>
+                <NavLink to="/custom-quickselect-options">
+                  List Display Options
+                </NavLink>
+              </InnerMenuDiv>
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link123">
+              <InnerMenuDiv>
+                <NavLink to="/payer-specific-options">
+                  Miscellaneous Display Options
+                </NavLink>
+              </InnerMenuDiv>
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link124">
+              <InnerMenuDiv>
+                <NavLink to="/administrative-contact-information">
+                  Forms & Custom Forms Options
+                </NavLink>
+              </InnerMenuDiv>
+            </ListGroup.Item>
+            <ListGroup.Item action href="#link125">
+              <InnerMenuDiv>
+                <NavLink to="/administrative-contact-information">
+                  Customizable & Visit Options
+                </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
           </div>
@@ -99,4 +114,4 @@ class PBQ extends React.Component {
   }
 }
 
-export default PBQ;
+export default RDONav;

@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 
 import PayrollBillingQuickbooks from "../../PayrollBillingQuickbooks";
 import ThirdPartyBilling from "../../ThirdPartyBilling";
-import StatusTypes from "../../StatusTypes";
+
 import ReportDisplayOptions from "../../ReportDisplayOptions";
 import Security from "../../Security";
 import Forms from "../../Forms";
@@ -49,6 +49,7 @@ import MessagingNav from "../sideBarNavigation/MessagingNav";
 import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
 import OpenVisitPermissions from "../mobileApp/OpenVisitPermissions";
 import TelephonyNav from "./TelephonyNav";
+import RDONav from "./RDONav";
 
 // STYLES
 import "../../Navigation.css";
@@ -60,7 +61,10 @@ import {
 } from "../../styles/SideBarStyles";
 import { Card, ListGroup, Collapse } from "react-bootstrap";
 import CallsAndAlertsTelephony from "../telephony/callsAndAlertsTelephony";
-import PBQ from "./PBQ";
+import PBQNav from "./PBQNav";
+import TPBNav from "./TPBNav";
+import NavtusTypesNav from "./StatusTypesNav";
+import StatusTypesNav from "./StatusTypesNav";
 
 // STYLES
 
@@ -102,67 +106,11 @@ class Navigation extends React.Component {
               <UserContactNav />
               <MessagingNav />
               <TelephonyNav />
-              <PBQ />
+              <PBQNav />
+              <TPBNav />
+              <StatusTypesNav />
+              <RDONav />
 
-              <StyledNav
-                onClick={() => this.setState({ openten: !openten })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openten}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Third Party Billing
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openten}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/thirdpartybilling">Third Party Billing</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
-              <StyledNav
-                onClick={() => this.setState({ openeleven: !openeleven })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openeleven}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Status Types
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openeleven}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/statustypes">Status Types</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
-              <StyledNav
-                onClick={() => this.setState({ opentwelve: !opentwelve })}
-                aria-controls="example-collapse-text"
-                aria-expanded={opentwelve}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Report and Display Options
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.opentwelve}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/reportanddisplayoptions">
-                        Report and Display Options
-                      </Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
               <StyledNav
                 onClick={() => this.setState({ openthirteen: !openthirteen })}
                 aria-controls="example-collapse-text"
@@ -282,7 +230,7 @@ class Navigation extends React.Component {
             path="/thirdpartybilling"
             component={ThirdPartyBilling}
           />
-          <Route exact path="/statustypes" component={StatusTypes} />
+          <Route exact path="/statustypes" component={StatusTypesNav} />
           <Route
             exact
             path="/reportanddisplayoptions"
