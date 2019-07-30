@@ -128,6 +128,25 @@ class Navigation extends React.Component {
             </ListGroup>
           </Card>
 
+          <Route exact path="/caregiver-setup" component={CaregiverSetup} />
+          <Route exact path="/care-notes" component={CareNotes} />
+          <Route
+            exact
+            path="/caregiver-classes-certifications-evaluations"
+            component={CaregiverCCF}
+          />
+          <Route
+            exact
+            path="/recommend-caregiver"
+            component={RecommendCaregiver}
+          />
+          <Route
+            exact
+            path="/caregiver-block-reasons"
+            component={CaregiverBlockReasons}
+          />
+          <Route exact path="/caregiver-points" component={CaregiverPoints} />
+
           <Route exact path="/profile-options" component={ProfileOptions} />
           <Route exact path="/client-classes" component={ClientClasses} />
           <Route
