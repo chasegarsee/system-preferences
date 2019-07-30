@@ -2,13 +2,7 @@ import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import { Route } from "react-router-dom";
 
-import PayrollBillingQuickbooks from "../../PayrollBillingQuickbooks";
-import ThirdPartyBilling from "../../ThirdPartyBilling";
-
-import ReportDisplayOptions from "../../ReportDisplayOptions";
-import Security from "../../Security";
-import Forms from "../../Forms";
-
+/*-------------------- CAREGIVER AND APPLICANT ------------------------ */
 import CaregiverNav from "../sideBarNavigation/CaregiverNav";
 import CaregiverSetup from "../caregiverAndApplicant/CaregiverSetup";
 import CareNotes from "../caregiverAndApplicant/CareNotes";
@@ -16,12 +10,15 @@ import CaregiverCCF from "../caregiverAndApplicant/CaregiverCCE";
 import RecommendCaregiver from "../caregiverAndApplicant/RecommendCaregiver";
 import CaregiverBlockReasons from "../caregiverAndApplicant/CaregiverBlockReasons";
 import CaregiverPoints from "../caregiverAndApplicant/CaregiverPoints";
-
+/*-------------------- CAREGIVER AND APPLICANT ------------------------ */
+/*-------------------- MOBILE APP ------------------------------------- */
 import MobileAppNav from "../sideBarNavigation/MobileAppNav";
-import MobileApp from "../../MobileApp";
+// import MobileApp from "../../MobileApp";
 import CallsAndAlerts from "../mobileApp/CallsAndAlerts";
 import MobileAppSettings from "../mobileApp/MoblieAppSettings";
-
+import OpenVisitPermissions from "../mobileApp/OpenVisitPermissions";
+/*-------------------- MOBILE APP ------------------------------------- */
+/*-------------------- CLIENT ----------------------------------------- */
 import ClientNav from "../sideBarNavigation/ClientNav";
 import Client from "../../Client";
 import ProfileOptions from "../client/ProfileOptions";
@@ -30,42 +27,58 @@ import RegionCodesClientAndCaregiver from "../client/RegionCodesClientAndCaregiv
 import TriageCategories from "../client/TriageCategories";
 import OtherReferralSources from "../client/OtherReferralSources";
 import PhysicianInformation from "../client/PhysicianInformation";
-
+/*-------------------- CLIENT ----------------------------------------- */
+/*-------------------- MARKETING -------------------------------------- */
 import MarketingNav from "../sideBarNavigation/MarketingNav";
 import BusinessSettings from "../marketingAndLeads/BusinessSettings";
 import ClassSettings from "../marketingAndLeads/ClassSettings";
 import LeadDeactivationReasons from "../marketingAndLeads/LeadDeactivationReasons";
-
+/*-------------------- MARKETING -------------------------------------- */
+/*-------------------- COMMUNITIES ------------------------------------ */
 import CommunitiesNav from "../sideBarNavigation/CommunitiesNav";
 import GeneralSettings from "../Communities/GeneralSettings";
-
+/*-------------------- COMMUNITIES ------------------------------------ */
+/*-------------------- USER CONTACT ----------------------------------- */
 import UserContactNav from "../sideBarNavigation/UserContactNav";
 import UserContact from "../userContact/UserContact";
-
+/*-------------------- USER CONTACT ----------------------------------- */
+/*-------------------- TELEPHONY -------------------------------------- */
+import TelephonyNav from "./TelephonyNav";
 import Telephony from "../../Telephony";
-
-import Messaging from "../../Messaging";
+import CallsAndAlertsTelephony from "../telephony/callsAndAlertsTelephony";
+/*-------------------- TELEPHONY -------------------------------------- */
+/*-------------------- USER CONTACT ----------------------------------- */
+/*-------------------- MESSAGING -------------------------------------- */
+// import Messaging from "../../Messaging";
 import MessagingNav from "../sideBarNavigation/MessagingNav";
 import MessagingGeneralSettings from "../messaging/MessagingGeneralSettings";
-import OpenVisitPermissions from "../mobileApp/OpenVisitPermissions";
-import TelephonyNav from "./TelephonyNav";
+/*-------------------- MESSAGING -------------------------------------- */
+
+import StatusTypesNav from "./StatusTypesNav";
+/*-------------------- PAYROLL BILLING & QB---------------------------- */
+import PBQNav from "./PBQNav";
+import PayrollBillingQuickbooks from "../../PayrollBillingQuickbooks";
+/*-------------------- PAYROLL BILLING & QB---------------------------- */
+/*-------------------- THIRD PARTY BILLING ---------------------------- */
+import ThirdPartyBilling from "../../ThirdPartyBilling";
+import TPBNav from "./TPBNav";
+/*-------------------- THIRD PARTY BILLING ---------------------------- */
+/*-------------------- REPORT AND DISPLAY OPTIONS --------------------- */
 import RDONav from "./RDONav";
+import ReportDisplayOptions from "../../ReportDisplayOptions";
+/*-------------------- REPORT AND DISPLAY OPTIONS --------------------- */
+/*-------------------- SECURITY --------------------------------------- */
+import Security from "../../Security";
+import SecurityNav from "./SecurityNav";
+/*-------------------- SECURITY --------------------------------------- */
+/*-------------------- FORMS ------------------------------------------ */
+import FormsNav from "./FormsNav";
+import Forms from "../../Forms";
+/*-------------------- FORMS ------------------------------------------ */
 
 // STYLES
 import "../../Navigation.css";
-import {
-  StyledI,
-  StyledNav,
-  StyledSpan,
-  InnerMenuDiv
-} from "../../styles/SideBarStyles";
-import { Card, ListGroup, Collapse } from "react-bootstrap";
-import CallsAndAlertsTelephony from "../telephony/callsAndAlertsTelephony";
-import PBQNav from "./PBQNav";
-import TPBNav from "./TPBNav";
-import NavtusTypesNav from "./StatusTypesNav";
-import StatusTypesNav from "./StatusTypesNav";
-
+import { Card, ListGroup } from "react-bootstrap";
 // STYLES
 
 class Navigation extends React.Component {
@@ -110,65 +123,11 @@ class Navigation extends React.Component {
               <TPBNav />
               <StatusTypesNav />
               <RDONav />
-
-              <StyledNav
-                onClick={() => this.setState({ openthirteen: !openthirteen })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openthirteen}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Security
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openthirteen}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/security">Security</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
-              <StyledNav
-                onClick={() => this.setState({ openfourteen: !openfourteen })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openfourteen}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Forms
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openfourteen}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/forms">Forms</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
+              <SecurityNav />
+              <FormsNav />
             </ListGroup>
           </Card>
-          <Route exact path="/caregiver-setup" component={CaregiverSetup} />
-          <Route exact path="/care-notes" component={CareNotes} />
-          <Route
-            exact
-            path="/caregiver-classes-certifications-evaluations"
-            component={CaregiverCCF}
-          />
-          <Route
-            exact
-            path="/recommend-caregiver"
-            component={RecommendCaregiver}
-          />
-          <Route
-            exact
-            path="/caregiver-block-reasons"
-            component={CaregiverBlockReasons}
-          />
-          <Route exact path="/caregiver-points" component={CaregiverPoints} />
+
           <Route exact path="/profile-options" component={ProfileOptions} />
           <Route exact path="/client-classes" component={ClientClasses} />
           <Route
