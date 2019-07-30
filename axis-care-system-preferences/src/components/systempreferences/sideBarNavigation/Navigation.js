@@ -60,6 +60,7 @@ import {
 } from "../../styles/SideBarStyles";
 import { Card, ListGroup, Collapse } from "react-bootstrap";
 import CallsAndAlertsTelephony from "../telephony/callsAndAlertsTelephony";
+import PBQ from "./PBQ";
 
 // STYLES
 
@@ -68,9 +69,6 @@ class Navigation extends React.Component {
     super(props, context);
 
     this.state = {
-      openseven: false,
-      openeight: false,
-      opennine: false,
       openten: false,
       openeleven: false,
       opentwelve: false,
@@ -81,9 +79,6 @@ class Navigation extends React.Component {
 
   render() {
     const {
-      openseven,
-      openeight,
-      opennine,
       openten,
       openeleven,
       opentwelve,
@@ -107,48 +102,8 @@ class Navigation extends React.Component {
               <UserContactNav />
               <MessagingNav />
               <TelephonyNav />
+              <PBQ />
 
-              {/* <StyledNav
-                onClick={() => this.setState({ openseven: !openseven })}
-                aria-controls="example-collapse-text"
-                aria-expanded={openseven}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Telephony
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.openseven}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/telephony">Telephony</Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse> */}
-
-              <StyledNav
-                onClick={() => this.setState({ opennine: !opennine })}
-                aria-controls="example-collapse-text"
-                aria-expanded={opennine}
-              >
-                <StyledSpan>
-                  <StyledI className="fas fa-chevron-right" />
-                  Payroll / Billing / Quickbooks
-                </StyledSpan>
-              </StyledNav>
-              <Collapse in={this.state.opennine}>
-                <div>
-                  <ListGroup.Item>
-                    <InnerMenuDiv>
-                      <Link to="/payrollbillingquickbooks">
-                        Payroll / Billing / Quickbooks
-                      </Link>
-                    </InnerMenuDiv>
-                  </ListGroup.Item>
-                </div>
-              </Collapse>
               <StyledNav
                 onClick={() => this.setState({ openten: !openten })}
                 aria-controls="example-collapse-text"
