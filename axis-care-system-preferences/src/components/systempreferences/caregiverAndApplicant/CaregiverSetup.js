@@ -37,7 +37,19 @@ export default class CaregiverSetup extends React.Component {
       hct: 0, // Hourly Certification Threshold
       checkedOT: false, // Overtime
       checkedTS: false, // Track Seniority
-      checkedCCPS: false // Caregiver Care Plan Signatures
+      checkedCCPS: false, // Caregiver Care Plan Signatures
+      checkedA: false, // Track Seniority
+      checkedB: false, // Caregiver Care Plan Signatures
+      checkedC: false, // Track Seniority
+      checkedD: false, // Caregiver Care Plan Signatures
+      checkedE: false, // Track Seniority
+      checkedF: false, // Caregiver Care Plan Signatures
+      checkedG: false, // Track Seniority
+      checkedH: false, // Caregiver Care Plan Signatures
+      checkedI: false, // Track Seniority
+      checkedJ: false, // Caregiver Care Plan Signatures
+      checkedK: false, // Track Seniority
+      checkedL: false // Caregiver Care Plan Signatures
     };
   }
 
@@ -53,6 +65,76 @@ export default class CaregiverSetup extends React.Component {
     });
   };
 
+  handleToggleChangeCCPS = value => {
+    this.setState({
+      checkedCCPS: value
+    });
+  };
+  handleToggleChangeA = value => {
+    this.setState({
+      checkedA: value
+    });
+  };
+
+  handleToggleChangeB = value => {
+    this.setState({
+      checkedB: value
+    });
+  };
+  handleToggleChangeC = value => {
+    this.setState({
+      checkedC: value
+    });
+  };
+
+  handleToggleChangeD = value => {
+    this.setState({
+      checkedD: value
+    });
+  };
+  handleToggleChangeE = value => {
+    this.setState({
+      checkedE: value
+    });
+  };
+
+  handleToggleChangeF = value => {
+    this.setState({
+      checkedF: value
+    });
+  };
+  handleToggleChangeG = value => {
+    this.setState({
+      checkedG: value
+    });
+  };
+
+  handleToggleChangeH = value => {
+    this.setState({
+      checkedH: value
+    });
+  };
+  handleToggleChangeI = value => {
+    this.setState({
+      checkedI: value
+    });
+  };
+
+  handleToggleChangeJ = value => {
+    this.setState({
+      checkedJ: value
+    });
+  };
+  handleToggleChangeK = value => {
+    this.setState({
+      checkedK: value
+    });
+  };
+  handleToggleChangeL = value => {
+    this.setState({
+      checkedL: value
+    });
+  };
   handleToggleChangeCCPS = value => {
     this.setState({
       checkedCCPS: value
@@ -180,49 +262,131 @@ export default class CaregiverSetup extends React.Component {
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Pay meal times</StyledSpan>
-          <input type="checkbox" />
+          <label>
+            <Switch
+              onChange={this.handleToggleChangeA}
+              checked={this.state.checkedA}
+              height={30}
+              width={100}
+              onColor="#007bff"
+              uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+              checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+            />
+          </label>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Pay sleep times</StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeB}
+            checked={this.state.checkedB}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Pay break times</StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeC}
+            checked={this.state.checkedC}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDivWithUnderline>
           <StyledSpan>Pay inter-visit travel time</StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeD}
+            checked={this.state.checkedD}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDivWithUnderline>
         <StyledDiv>
           <StyledSpan>Request meal times</StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeE}
+            checked={this.state.checkedE}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Request sleep times</StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeF}
+            checked={this.state.checkedF}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>Request break times</StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeG}
+            checked={this.state.checkedG}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>
             Request meal times <br /> (telephony)
           </StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeH}
+            checked={this.state.checkedH}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>
             Request sleep times <br /> (telephony)
           </StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeI}
+            checked={this.state.checkedI}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDivWithUnderline>
           <StyledSpan>
             Request break times <br /> (telephony)
           </StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeJ}
+            checked={this.state.checkedJ}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDivWithUnderline>
 
         <StyledDiv>
@@ -233,14 +397,30 @@ export default class CaregiverSetup extends React.Component {
               Dignissimos!
             </StyledPara>
           </StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeK}
+            checked={this.state.checkedK}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
 
         <StyledDiv>
           <StyledSpan>
             Request inter-visit travel time <br /> (telephony)
           </StyledSpan>
-          <input type="checkbox" />
+          <Switch
+            onChange={this.handleToggleChangeL}
+            checked={this.state.checkedL}
+            height={30}
+            width={100}
+            onColor="#007bff"
+            uncheckedIcon={<UncheckedIcon>Disabled</UncheckedIcon>}
+            checkedIcon={<CheckedIcon>Enabled</CheckedIcon>}
+          />
         </StyledDiv>
         <StyledDivWithUnderline>
           <StyledSpan>Inter-visit travel time before/after</StyledSpan>
