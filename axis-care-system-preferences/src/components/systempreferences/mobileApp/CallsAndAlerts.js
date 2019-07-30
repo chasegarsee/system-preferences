@@ -12,7 +12,8 @@ import {
   StyledSpan2,
   StyledDiv,
   StyledDivWithUnderline,
-  StyledPara
+  StyledPara,
+  StyledInput
 } from "../../styles/Divs";
 
 import { Form } from "react-bootstrap";
@@ -20,10 +21,19 @@ import { Form } from "react-bootstrap";
 export default class CallsAndAlerts extends React.Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {};
+    this.state = {
+      clockInEarly: 0
+    };
   }
 
+  handleOnChangeClockInEarly = value => {
+    this.setState({
+      clockInEarly: value
+    });
+  };
+
   render() {
+    let { clockInEarly } = this.state;
     return (
       <MainCard>
         <StyledDivHeader>
@@ -42,11 +52,14 @@ export default class CallsAndAlerts extends React.Component {
           <StyledSpan>
             Clock-In early <br />
           </StyledSpan>
-          <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
-            </Form.Group>
-          </Form>
+          <StyledInput type="text" value={clockInEarly} />
+          <Slider
+            min={0}
+            max={168}
+            value={clockInEarly}
+            orientation="horizontal"
+            onChange={this.handleOnChangeClockInEarly}
+          />
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>
@@ -54,7 +67,7 @@ export default class CallsAndAlerts extends React.Component {
           </StyledSpan>
           <Form>
             <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+              <Form.Control rows="1" />
             </Form.Group>
           </Form>
         </StyledDiv>

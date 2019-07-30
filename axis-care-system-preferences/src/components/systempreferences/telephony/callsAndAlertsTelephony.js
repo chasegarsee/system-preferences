@@ -3,6 +3,7 @@ import "../SystemPreferences.css";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
 import Switch from "react-switch";
+import styled from "styled-components";
 import {
   MainCard,
   StyledDivHeader,
@@ -12,11 +13,11 @@ import {
   StyledSpan2,
   StyledDiv,
   StyledDivWithUnderline,
-  StyledPara
+  StyledPara,
+  StyledInput
 } from "../../styles/Divs";
 import { StyledSelect } from "../../styles/Button";
 import { UncheckedIcon, CheckedIcon } from "../../styles/Button";
-
 import { Form } from "react-bootstrap";
 
 export default class CallsAndAlertsTelephony extends React.Component {
@@ -33,7 +34,8 @@ export default class CallsAndAlertsTelephony extends React.Component {
       checkedH: false, // Show Messages on "Client Alerts"
       checkedI: false, // Show Messages on "Calendar Alerts"
       checkedJ: false, // Show Caregiver phone number on Alert (to User)
-      checkedK: false // Show Client phone number on Alert (to User)
+      checkedK: false, // Show Client phone number on Alert (to User)
+      clockInEarly: 0
     };
   }
   handleToggleChangeA = value => {
@@ -102,7 +104,14 @@ export default class CallsAndAlertsTelephony extends React.Component {
     });
   };
 
+  handleOnChangeClockInEarly = value => {
+    this.setState({
+      clockInEarly: value
+    });
+  };
+
   render() {
+    let { clockInEarly } = this.state;
     return (
       <MainCard>
         <StyledDivHeader>
@@ -122,8 +131,8 @@ export default class CallsAndAlertsTelephony extends React.Component {
             Clock-In early <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -132,8 +141,8 @@ export default class CallsAndAlertsTelephony extends React.Component {
             Clock-In late <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -142,8 +151,8 @@ export default class CallsAndAlertsTelephony extends React.Component {
             Clock-Out early <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -152,8 +161,8 @@ export default class CallsAndAlertsTelephony extends React.Component {
             Clock-Out late <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDivWithUnderline>
@@ -167,8 +176,8 @@ export default class CallsAndAlertsTelephony extends React.Component {
             Clock-In before <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -177,8 +186,8 @@ export default class CallsAndAlertsTelephony extends React.Component {
             Clock-In after <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -187,21 +196,25 @@ export default class CallsAndAlertsTelephony extends React.Component {
             Clock-Out before <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
-        <StyledDivWithUnderline>
+        <StyledDiv>
           <StyledSpan>
             Clock-Out after <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
-        </StyledDivWithUnderline>
+        </StyledDiv>
+        <StyledDivHeader style={{ borderBottom: "4px solid #eeeff2" }}>
+          <StyledSpan2>Features</StyledSpan2>
+          <StyledSpan2>Status</StyledSpan2>
+        </StyledDivHeader>
         <StyledDiv>
           <StyledH3>
             List Alerts in places other than dashboard "Telephony" tab
@@ -409,3 +422,19 @@ export default class CallsAndAlertsTelephony extends React.Component {
     );
   }
 }
+
+const StyledFormInput = styled.input`
+  display: block;
+  width: 35%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+`;
