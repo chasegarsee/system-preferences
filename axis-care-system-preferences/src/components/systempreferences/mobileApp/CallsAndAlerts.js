@@ -3,6 +3,7 @@ import "../SystemPreferences.css";
 import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
 import Switch from "react-switch";
+import styled from "styled-components";
 import {
   MainCard,
   StyledDivHeader,
@@ -52,22 +53,19 @@ export default class CallsAndAlerts extends React.Component {
           <StyledSpan>
             Clock-In early <br />
           </StyledSpan>
-          <StyledInput type="text" value={clockInEarly} />
-          <Slider
-            min={0}
-            max={168}
-            value={clockInEarly}
-            orientation="horizontal"
-            onChange={this.handleOnChangeClockInEarly}
-          />
+          <Form>
+            <Form.Group>
+              <StyledFormInput />
+            </Form.Group>
+          </Form>
         </StyledDiv>
         <StyledDiv>
           <StyledSpan>
             Clock-In late <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -76,8 +74,8 @@ export default class CallsAndAlerts extends React.Component {
             Clock-Out early <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -86,8 +84,8 @@ export default class CallsAndAlerts extends React.Component {
             Clock-Out late <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDivWithUnderline>
@@ -101,8 +99,8 @@ export default class CallsAndAlerts extends React.Component {
             Clock-In before <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -111,8 +109,8 @@ export default class CallsAndAlerts extends React.Component {
             Clock-In after <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -121,8 +119,8 @@ export default class CallsAndAlerts extends React.Component {
             Clock-Out before <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDiv>
@@ -131,8 +129,8 @@ export default class CallsAndAlerts extends React.Component {
             Clock-Out after <br />
           </StyledSpan>
           <Form>
-            <Form.Group controlId="exampleForm.ControlTextarea1">
-              <Form.Control as="textarea" rows="1" />
+            <Form.Group>
+              <StyledFormInput />
             </Form.Group>
           </Form>
         </StyledDivWithUnderline>
@@ -140,3 +138,19 @@ export default class CallsAndAlerts extends React.Component {
     );
   }
 }
+
+const StyledFormInput = styled.input`
+  display: block;
+  width: 35%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+`;
