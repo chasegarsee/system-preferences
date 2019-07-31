@@ -85,23 +85,11 @@ class Navigation extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    this.state = {
-      openten: false,
-      openeleven: false,
-      opentwelve: false,
-      openthirteen: false,
-      openfourteen: false
-    };
+    this.state = {};
   }
 
   render() {
-    const {
-      openten,
-      openeleven,
-      opentwelve,
-      openthirteen,
-      openfourteen
-    } = this.state;
+    const {} = this.state;
 
     return (
       <div>
@@ -127,95 +115,9 @@ class Navigation extends React.Component {
               <FormsNav />
             </ListGroup>
           </Card>
-
-          <Route exact path="/caregiver-setup" component={CaregiverSetup} />
-          <Route exact path="/care-notes" component={CareNotes} />
-          <Route
-            exact
-            path="/caregiver-classes-certifications-evaluations"
-            component={CaregiverCCF}
-          />
-          <Route
-            exact
-            path="/recommend-caregiver"
-            component={RecommendCaregiver}
-          />
-          <Route
-            exact
-            path="/caregiver-block-reasons"
-            component={CaregiverBlockReasons}
-          />
-          <Route exact path="/caregiver-points" component={CaregiverPoints} />
-
-          <Route exact path="/profile-options" component={ProfileOptions} />
-          <Route exact path="/client-classes" component={ClientClasses} />
-          <Route
-            exact
-            path="/region-codes-client-and-caregiver"
-            component={RegionCodesClientAndCaregiver}
-          />
-          <Route exact path="/triage-categories" component={TriageCategories} />
-          <Route
-            exact
-            path="/referral-sources"
-            component={OtherReferralSources}
-          />
-          <Route
-            exact
-            path="/physician-information"
-            component={PhysicianInformation}
-          />
-          <Route exact path="/business-settings" component={BusinessSettings} />
-          <Route exact path="/class-settings" component={ClassSettings} />
-          <Route
-            exact
-            path="/lead-deactivation-reasons"
-            component={LeadDeactivationReasons}
-          />
-          <Route exact path="/client" component={Client} />
-          <Route exact path="/general-settings" component={GeneralSettings} />
-          <Route exact path="/user-contact" component={UserContact} />
-          <Route
-            exact
-            path="/general-messaging-settings"
-            component={MessagingGeneralSettings}
-          />
-          <Route exact path="/telephony" component={Telephony} />
-
-          <Route
-            exact
-            path="/calls-and-alerts-telephony"
-            component={CallsAndAlertsTelephony}
-          />
-          <Route
-            exact
-            path="/mobile-app-settings"
-            component={MobileAppSettings}
-          />
-          <Route exact path="/calls-and-alerts" component={CallsAndAlerts} />
-          <Route
-            exact
-            path="/open-visit-permissions"
-            component={OpenVisitPermissions}
-          />
-          <Route
-            exact
-            path="/payrollbillingquickbooks"
-            component={PayrollBillingQuickbooks}
-          />
-          <Route
-            exact
-            path="/thirdpartybilling"
-            component={ThirdPartyBilling}
-          />
-          <Route exact path="/statustypes" component={StatusTypesNav} />
-          <Route
-            exact
-            path="/reportanddisplayoptions"
-            component={ReportDisplayOptions}
-          />
-          <Route exact path="/security" component={Security} />
-          <Route exact path="/forms" component={Forms} />
+          {routes.map(({ path, component: C }) => (
+            <Route exact path={path} component={C} />
+          ))}
         </div>
       </div>
     );
@@ -223,3 +125,126 @@ class Navigation extends React.Component {
 }
 
 export default Navigation;
+
+const routes = [
+  {
+    path: "/caregiver-setup",
+    component: CaregiverSetup
+  },
+  {
+    path: "/care-notes",
+    component: CareNotes
+  },
+  {
+    path: "/caregiver-classes-certifications-evaluations",
+    component: CaregiverCCF
+  },
+  {
+    path: "/recommend-caregiver",
+    component: RecommendCaregiver
+  },
+  {
+    path: "/caregiver-block-reasons",
+    component: CaregiverBlockReasons
+  },
+  {
+    path: "/caregiver-points",
+    component: CaregiverPoints
+  },
+  {
+    path: "/client-classes",
+    component: ClientClasses
+  },
+  {
+    path: "/profile-options",
+    component: ProfileOptions
+  },
+  {
+    path: "/region-codes-client-and-caregiver",
+    component: RegionCodesClientAndCaregiver
+  },
+  {
+    path: "/triage-categories",
+    component: TriageCategories
+  },
+  {
+    path: "/referral-sources",
+    component: OtherReferralSources
+  },
+  {
+    path: "/physician-information",
+    component: PhysicianInformation
+  },
+  {
+    path: "/business-settings",
+    component: BusinessSettings
+  },
+  {
+    path: "/lead-deactivation-reasons",
+    component: LeadDeactivationReasons
+  },
+  {
+    path: "/class-settings",
+    component: ClassSettings
+  },
+  {
+    path: "/client",
+    component: Client
+  },
+  {
+    path: "/general-settings",
+    component: GeneralSettings
+  },
+  {
+    path: "/user-contact",
+    component: UserContact
+  },
+  {
+    path: "/general-messaging-settings",
+    component: MessagingGeneralSettings
+  },
+  {
+    path: "/telephony",
+    component: Telephony
+  },
+  {
+    path: "calls-and-alerts-telephony",
+    component: CallsAndAlertsTelephony
+  },
+  {
+    path: "/mobile-app-settings",
+    component: MobileAppSettings
+  },
+  {
+    path: "/calls-and-alerts",
+    component: CallsAndAlerts
+  },
+  {
+    path: "/open-visit-permissions",
+    component: OpenVisitPermissions
+  },
+  {
+    path: "/payroll-billing-quickbooks",
+    component: PayrollBillingQuickbooks
+  },
+  {
+    path: "third-party-billing",
+    component: ThirdPartyBilling
+  },
+  {
+    path: "/status-types",
+    component: StatusTypesNav
+  },
+  {
+    path: "/report-and-display-options",
+    component: ReportDisplayOptions
+  },
+  {
+    path: "/security",
+    component: Security
+  },
+  {
+    path: "/forms",
+    component: Forms
+  }
+];

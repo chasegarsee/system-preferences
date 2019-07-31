@@ -35,11 +35,9 @@ class CaregiverNav extends React.Component {
   }
 
   handleOutsideClick(e) {
-    // ignore clicks on the component itself
     if (this.node.contains(e.target)) {
       return;
     }
-
     this.handleClick();
   }
 
@@ -66,7 +64,18 @@ class CaregiverNav extends React.Component {
           >
             <ListGroup.Item action href="#link1">
               <InnerMenuDiv>
-                <NavLink to="/caregiver-setup">Caregiver Setup</NavLink>
+                <NavLink
+                  to={{
+                    pathname: "/caregiver-setup",
+                    header: "Caregiver Setup",
+                    state: {
+                      RangeSliderNumber: 0,
+                      header: "Caregiver Setup"
+                    }
+                  }}
+                >
+                  Caregiver Setup
+                </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
             <ListGroup.Item action href="#link2">

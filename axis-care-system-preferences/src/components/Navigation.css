@@ -80,7 +80,7 @@ a:hover {
   color: black;
 }
 a.active {
-  color: white;
+  color: white !important;
 }
 
 .navbar-expand .navbar-nav .nav-link {

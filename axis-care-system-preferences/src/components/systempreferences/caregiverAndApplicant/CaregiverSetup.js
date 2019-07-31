@@ -53,6 +53,11 @@ export default class CaregiverSetup extends React.Component {
     };
   }
 
+  componentDidMount() {
+    const { RangeSliderNumber } = this.props.location.state;
+    const { header } = this.props.location.state;
+  }
+
   handleToggleChangeOT = value => {
     this.setState({
       checkedOT: value
@@ -143,7 +148,7 @@ export default class CaregiverSetup extends React.Component {
 
   handleOnChangeWot = value => {
     this.setState({
-      wot: value
+      RangeSliderNumber: value
     });
   };
 
@@ -178,12 +183,25 @@ export default class CaregiverSetup extends React.Component {
   };
 
   render() {
-    let { wot, dot, att, dct, fct, hct } = this.state;
-
+    let {
+      RangeSliderNumber,
+      header,
+      wot,
+      dot,
+      att,
+      dct,
+      fct,
+      hct
+    } = this.state;
+    console.log(
+      "HEADERRR",
+      RangeSliderNumber,
+      this.props.location.state.header
+    );
     return (
       <MainCard>
         <StyledDivHeader>
-          <StyledH1>Caregiver Setup</StyledH1>
+          <StyledH1>{this.props.location.state.header}</StyledH1>
         </StyledDivHeader>
         <StyledDivHeader style={{ borderBottom: "4px solid #eeeff2" }}>
           <StyledSpan2>Features</StyledSpan2>

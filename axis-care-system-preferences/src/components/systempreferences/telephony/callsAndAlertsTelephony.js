@@ -14,7 +14,8 @@ import {
   StyledDiv,
   StyledDivWithUnderline,
   StyledPara,
-  StyledInput
+  StyledInput,
+  StyledFormInput
 } from "../../styles/Divs";
 import { StyledSelect } from "../../styles/Button";
 import { UncheckedIcon, CheckedIcon } from "../../styles/Button";
@@ -422,19 +423,3 @@ export default class CallsAndAlertsTelephony extends React.Component {
     );
   }
 }
-
-const StyledFormInput = styled.input`
-  display: block;
-  width: 35%;
-  height: calc(1.5em + 0.75rem + 2px);
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #495057;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-`;
