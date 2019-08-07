@@ -1,15 +1,12 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
-import { Card, ListGroup, Collapse } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import { ListGroup, Collapse } from "react-bootstrap";
 import {
   StyledI,
   StyledNav,
   StyledSpan,
   InnerMenuDiv
 } from "../../styles/SideBarStyles";
-
-import { Route } from "react-router-dom";
-import MobileAppSettings from "../mobileApp/MoblieAppSettings";
 
 class MobileAppNav extends React.Component {
   constructor(props, context) {
@@ -47,7 +44,7 @@ class MobileAppNav extends React.Component {
   }
 
   render() {
-    const { open } = this.state;
+    // const { open } = this.state;
 
     return (
       <div>

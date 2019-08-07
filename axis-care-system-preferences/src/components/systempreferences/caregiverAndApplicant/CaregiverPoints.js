@@ -6,10 +6,8 @@ import {
   MainCard,
   StyledDivHeader,
   StyledH1,
-  StyledButtonDiv,
   StyledSpan,
   StyledSpan2,
-  StyledPara,
   StyledDiv,
   StyledButtonDivWithUnderline
 } from "../../styles/Divs";

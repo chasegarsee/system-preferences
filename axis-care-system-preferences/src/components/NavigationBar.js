@@ -23,16 +23,16 @@ class NavigationBar extends Component {
   }
 
   render() {
-    const styles = {
-      body: {
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        width: "100vw",
-        height: "100vh",
-        filter: this.state.menuOpen ? "blur(2px)" : null
-      }
-    };
+    // const styles = {
+    //   body: {
+    //     display: "flex",
+    //     flexDirection: "column",
+    //     alignItems: "center",
+    //     width: "100vw",
+    //     height: "100vh",
+    //     filter: this.state.menuOpen ? "blur(2px)" : null
+    //   }
+    // };
     const menu = ["About Us", "Our Products", "Services", "FAQ", "Contact Us"];
     const menuItems = menu.map((val, index) => {
       return (

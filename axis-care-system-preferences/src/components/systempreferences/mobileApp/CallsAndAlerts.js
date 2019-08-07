@@ -1,9 +1,6 @@
 import React from "react";
 import "../SystemPreferences.css";
-import Slider from "react-rangeslider";
 import "react-rangeslider/lib/index.css";
-import Switch from "react-switch";
-import styled from "styled-components";
 import {
   MainCard,
   StyledDivHeader,
@@ -13,8 +10,6 @@ import {
   StyledSpan2,
   StyledDiv,
   StyledDivWithUnderline,
-  StyledPara,
-  StyledInput,
   StyledFormInput
 } from "../../styles/Divs";
 
@@ -35,7 +30,7 @@ export default class CallsAndAlerts extends React.Component {
   };
 
   render() {
-    let { clockInEarly } = this.state;
+    // let { clockInEarly } = this.state;
     return (
       <MainCard>
         <StyledDivHeader>

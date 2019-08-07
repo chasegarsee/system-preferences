@@ -17,14 +17,14 @@ class Menu extends React.Component {
   }
 
   render() {
-    const styles = {
-      container: {
-        height: this.state.open ? "auto" : "0"
-      },
-      menuList: {
-        paddingTop: "3rem"
-      }
-    };
+    // const styles = {
+    //   container: {
+    //     height: this.state.open ? "auto" : "0"
+    //   },
+    //   menuList: {
+    //     paddingTop: "3rem"
+    //   }
+    // };
     return (
       <div className="mobile-nav-bar">
         {this.state.open ? (

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import { Card, ListGroup, Collapse } from "react-bootstrap";
+import { ListGroup, Collapse } from "react-bootstrap";
 import {
   StyledI,
   StyledNav,
@@ -42,7 +42,7 @@ class CaregiverNav extends React.Component {
   }
 
   render() {
-    const { open } = this.state;
+    // const { open } = this.state;
 
     return (
       <div>
@@ -64,7 +64,7 @@ class CaregiverNav extends React.Component {
           >
             <ListGroup.Item action href="#link1">
               <InnerMenuDiv>
-                <NavLink
+                <Link
                   to={{
                     pathname: "/caregiver-setup",
                     header: "Caregiver Setup",
@@ -75,7 +75,7 @@ class CaregiverNav extends React.Component {
                   }}
                 >
                   Caregiver Setup
-                </NavLink>
+                </Link>
               </InnerMenuDiv>
             </ListGroup.Item>
             <ListGroup.Item action href="#link2">

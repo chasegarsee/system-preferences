@@ -44,7 +44,7 @@ class UserContactNav extends React.Component {
   }
 
   render() {
-    const { open } = this.state;
+    // const { open } = this.state;
 
     return (
       <div>

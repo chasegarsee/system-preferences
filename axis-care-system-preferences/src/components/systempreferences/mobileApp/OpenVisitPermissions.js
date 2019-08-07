@@ -11,20 +11,10 @@ import {
   StyledSpan,
   StyledSpan2,
   StyledDiv,
-  StyledSpanMultiLineText,
-  StyledSpanMultiLineTextTwo,
-  StyledDivWithUnderline,
   StyledPara,
   StyledInput
 } from "../../styles/Divs";
-import {
-  UncheckedIcon,
-  CheckedIcon,
-  StyledSelect,
-  StyledSelectSmall
-} from "../../styles/Button";
-
-import { Form } from "react-bootstrap";
+import { UncheckedIcon, CheckedIcon, StyledSelect } from "../../styles/Button";
 
 export default class OpenVisitPermissions extends React.Component {
   constructor(props, context) {

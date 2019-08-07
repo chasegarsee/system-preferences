@@ -53,10 +53,10 @@ export default class CaregiverSetup extends React.Component {
     };
   }
 
-  componentDidMount() {
-    const { RangeSliderNumber } = this.props.location.state;
-    const { header } = this.props.location.state;
-  }
+  // componentDidMount() {
+  //   const { RangeSliderNumber } = this.props.location.state;
+  //   const { header } = this.props.location.state;
+  // }
 
   handleToggleChangeOT = value => {
     this.setState({
@@ -148,7 +148,7 @@ export default class CaregiverSetup extends React.Component {
 
   handleOnChangeWot = value => {
     this.setState({
-      RangeSliderNumber: value
+      wot: value
     });
   };
 
@@ -183,25 +183,17 @@ export default class CaregiverSetup extends React.Component {
   };
 
   render() {
-    let {
-      RangeSliderNumber,
-      header,
-      wot,
-      dot,
-      att,
-      dct,
-      fct,
-      hct
-    } = this.state;
-    console.log(
-      "HEADERRR",
-      RangeSliderNumber,
-      this.props.location.state.header
-    );
+    let { wot, dot, att, dct, fct, hct } = this.state;
+    // console.log(
+    //   "HEADERRR",
+    //   RangeSliderNumber,
+    //   this.props.location.state.header
+    // );
+
     return (
       <MainCard>
         <StyledDivHeader>
-          <StyledH1>{this.props.location.state.header}</StyledH1>
+          <StyledH1>Caregiver Setup</StyledH1>
         </StyledDivHeader>
         <StyledDivHeader style={{ borderBottom: "4px solid #eeeff2" }}>
           <StyledSpan2>Features</StyledSpan2>
@@ -236,7 +228,11 @@ export default class CaregiverSetup extends React.Component {
               Doloremque
             </StyledPara>
           </StyledSpan>
-          <StyledInput type="text" value={wot} />
+          <StyledInput
+            type="text"
+            value={wot}
+            onChange={this.handleOnChangeWot}
+          />
           <Slider
             min={0}
             max={168}
@@ -254,7 +250,11 @@ export default class CaregiverSetup extends React.Component {
               assumenda, rem dolorum.
             </StyledPara>
           </StyledSpan>
-          <StyledInput type="text" value={dot} />
+          <StyledInput
+            type="text"
+            value={dot}
+            onChange={this.handleOnChangeDot}
+          />
           <Slider
             min={0}
             max={168}
@@ -461,7 +461,11 @@ export default class CaregiverSetup extends React.Component {
           <StyledSpan>
             Autocalculate inter-visit travel time max gap (minutes)
           </StyledSpan>
-          <StyledInput type="text" value={att} />
+          <StyledInput
+            type="text"
+            value={att}
+            onChange={this.handleOnChangeAtt}
+          />
           <Slider
             min={0}
             max={1440}
@@ -472,7 +476,11 @@ export default class CaregiverSetup extends React.Component {
         </StyledDivWithUnderline>
         <StyledDiv>
           <StyledSpan>Daily Certification Threshold (hours)</StyledSpan>
-          <StyledInput type="text" value={fct} />
+          <StyledInput
+            type="text"
+            value={fct}
+            onChange={this.handleOnChangeFct}
+          />
           <Slider
             min={0}
             max={30}
@@ -727,7 +735,11 @@ export default class CaregiverSetup extends React.Component {
 
         <StyledDiv>
           <StyledSpan>Fixed Certification Threshold (hours)</StyledSpan>
-          <StyledInput type="text" value={dct} />
+          <StyledInput
+            type="text"
+            value={dct}
+            onChange={this.handleOnChangeDct}
+          />
           <Slider
             min={0}
             max={30}
@@ -982,7 +994,11 @@ export default class CaregiverSetup extends React.Component {
 
         <StyledDiv>
           <StyledSpan>Hourly Certification Threshold (hours)</StyledSpan>
-          <StyledInput type="text" value={hct} />
+          <StyledInput
+            type="text"
+            value={hct}
+            onChange={this.handleOnChangeHct}
+          />
           <Slider
             min={0}
             max={30}

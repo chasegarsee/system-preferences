@@ -6,8 +6,7 @@ import {
   StyledH1,
   StyledButtonDiv,
   StyledButtonDivWithUnderline,
-  StyledDivHeader,
-  StyledSpan2
+  StyledDivHeader
 } from "../../styles/Divs";
 import { StyledButton, StyledSelectTwo } from "../../styles/Button";
 

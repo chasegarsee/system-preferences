@@ -11,18 +11,11 @@ import {
   StyledSpan,
   StyledSpan2,
   StyledDiv,
-  StyledSpanMultiLineText,
-  StyledSpanMultiLineTextTwo,
   StyledDivWithUnderline,
   StyledPara,
   StyledInput
 } from "../../styles/Divs";
-import {
-  UncheckedIcon,
-  CheckedIcon,
-  StyledSelect,
-  StyledSelectSmall
-} from "../../styles/Button";
+import { UncheckedIcon, CheckedIcon, StyledSelect } from "../../styles/Button";
 
 import { Form } from "react-bootstrap";
 

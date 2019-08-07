@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
 import { Route } from "react-router-dom";
 
 /*-------------------- CAREGIVER AND APPLICANT ------------------------ */
@@ -89,7 +88,7 @@ class Navigation extends React.Component {
   }
 
   render() {
-    const {} = this.state;
+    // const {} = this.state;
 
     return (
       <div>
@@ -115,8 +114,8 @@ class Navigation extends React.Component {
               <FormsNav />
             </ListGroup>
           </Card>
-          {routes.map(({ path, component: C }) => (
-            <Route exact path={path} component={C} />
+          {routes.map(({ path, component: c }) => (
+            <Route exact path={path} component={c} />
           ))}
         </div>
       </div>

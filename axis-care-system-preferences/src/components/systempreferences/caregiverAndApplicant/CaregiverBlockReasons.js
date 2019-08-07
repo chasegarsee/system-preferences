@@ -3,7 +3,6 @@ import { Form, Row, Col } from "react-bootstrap";
 import "./CaregiverAndApplicant.css";
 import {
   StyledH1,
-  StyledButtonDiv,
   StyledButtonDivWithUnderline,
   MainCard,
   StyledDivHeader
