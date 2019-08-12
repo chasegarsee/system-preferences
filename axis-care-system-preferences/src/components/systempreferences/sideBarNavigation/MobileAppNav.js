@@ -67,18 +67,18 @@ class MobileAppNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link10">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link10">
                 <NavLink to="/mobile-app-settings">Mobile App Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link11">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link11">
                 <NavLink to="/calls-and-alerts">Calls and Alerts</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link12">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link12">
                 <NavLink to="/open-visit-permissions">
                   Open Visit Permissions
                 </NavLink>

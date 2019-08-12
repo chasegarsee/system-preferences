@@ -64,41 +64,41 @@ class SecurityNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link130">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link130">
                 <NavLink to="/password-requirements">
                   Password Requirements
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link131">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link131">
                 <NavLink to="/login-logout-settings">
                   Login & Logout Settings
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link132">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link132">
                 <NavLink to="/identity-confirmation">
                   Identity Confirmation
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link133">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link133">
                 <NavLink to="/portal-permissions">Portal Permissions</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link134">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link134">
                 <NavLink to="/open-visit-permissions">
                   Open Visit Permissions
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link135">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link135">
                 <NavLink to="/advanced-user-permissions">
                   Advanced User Permissions
                 </NavLink>

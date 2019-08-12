@@ -25,6 +25,19 @@ export const InnerMenuDiv = styled.div`
   width: 175px;
   justify-content: flex-start;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  border: none;
+  padding: 0;
+  border-radius: 0.25rem;
+
+  .active {
+    background-color: rgb(22, 95, 199);
+    border-radius: 0.25rem;
+  }
 `;
 
 export const StyledI = styled.i`

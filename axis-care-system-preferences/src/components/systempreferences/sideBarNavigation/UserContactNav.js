@@ -65,8 +65,8 @@ class UserContactNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link60">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link60">
                 <NavLink to="/user-contact">User Contact</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>

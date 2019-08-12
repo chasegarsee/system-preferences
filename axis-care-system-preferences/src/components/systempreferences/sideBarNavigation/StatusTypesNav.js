@@ -64,40 +64,40 @@ class StatusTypesNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link110">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link110">
                 <NavLink to="/third-party-billing-general-settings">
                   User Status
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link111">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link111">
                 <NavLink to="/caregiver-status">Caregiver Status</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link112">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link112">
                 <NavLink to="/client-status">Client Status</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link113">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link113">
                 <NavLink to="/applicant-status">Applicant Status</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link114">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link114">
                 <NavLink to="/lead-status">Lead Status</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link115">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link115">
                 <NavLink to="/contact-status">Contact Status</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link116">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link116">
                 <NavLink to="/organization-status">Organization Status</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>

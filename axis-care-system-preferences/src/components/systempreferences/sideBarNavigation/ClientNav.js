@@ -65,35 +65,35 @@ class ClientNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link30">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link30">
                 <NavLink to="/profile-options">Profile Options</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link31">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link31">
                 <NavLink to="/client-classes">Client Classes</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link32">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link32">
                 <NavLink to="/region-codes-client-and-caregiver">
                   Region Codes Client and Caregiver
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link33">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link33">
                 <NavLink to="/triage-categories">Triage Categories</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link34">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link34">
                 <NavLink to="/referral-sources">Other Referral Sources</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link35">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link35">
                 <NavLink to="/physician-information">
                   Physician Information
                 </NavLink>

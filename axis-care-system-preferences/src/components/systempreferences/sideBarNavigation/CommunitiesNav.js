@@ -65,8 +65,8 @@ class CommunitiesNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link50">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link50">
                 <NavLink to="/general-settings">General Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>

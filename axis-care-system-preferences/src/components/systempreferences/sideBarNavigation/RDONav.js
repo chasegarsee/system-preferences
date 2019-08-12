@@ -65,43 +65,43 @@ class RDONav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link120">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link120">
                 <NavLink to="/third-party-billing-general-settings">
                   Report Viewing, Printing, and Saving
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link121">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link121">
                 <NavLink to="/organization-information">
                   Schedule Verification Options
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link122">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link122">
                 <NavLink to="/custom-quickselect-options">
                   List Display Options
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link123">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link123">
                 <NavLink to="/payer-specific-options">
                   Miscellaneous Display Options
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link124">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link124">
                 <NavLink to="/administrative-contact-information">
                   Forms & Custom Forms Options
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link125">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link125">
                 <NavLink to="/administrative-contact-information">
                   Customizable & Visit Options
                 </NavLink>

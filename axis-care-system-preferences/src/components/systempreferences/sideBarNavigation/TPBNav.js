@@ -64,36 +64,36 @@ class TPBNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link100">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link100">
                 <NavLink to="/third-party-billing-general-settings">
                   General Settings
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link101">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link101">
                 <NavLink to="/organization-information">
                   Organization Information
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link102">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link102">
                 <NavLink to="/custom-quickselect-options">
                   Custom Quickselect Options
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link103">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link103">
                 <NavLink to="/payer-specific-options">
                   Payer Specific Options
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link104">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link104">
                 <NavLink to="/administrative-contact-information">
                   Administrative Contact Information
                 </NavLink>

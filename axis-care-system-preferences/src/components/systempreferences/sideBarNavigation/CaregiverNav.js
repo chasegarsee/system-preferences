@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ListGroup, Collapse } from "react-bootstrap";
 import {
   StyledI,
@@ -62,9 +62,9 @@ class CaregiverNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link1">
-              <InnerMenuDiv>
-                <Link
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link1">
+                <NavLink
                   to={{
                     pathname: "/caregiver-setup",
                     header: "Caregiver Setup",
@@ -75,35 +75,35 @@ class CaregiverNav extends React.Component {
                   }}
                 >
                   Caregiver Setup
-                </Link>
+                </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link2">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link2">
                 <NavLink to="/care-notes">Care Notes</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link3">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link3">
                 <NavLink to="/caregiver-classes-certifications-evaluations">
                   Classes Certifications Evaluations
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link4">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link4">
                 <NavLink to="/recommend-caregiver">Recommend Caregiver</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link5">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link5">
                 <NavLink to="/caregiver-block-reasons">
                   Caregiver Block Reasons
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link6">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link6">
                 <NavLink to="/caregiver-points">Caregiver Points</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>

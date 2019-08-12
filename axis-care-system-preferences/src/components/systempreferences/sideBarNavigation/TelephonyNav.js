@@ -64,13 +64,13 @@ class TelephonyNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link80">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link80">
                 <NavLink to="/telephony-module">Telephony Module</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link81">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link81">
                 <NavLink to="/calls-and-alerts-telephony">
                   Calls and Alerts
                 </NavLink>

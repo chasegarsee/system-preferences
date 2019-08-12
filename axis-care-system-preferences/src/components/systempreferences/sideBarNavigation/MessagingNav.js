@@ -65,8 +65,8 @@ class MessagingNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link70">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link70">
                 <NavLink to="/general-messaging-settings">
                   General Messaging Settings
                 </NavLink>

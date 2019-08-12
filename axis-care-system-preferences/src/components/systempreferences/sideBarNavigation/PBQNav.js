@@ -65,30 +65,30 @@ class PBQNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link90">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link90">
                 <NavLink to="/pbq-general-settings">General Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link91">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link91">
                 <NavLink to="/timesheet-setup">Timesheet Setup</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link92">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link92">
                 <NavLink to="/invoicing-settings">Invoicing Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link93">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link93">
                 <NavLink to="/misc-quickbook-settings">
                   Misc Quickbook Settings
                 </NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link94">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link94">
                 <NavLink to="/payment-settings">Payment Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>

@@ -98,24 +98,24 @@ class Navigation extends React.Component {
               variant="flush"
               style={{ height: "auto", alignItems: "center" }}
             >
-              <CaregiverNav />
-              <MobileAppNav />
-              <ClientNav />
-              <MarketingNav />
-              <CommunitiesNav />
-              <UserContactNav />
-              <MessagingNav />
-              <TelephonyNav />
-              <PBQNav />
-              <TPBNav />
-              <StatusTypesNav />
-              <RDONav />
-              <SecurityNav />
-              <FormsNav />
+              <CaregiverNav key="caregiver-nav" />
+              <MobileAppNav key="mobile-app-nav" />
+              <ClientNav key="client-nav" />
+              <MarketingNav key="marketing-nav" />
+              <CommunitiesNav key="communities-nav" />
+              <UserContactNav key="user-contact-nav" />
+              <MessagingNav key="messaging-nav" />
+              <TelephonyNav key="telephony-nav" />
+              <PBQNav key="payroll-billing-quickbooks-nav" />
+              <TPBNav key="third-party-billing-nav" />
+              <StatusTypesNav key="status-types-nav" />
+              <RDONav key="report-display-nav" />
+              <SecurityNav key="security-nav" />
+              <FormsNav key="forms-nav" />
             </ListGroup>
           </Card>
-          {routes.map(({ path, component: c }) => (
-            <Route exact path={path} component={c} />
+          {routes.map(({ path, component: c, key }) => (
+            <Route exact path={path} component={c} key={key} />
           ))}
         </div>
       </div>
@@ -128,122 +128,152 @@ export default Navigation;
 const routes = [
   {
     path: "/caregiver-setup",
-    component: CaregiverSetup
+    component: CaregiverSetup,
+    key: "caregiversetup"
   },
   {
     path: "/care-notes",
-    component: CareNotes
+    component: CareNotes,
+    key: "carenotes"
   },
   {
     path: "/caregiver-classes-certifications-evaluations",
-    component: CaregiverCCF
+    component: CaregiverCCF,
+    key: "caregiverccf"
   },
   {
     path: "/recommend-caregiver",
-    component: RecommendCaregiver
+    component: RecommendCaregiver,
+    key: "recommendcaregiver"
   },
   {
     path: "/caregiver-block-reasons",
-    component: CaregiverBlockReasons
+    component: CaregiverBlockReasons,
+    key: "caregiverblockreasons"
   },
   {
     path: "/caregiver-points",
-    component: CaregiverPoints
+    component: CaregiverPoints,
+    key: "caregiverpoints"
   },
   {
     path: "/client-classes",
-    component: ClientClasses
+    component: ClientClasses,
+    key: "clientclasses"
   },
   {
     path: "/profile-options",
-    component: ProfileOptions
+    component: ProfileOptions,
+    key: "profileoptions"
   },
   {
     path: "/region-codes-client-and-caregiver",
-    component: RegionCodesClientAndCaregiver
+    component: RegionCodesClientAndCaregiver,
+    key: "regioncodesclientandcaregiver"
   },
   {
     path: "/triage-categories",
-    component: TriageCategories
+    component: TriageCategories,
+    key: "triagecategories"
   },
   {
     path: "/referral-sources",
-    component: OtherReferralSources
+    component: OtherReferralSources,
+    key: "otherreferralsources"
   },
   {
     path: "/physician-information",
-    component: PhysicianInformation
+    component: PhysicianInformation,
+    key: "physicianinformation"
   },
   {
     path: "/business-settings",
-    component: BusinessSettings
+    component: BusinessSettings,
+    key: "businesssettings"
   },
   {
     path: "/lead-deactivation-reasons",
-    component: LeadDeactivationReasons
+    component: LeadDeactivationReasons,
+    key: "leaddeactivationreasons"
   },
   {
     path: "/class-settings",
-    component: ClassSettings
+    component: ClassSettings,
+    key: "classsettings"
   },
   {
     path: "/client",
-    component: Client
+    component: Client,
+    key: "client"
   },
   {
     path: "/general-settings",
-    component: GeneralSettings
+    component: GeneralSettings,
+    key: "generalsettings"
   },
   {
     path: "/user-contact",
-    component: UserContact
+    component: UserContact,
+    key: "usercontact"
   },
   {
     path: "/general-messaging-settings",
-    component: MessagingGeneralSettings
+    component: MessagingGeneralSettings,
+    key: "messaginggeneralsettings"
   },
   {
     path: "/telephony",
-    component: Telephony
+    component: Telephony,
+    key: "telephony"
   },
   {
     path: "calls-and-alerts-telephony",
-    component: CallsAndAlertsTelephony
+    component: CallsAndAlertsTelephony,
+    key: "callsandalertstelephony"
   },
   {
     path: "/mobile-app-settings",
-    component: MobileAppSettings
+    component: MobileAppSettings,
+    key: "mobileappsettings"
   },
   {
     path: "/calls-and-alerts",
-    component: CallsAndAlerts
+    component: CallsAndAlerts,
+    key: "callsandalerts"
   },
   {
     path: "/open-visit-permissions",
-    component: OpenVisitPermissions
+    component: OpenVisitPermissions,
+    key: "openvisitpermissions"
   },
   {
     path: "/payroll-billing-quickbooks",
-    component: PayrollBillingQuickbooks
+    component: PayrollBillingQuickbooks,
+    key: "payrollbillingquickbooks"
   },
   {
     path: "third-party-billing",
-    component: ThirdPartyBilling
+    component: ThirdPartyBilling,
+    key: "thirdpartybilling"
   },
   {
     path: "/status-types",
-    component: StatusTypesNav
+    component: StatusTypesNav,
+    key: "statustypesnav"
   },
   {
     path: "/report-and-display-options",
-    component: ReportDisplayOptions
+    component: ReportDisplayOptions,
+    key: "reportdisplayoptions"
   },
   {
     path: "/security",
-    component: Security
+    component: Security,
+    key: "security"
   },
   {
     path: "/forms",
-    component: Forms
+    component: Forms,
+    key: "forms"
   }
 ];

@@ -65,18 +65,18 @@ class MarketingNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link40">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link40">
                 <NavLink to="/business-settings">Business Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link41">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link41">
                 <NavLink to="/class-settings">Class Settings</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link42">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link42">
                 <NavLink to="/lead-deactivation-reasons">
                   Lead Deactivation Reasons
                 </NavLink>

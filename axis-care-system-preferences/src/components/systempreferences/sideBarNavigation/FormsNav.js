@@ -64,13 +64,13 @@ class FormsNav extends React.Component {
               this.node = node;
             }}
           >
-            <ListGroup.Item action href="#link80">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link80">
                 <NavLink to="/form-status">Filled-out Form Status</NavLink>
               </InnerMenuDiv>
             </ListGroup.Item>
-            <ListGroup.Item action href="#link81">
-              <InnerMenuDiv>
+            <ListGroup.Item>
+              <InnerMenuDiv action="true" href="#link81">
                 <NavLink to="/caregiver-care-plan-signatures">
                   Caregiver Care Plan Signatures
                 </NavLink>
