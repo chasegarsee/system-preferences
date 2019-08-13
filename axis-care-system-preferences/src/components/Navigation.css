@@ -106,6 +106,21 @@ a.active {
   color: white;
   font-size: 1.6rem;
 }
+.react-switch-handle {
+  box-shadow: none;
+}
+
+.react-switch-bg {
+  margin: 0 0 10px !important;
+}
+
+.react-switch-bg::after {
+  background: rgb(81, 199, 22) !important;
+}
+
+.react-switch-handle {
+  box-shadow: none !important;
+}
 /* @media (max-width: 1160px) {
   .navigation-bar-div {
     display: none;
