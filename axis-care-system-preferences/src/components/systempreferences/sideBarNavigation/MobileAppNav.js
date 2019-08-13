@@ -94,7 +94,7 @@ class MobileAppNav extends React.Component {
                 style={{
                   width: "175px",
 
-                  margin: "0 0 10px 25px"
+                  margin: "0 0 10px 20px"
                 }}
               >
                 <Switch
