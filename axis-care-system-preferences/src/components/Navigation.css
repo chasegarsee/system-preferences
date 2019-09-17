@@ -114,12 +114,12 @@ a.active {
   margin: 0 0 10px !important;
 }
 
-.react-switch-bg::after {
-  background: rgb(81, 199, 22) !important;
-}
-
 .react-switch-handle {
   box-shadow: none !important;
+}
+
+.mobile-app-nav-components {
+  transition: height 350ms ease-in-out, opacity 750ms ease-in-out;
 }
 /* @media (max-width: 1160px) {
   .navigation-bar-div {

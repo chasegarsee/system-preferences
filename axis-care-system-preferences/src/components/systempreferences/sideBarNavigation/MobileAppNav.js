@@ -122,7 +122,7 @@ class MobileAppNav extends React.Component {
                   </div>
                 )}
                 {!this.state.isHidden && (
-                  <>
+                  <div className="mobile-app-nav-components">
                     <ListGroup.Item>
                       <InnerMenuDiv action="true" href="#link10">
                         <NavLink to="/mobile-app-settings">
@@ -144,7 +144,7 @@ class MobileAppNav extends React.Component {
                         </NavLink>
                       </InnerMenuDiv>
                     </ListGroup.Item>
-                  </>
+                  </div>
                 )}
               </label>
             </div>

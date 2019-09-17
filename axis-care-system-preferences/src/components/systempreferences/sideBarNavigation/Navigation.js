@@ -80,48 +80,41 @@ import "../../Navigation.css";
 import { Card, ListGroup } from "react-bootstrap";
 // STYLES
 
-class Navigation extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+import { useDarkMode } from "../../../Hooks/useDarkMode";
 
-    this.state = {};
-  }
-
-  render() {
-    // const {} = this.state;
-
-    return (
-      <div>
-        <div className="main">
-          <Card className="main-card">
-            <ListGroup
-              variant="flush"
-              style={{ height: "auto", alignItems: "center" }}
-            >
-              <CaregiverNav key="caregiver-nav" />
-              <MobileAppNav key="mobile-app-nav" />
-              <ClientNav key="client-nav" />
-              <MarketingNav key="marketing-nav" />
-              <CommunitiesNav key="communities-nav" />
-              <UserContactNav key="user-contact-nav" />
-              <MessagingNav key="messaging-nav" />
-              <TelephonyNav key="telephony-nav" />
-              <PBQNav key="payroll-billing-quickbooks-nav" />
-              <TPBNav key="third-party-billing-nav" />
-              <StatusTypesNav key="status-types-nav" />
-              <RDONav key="report-display-nav" />
-              <SecurityNav key="security-nav" />
-              <FormsNav key="forms-nav" />
-            </ListGroup>
-          </Card>
-          {routes.map(({ path, component: c, key }) => (
-            <Route exact path={path} component={c} key={key} />
-          ))}
-        </div>
+const Navigation = props => {
+  const [mode, toggleMode] = useDarkMode("dark-mode", false);
+  return (
+    <div>
+      <div className="main">
+        <Card className={`main-card ${mode === true ? "dark-mode" : ""}`}>
+          <ListGroup
+            variant="flush"
+            style={{ height: "auto", alignItems: "center" }}
+          >
+            <CaregiverNav key="caregiver-nav" />
+            <MobileAppNav key="mobile-app-nav" />
+            <ClientNav key="client-nav" />
+            <MarketingNav key="marketing-nav" />
+            <CommunitiesNav key="communities-nav" />
+            <UserContactNav key="user-contact-nav" />
+            <MessagingNav key="messaging-nav" />
+            <TelephonyNav key="telephony-nav" />
+            <PBQNav key="payroll-billing-quickbooks-nav" />
+            <TPBNav key="third-party-billing-nav" />
+            <StatusTypesNav key="status-types-nav" />
+            <RDONav key="report-display-nav" />
+            <SecurityNav key="security-nav" />
+            <FormsNav key="forms-nav" />
+          </ListGroup>
+        </Card>
+        {routes.map(({ path, component: c, key }) => (
+          <Route exact path={path} component={c} key={key} />
+        ))}
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Navigation;
 
