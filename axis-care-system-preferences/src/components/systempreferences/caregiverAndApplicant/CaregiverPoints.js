@@ -3,7 +3,7 @@ import { Form, Row, Col } from "react-bootstrap";
 import "./CaregiverAndApplicant.css";
 import Switch from "react-switch";
 import {
-  MainCard,
+  MainCardSmall,
   StyledDivHeader,
   StyledH1,
   StyledSpan,
@@ -31,7 +31,7 @@ export default class CaregiverPoints extends Component {
 
   render() {
     return (
-      <MainCard>
+      <MainCardSmall>
         <StyledDivHeader>
           <StyledH1>Caregiver Points</StyledH1>
         </StyledDivHeader>
@@ -87,7 +87,7 @@ export default class CaregiverPoints extends Component {
             Add New
           </StyledButton>
         </StyledButtonDivWithUnderline>
-      </MainCard>
+      </MainCardSmall>
     );
   }
 }

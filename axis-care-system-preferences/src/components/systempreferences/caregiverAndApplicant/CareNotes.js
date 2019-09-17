@@ -4,6 +4,7 @@ import { Form } from "react-bootstrap";
 import Switch from "react-switch";
 import {
   MainCard,
+  MainCardSmall,
   StyledDivHeader,
   StyledH1,
   StyledSpan,
@@ -29,7 +30,7 @@ export default class CareNotes extends React.Component {
 
   render() {
     return (
-      <MainCard>
+      <MainCardSmall>
         <StyledDivHeader>
           <StyledH1 style={{ fontWeight: "300" }}>Care Notes</StyledH1>
         </StyledDivHeader>
@@ -87,7 +88,7 @@ export default class CareNotes extends React.Component {
             />
           </label>
         </StyledDiv>
-      </MainCard>
+      </MainCardSmall>
     );
   }
 }

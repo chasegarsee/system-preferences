@@ -9,6 +9,15 @@ export const MainCard = styled.div`
   margin: 2% 0;
 `;
 
+export const MainCardSmall = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+  height: 100vh;
+  margin: 2% 0;
+`;
+
 export const StyledDivHeader = styled.div`
   display: flex;
   justify-content: flex-start;

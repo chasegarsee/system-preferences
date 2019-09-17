@@ -3,6 +3,7 @@ import { Form, Row, Col } from "react-bootstrap";
 import "./CaregiverAndApplicant.css";
 import {
   MainCard,
+  MainCardSmall,
   StyledH1,
   StyledButtonDiv,
   StyledButtonDivWithUnderline,
@@ -31,7 +32,7 @@ export default class CaregiverCCF extends Component {
 
   render() {
     return (
-      <MainCard>
+      <MainCardSmall>
         <StyledDivHeader>
           <StyledH1>Classes</StyledH1>
         </StyledDivHeader>
@@ -205,7 +206,7 @@ export default class CaregiverCCF extends Component {
             Add Evaluation
           </StyledButton>
         </StyledButtonDiv>
-      </MainCard>
+      </MainCardSmall>
     );
   }
 }

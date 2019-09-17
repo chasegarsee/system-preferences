@@ -8,6 +8,8 @@ import {
   InnerMenuDiv
 } from "../../styles/SideBarStyles";
 
+import { useDarkMode } from "../../../Hooks/useDarkMode";
+
 class CaregiverNav extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -42,8 +44,6 @@ class CaregiverNav extends React.Component {
   }
 
   render() {
-    // const { open } = this.state;
-
     return (
       <div>
         <StyledNav

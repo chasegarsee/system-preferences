@@ -4,7 +4,7 @@ import "./CaregiverAndApplicant.css";
 import {
   StyledH1,
   StyledButtonDivWithUnderline,
-  MainCard,
+  MainCardSmall,
   StyledDivHeader
 } from "../../styles/Divs";
 import { StyledButton } from "../../styles/Button";
@@ -25,7 +25,7 @@ export default class CaregiverBlockReasons extends Component {
 
   render() {
     return (
-      <MainCard>
+      <MainCardSmall>
         <StyledDivHeader>
           <StyledH1>Caregiver Block Reasons</StyledH1>
         </StyledDivHeader>
@@ -94,7 +94,7 @@ export default class CaregiverBlockReasons extends Component {
             Add Reason
           </StyledButton>
         </StyledButtonDivWithUnderline>
-      </MainCard>
+      </MainCardSmall>
     );
   }
 }

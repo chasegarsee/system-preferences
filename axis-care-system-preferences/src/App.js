@@ -9,7 +9,10 @@ import "./styles.scss";
 const App = () => {
   const [mode, toggleMode] = useDarkMode("dark-mode", false);
   return (
-    <div className={`${mode === true ? "dark-mode" : ""}`}>
+    <div
+      style={{ width: "100vw", height: "100%" }}
+      className={`${mode === true ? "dark-mode" : ""}`}
+    >
       <NavigationBar toggleMode={toggleMode} darkMode={mode} />
       <Navigation />
     </div>

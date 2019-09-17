@@ -3,7 +3,7 @@ import React from "react";
 import Slider from "react-rangeslider";
 import Switch from "react-switch";
 import {
-  MainCard,
+  MainCardSmall,
   StyledDivHeader,
   StyledH1,
   StyledSpan,
@@ -45,7 +45,7 @@ export default class RecommendCaregiver extends React.Component {
   render() {
     let { wot } = this.state;
     return (
-      <MainCard>
+      <MainCardSmall>
         <StyledDivHeader>
           <StyledH1>Recommend Caregiver</StyledH1>
         </StyledDivHeader>
@@ -131,7 +131,7 @@ export default class RecommendCaregiver extends React.Component {
             onChange={this.handleOnChangeWot}
           />
         </StyledDiv>
-      </MainCard>
+      </MainCardSmall>
     );
   }
 }
