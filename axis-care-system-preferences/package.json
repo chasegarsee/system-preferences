@@ -9,7 +9,7 @@
     "babel-preset-react": "^6.24.1",
     "bootstrap-toggle": "^2.2.2",
     "bulma": "^0.7.5",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "parcel": "^1.12.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
